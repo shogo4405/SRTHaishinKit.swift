@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (4% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SRTConnection.html">SRTConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SRTStream.html">SRTStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SRTStream/ReadyState.html">– ReadyState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SRTSocketOption.html">SRTSocketOption</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='srthaishinkit' class='heading'>SRTHaishinKit</h1>
+
+<p><a href="https://raw.githubusercontent.com/shogo4405/SRTHaishinKit.swift/master/LICENSE.md"><img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="GitHub license"></a></p>
+
+<ul>
+<li>Camera and Microphone streaming library via SRT for iOS.</li>
+<li>Issuesの言語は、英語か、日本語でお願いします！</li>
+</ul>
+<h2 id='features' class='heading'>Features</h2>
+<h3 id='srt' class='heading'>SRT</h3>
+
+<ul>
+<li>[x] Publish and Recording (H264/AAC)</li>
+<li>[ ] Playback</li>
+<li>[ ] mode
+
+<ul>
+<li>[x] caller</li>
+<li>[ ] listener</li>
+<li>[ ] rendezvous</li>
+</ul></li>
+</ul>
+
+<p>see also <a href="https://github.com/shogo4405/HaishinKit.swift/blob/master/README.md">https://github.com/shogo4405/HaishinKit.swift/blob/master/README.md</a></p>
+<h3 id='rendering' class='heading'>Rendering</h3>
+
+<table><thead>
+<tr>
+<th>-</th>
+<th style="text-align: center">HKView</th>
+<th style="text-align: center">GLHKView</th>
+<th style="text-align: center">MTHKView</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Engine</td>
+<td style="text-align: center">AVCaptureVideoPreviewLayer</td>
+<td style="text-align: center">OpenGL ES</td>
+<td style="text-align: center">Metal</td>
+</tr>
+<tr>
+<td>Publish</td>
+<td style="text-align: center">○</td>
+<td style="text-align: center">○</td>
+<td style="text-align: center">◯</td>
+</tr>
+<tr>
+<td>VIsualEffect</td>
+<td style="text-align: center">×</td>
+<td style="text-align: center">○</td>
+<td style="text-align: center">◯</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td style="text-align: center">Stable</td>
+<td style="text-align: center">Stable</td>
+<td style="text-align: center">Beta</td>
+</tr>
+</tbody></table>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<table><thead>
+<tr>
+<th style="text-align: center">-</th>
+<th style="text-align: center">iOS</th>
+<th style="text-align: center">OSX</th>
+<th style="text-align: center">tvOS</th>
+<th style="text-align: center">XCode</th>
+<th style="text-align: center">Swift</th>
+<th style="text-align: center">CocoaPods</th>
+<th style="text-align: center">Carthage</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">0.0.0+</td>
+<td style="text-align: center">8.0+</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">10.0+</td>
+<td style="text-align: center">4.2</td>
+<td style="text-align: center">1.5.0+</td>
+<td style="text-align: center">0.29.0+</td>
+</tr>
+</tbody></table>
+<h2 id='cocoa-keys' class='heading'>Cocoa Keys</h2>
+
+<p>Please contains Info.plist.</p>
+
+<p>iOS 10.0+</p>
+
+<ul>
+<li>NSMicrophoneUsageDescription</li>
+<li>NSCameraUsageDescription</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p><em>Please set up your project Swift 4.2.</em></p>
+<h3 id='carthage' class='heading'>Carthage</h3>
+<pre class="highlight plaintext"><code>github "shogo4405/SRTHaishinKit.swift" ~&gt; 0.0.1
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>BSD-3-Clause</p>
+<h2 id='donation' class='heading'>Donation</h2>
+
+<p>Paypal</p>
+
+<ul>
+<li><a href="https://www.paypal.me/shogo4405">https://www.paypal.me/shogo4405</a></li>
+</ul>
+
+<p>Bitcoin</p>
+<pre class="highlight plaintext"><code>1LP7Jo4VwAFdEisJSykBAtUyAusZjozSpw
+</code></pre>
+<h2 id='prerequisites' class='heading'>Prerequisites</h2>
+
+<p>Make sure you setup and activate your AVAudioSession.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">AVFoundation</span>
+<span class="k">let</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">AVAudioSession</span> <span class="o">=</span> <span class="kt">AVAudioSession</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="n">session</span><span class="o">.</span><span class="nf">setPreferredSampleRate</span><span class="p">(</span><span class="mi">44_100</span><span class="p">)</span>
+    <span class="c1">// https://stackoverflow.com/questions/51010390/avaudiosession-setcategory-swift-4-2-ios-12-play-sound-on-silent</span>
+    <span class="k">if</span> <span class="kd">#available(iOS 10.0, *)</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="n">session</span><span class="o">.</span><span class="nf">setCategory</span><span class="p">(</span><span class="o">.</span><span class="n">playAndRecord</span><span class="p">,</span> <span class="nv">mode</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">allowBluetooth</span><span class="p">])</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">session</span><span class="o">.</span><span class="nf">perform</span><span class="p">(</span><span class="kt">NSSelectorFromString</span><span class="p">(</span><span class="s">"setCategory:withOptions:error:"</span><span class="p">),</span> <span class="nv">with</span><span class="p">:</span> <span class="kt">AVAudioSession</span><span class="o">.</span><span class="kt">Category</span><span class="o">.</span><span class="n">playAndRecord</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span>  <span class="p">[</span><span class="kt">AVAudioSession</span><span class="o">.</span><span class="kt">CategoryOptions</span><span class="o">.</span><span class="n">allowBluetooth</span><span class="p">])</span>
+    <span class="p">}</span>
+    <span class="k">try</span> <span class="n">session</span><span class="o">.</span><span class="nf">setMode</span><span class="p">(</span><span class="kt">AVAudioSessionModeDefault</span><span class="p">)</span>
+    <span class="k">try</span> <span class="n">session</span><span class="o">.</span><span class="nf">setActive</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='srt-usage' class='heading'>SRT Usage</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">srtConnection</span><span class="p">:</span> <span class="kt">SRTConnection</span> <span class="o">=</span> <span class="kt">SRTConnection</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">srtStream</span><span class="p">:</span> <span class="kt">SRTStream</span> <span class="o">=</span> <span class="kt">SRTStream</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="n">srtConnection</span><span class="p">)</span>
+<span class="n">srtStream</span><span class="o">.</span><span class="nf">attachCamera</span><span class="p">(</span><span class="kt">DeviceUtil</span><span class="o">.</span><span class="nf">device</span><span class="p">(</span><span class="nv">withPosition</span><span class="p">:</span> <span class="o">.</span><span class="n">back</span><span class="p">))</span>
+<span class="n">srtStream</span><span class="o">.</span><span class="nf">attachAudio</span><span class="p">(</span><span class="kt">AVCaptureDevice</span><span class="o">.</span><span class="nf">defaultDevice</span><span class="p">(</span><span class="nv">withMediaType</span><span class="p">:</span> <span class="kt">AVMediaTypeAudio</span><span class="p">))</span>
+<span class="n">srtStream</span><span class="o">.</span><span class="nf">publish</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
+<span class="n">srtConnection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="s">"srt://host:port?option=foo"</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">hkView</span><span class="p">:</span> <span class="kt">HKView</span> <span class="o">=</span> <span class="kt">HKView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+<span class="n">hkView</span><span class="o">.</span><span class="nf">attachStream</span><span class="p">(</span><span class="n">srtStream</span><span class="p">)</span>
+
+<span class="c1">// add ViewController#view</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">hkView</span><span class="p">)</span>
+</code></pre>
+<h2 id='faq' class='heading'>FAQ</h2>
+<h3 id='how-can-i-run-example-project' class='heading'>How can I run example project?</h3>
+
+<p>SRTHaishinKit needs other dependicies.</p>
+<pre class="highlight shell"><code>carthage update
+</code></pre>
+<h3 id='do-you-support-me-via-email' class='heading'>Do you support me via Email?</h3>
+
+<p>Yes. Consulting fee is <a href="https://www.paypal.me/shogo4405/50USD">$50</a>/1 incident. I don&rsquo;t recommend. 
+Please consider to use Issues.</p>
+<h2 id='dependicies' class='heading'>Dependicies</h2>
+
+<ol>
+<li><a href="https://github.com/Haivision/srt">https://github.com/Haivision/srt</a></li>
+<li><a href="https://github.com/shogo4405/HaishinKit.swift">https://github.com/shogo4405/HaishinKit.swift</a></li>
+<li><a href="https://github.com/shogo4405/Logboard">https://github.com/shogo4405/Logboard</a></li>
+</ol>
+<h2 id='refernces' class='heading'>Refernces</h2>
+
+<ul>
+<li><a href="https://www.haivision.com/products/srt-secure-reliable-transport/">https://www.haivision.com/products/srt-secure-reliable-transport/</a></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-12-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

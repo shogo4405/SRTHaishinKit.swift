@@ -11,8 +11,6 @@
 		2923D2A021733A73000A5E9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923D29F21733A73000A5E9B /* ViewController.swift */; };
 		2923D2A221733A74000A5E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2A121733A74000A5E9B /* Assets.xcassets */; };
 		2923D2A521733A74000A5E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2A321733A74000A5E9B /* Main.storyboard */; };
-		2923D2BB21733B1F000A5E9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2B921733B1E000A5E9B /* README.md */; };
-		2923D2BC21733B1F000A5E9B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2BA21733B1E000A5E9B /* LICENSE */; };
 		2923D2C821733C3D000A5E9B /* SRTHaishinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2923D2C621733C3D000A5E9B /* SRTHaishinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2923D2DD21734075000A5E9B /* SRTHaishinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2923D2DB21734075000A5E9B /* SRTHaishinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2923D2F9217342A2000A5E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923D2F8217342A2000A5E9B /* AppDelegate.swift */; };
@@ -20,7 +18,112 @@
 		2923D2FE217342A3000A5E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FC217342A3000A5E9B /* Main.storyboard */; };
 		2923D300217342A4000A5E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FF217342A4000A5E9B /* Assets.xcassets */; };
 		2923D303217342A4000A5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D301217342A4000A5E9B /* LaunchScreen.storyboard */; };
+		29370FDB21B3EDE900451B6F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29370FDA21B3EDE900451B6F /* libc++.tbd */; };
+		29370FDC21B3EE3F00451B6F /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29370FD821B3EDCA00451B6F /* libcrypto.a */; };
+		29370FDE21B3EE8500451B6F /* libsrt-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29370FDD21B3EE8400451B6F /* libsrt-iOS.a */; };
+		296FB21121A6BD9900CB4770 /* srt4udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20A21A6BD9800CB4770 /* srt4udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21521A6BD9900CB4770 /* platform_sys.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20E21A6BD9800CB4770 /* platform_sys.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21621A6BD9900CB4770 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20F21A6BD9900CB4770 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21721A6BD9900CB4770 /* srt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB21021A6BD9900CB4770 /* srt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21821A6BE2300CB4770 /* logging_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20B21A6BD9800CB4770 /* logging_api.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21921A6BE2400CB4770 /* logging_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20B21A6BD9800CB4770 /* logging_api.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21A21A6BE2700CB4770 /* platform_sys.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20E21A6BD9800CB4770 /* platform_sys.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21B21A6BE2A00CB4770 /* srt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB21021A6BD9900CB4770 /* srt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21C21A6BE2D00CB4770 /* srt4udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20A21A6BD9800CB4770 /* srt4udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB21F21A6BE3500CB4770 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20F21A6BD9900CB4770 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB22821A6BEE700CB4770 /* SRTSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB22721A6BEE700CB4770 /* SRTSocket.swift */; };
+		296FB22921A6BEE700CB4770 /* SRTSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB22721A6BEE700CB4770 /* SRTSocket.swift */; };
+		296FB22C21A6C12F00CB4770 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB22A21A6C12F00CB4770 /* HaishinKit.framework */; };
+		296FB22D21A6C12F00CB4770 /* Logboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB22B21A6C12F00CB4770 /* Logboard.framework */; };
+		296FB23721A6D58900CB4770 /* SRTStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23621A6D58900CB4770 /* SRTStream.swift */; };
+		296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23621A6D58900CB4770 /* SRTStream.swift */; };
+		296FB23D21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */; };
+		296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */; };
+		296FB25621A7006000CB4770 /* queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24121A7005D00CB4770 /* queue.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25721A7006000CB4770 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24221A7005E00CB4770 /* logging.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25821A7006000CB4770 /* channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24321A7005E00CB4770 /* channel.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25921A7006000CB4770 /* utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24421A7005E00CB4770 /* utilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25A21A7006000CB4770 /* srt_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24521A7005E00CB4770 /* srt_compat.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25B21A7006000CB4770 /* smoother.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24621A7005E00CB4770 /* smoother.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25C21A7006000CB4770 /* handshake.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24721A7005E00CB4770 /* handshake.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25D21A7006000CB4770 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24821A7005E00CB4770 /* md5.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25E21A7006000CB4770 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24921A7005E00CB4770 /* core.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB25F21A7006000CB4770 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24A21A7005F00CB4770 /* api.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26021A7006000CB4770 /* threadname.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24B21A7005F00CB4770 /* threadname.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26121A7006000CB4770 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24C21A7005F00CB4770 /* buffer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26221A7006000CB4770 /* udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24D21A7005F00CB4770 /* udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26321A7006000CB4770 /* netinet_any.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24E21A7005F00CB4770 /* netinet_any.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26421A7006000CB4770 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24F21A7005F00CB4770 /* common.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26521A7006000CB4770 /* crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25021A7005F00CB4770 /* crypto.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26621A7006000CB4770 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25121A7005F00CB4770 /* list.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26721A7006000CB4770 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25221A7006000CB4770 /* cache.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26821A7006000CB4770 /* packet.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25321A7006000CB4770 /* packet.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26921A7006000CB4770 /* window.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25421A7006000CB4770 /* window.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26A21A7006000CB4770 /* epoll.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25521A7006000CB4770 /* epoll.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26B21A7007D00CB4770 /* api.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24A21A7005F00CB4770 /* api.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26C21A7007F00CB4770 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24C21A7005F00CB4770 /* buffer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26D21A7008200CB4770 /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25221A7006000CB4770 /* cache.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26E21A7009200CB4770 /* channel.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24321A7005E00CB4770 /* channel.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB26F21A7009400CB4770 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24F21A7005F00CB4770 /* common.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27021A7009600CB4770 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24921A7005E00CB4770 /* core.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27121A7009900CB4770 /* crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25021A7005F00CB4770 /* crypto.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27221A7009C00CB4770 /* epoll.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25521A7006000CB4770 /* epoll.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27321A7009E00CB4770 /* handshake.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24721A7005E00CB4770 /* handshake.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27421A700A100CB4770 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25121A7005F00CB4770 /* list.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27521A700A200CB4770 /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24221A7005E00CB4770 /* logging.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27621A700A400CB4770 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24821A7005E00CB4770 /* md5.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27721A700A700CB4770 /* netinet_any.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24E21A7005F00CB4770 /* netinet_any.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27821A700AA00CB4770 /* packet.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25321A7006000CB4770 /* packet.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27921A700AD00CB4770 /* queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24121A7005D00CB4770 /* queue.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27A21A700AF00CB4770 /* smoother.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24621A7005E00CB4770 /* smoother.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27B21A700B200CB4770 /* srt_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24521A7005E00CB4770 /* srt_compat.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27C21A700B500CB4770 /* threadname.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24B21A7005F00CB4770 /* threadname.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27D21A700B700CB4770 /* udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24D21A7005F00CB4770 /* udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27E21A700BA00CB4770 /* utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24421A7005E00CB4770 /* utilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB27F21A700BC00CB4770 /* window.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB25421A7006000CB4770 /* window.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		296FB28421A70D8100CB4770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28321A70D8100CB4770 /* Constants.swift */; };
+		296FB28621A70D9600CB4770 /* SRTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28521A70D9600CB4770 /* SRTError.swift */; };
+		296FB28721A70D9600CB4770 /* SRTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28521A70D9600CB4770 /* SRTError.swift */; };
+		296FB28821A70E1500CB4770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28321A70D8100CB4770 /* Constants.swift */; };
+		296FB28A21A800CF00CB4770 /* SRTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28921A800CF00CB4770 /* SRTConnection.swift */; };
+		296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28921A800CF00CB4770 /* SRTConnection.swift */; };
+		296FB29021A80F1700CB4770 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB28E21A80F1700CB4770 /* HaishinKit.framework */; };
+		296FB29121A80F1700CB4770 /* Logboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB28F21A80F1700CB4770 /* Logboard.framework */; };
+		296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; };
+		296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		296FB29F21A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */; };
+		296FB2A021A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */; };
+		296FB2A221A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */; };
+		296FB2A321A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */; };
+		29B2C56C21B3CA8A00B1609D /* libsrt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B2C56B21B3CA8A00B1609D /* libsrt.a */; };
+		29D0939621A98B28003E6E1F /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB22A21A6C12F00CB4770 /* HaishinKit.framework */; };
+		29D0939921A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
+		29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		296FB29B21A8262800CB4770 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2923D26C217339E2000A5E9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2923D2D821734075000A5E9B;
+			remoteInfo = "SRTHaishinKit iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		296FB29D21A8262800CB4770 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2923D29B21733A73000A5E9B /* Example macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +148,55 @@
 		2923D2FF217342A4000A5E9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2923D302217342A4000A5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2923D304217342A4000A5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29370FD821B3EDCA00451B6F /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "Vendor/SRT/OpenSSL-for-iPhone/lib/libcrypto.a"; sourceTree = "<group>"; };
+		29370FDA21B3EDE900451B6F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		29370FDD21B3EE8400451B6F /* libsrt-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsrt-iOS.a"; path = "Vendor/SRT/libsrt-iOS.a"; sourceTree = "<group>"; };
 		296FB1FC21A6A7BD00CB4770 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		296FB20A21A6BD9800CB4770 /* srt4udt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srt4udt.h; path = Vendor/SRT/Includes/srt4udt.h; sourceTree = SOURCE_ROOT; };
+		296FB20B21A6BD9800CB4770 /* logging_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logging_api.h; path = Vendor/SRT/Includes/logging_api.h; sourceTree = SOURCE_ROOT; };
+		296FB20E21A6BD9800CB4770 /* platform_sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_sys.h; path = Vendor/SRT/Includes/platform_sys.h; sourceTree = SOURCE_ROOT; };
+		296FB20F21A6BD9900CB4770 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = Vendor/SRT/Includes/version.h; sourceTree = SOURCE_ROOT; };
+		296FB21021A6BD9900CB4770 /* srt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srt.h; path = Vendor/SRT/Includes/srt.h; sourceTree = SOURCE_ROOT; };
+		296FB22721A6BEE700CB4770 /* SRTSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocket.swift; sourceTree = "<group>"; };
+		296FB22A21A6C12F00CB4770 /* HaishinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HaishinKit.framework; path = Carthage/Build/iOS/HaishinKit.framework; sourceTree = "<group>"; };
+		296FB22B21A6C12F00CB4770 /* Logboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logboard.framework; path = Carthage/Build/iOS/Logboard.framework; sourceTree = "<group>"; };
+		296FB22F21A6C2C700CB4770 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		296FB23621A6D58900CB4770 /* SRTStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTStream.swift; sourceTree = "<group>"; };
+		296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocketOption.swift; sourceTree = "<group>"; };
+		296FB24121A7005D00CB4770 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		296FB24221A7005E00CB4770 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
+		296FB24321A7005E00CB4770 /* channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channel.h; sourceTree = "<group>"; };
+		296FB24421A7005E00CB4770 /* utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+		296FB24521A7005E00CB4770 /* srt_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srt_compat.h; sourceTree = "<group>"; };
+		296FB24621A7005E00CB4770 /* smoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smoother.h; sourceTree = "<group>"; };
+		296FB24721A7005E00CB4770 /* handshake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = handshake.h; sourceTree = "<group>"; };
+		296FB24821A7005E00CB4770 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		296FB24921A7005E00CB4770 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		296FB24A21A7005F00CB4770 /* api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = api.h; sourceTree = "<group>"; };
+		296FB24B21A7005F00CB4770 /* threadname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadname.h; sourceTree = "<group>"; };
+		296FB24C21A7005F00CB4770 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		296FB24D21A7005F00CB4770 /* udt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udt.h; sourceTree = "<group>"; };
+		296FB24E21A7005F00CB4770 /* netinet_any.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netinet_any.h; sourceTree = "<group>"; };
+		296FB24F21A7005F00CB4770 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		296FB25021A7005F00CB4770 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		296FB25121A7005F00CB4770 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		296FB25221A7006000CB4770 /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
+		296FB25321A7006000CB4770 /* packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packet.h; sourceTree = "<group>"; };
+		296FB25421A7006000CB4770 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		296FB25521A7006000CB4770 /* epoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epoll.h; sourceTree = "<group>"; };
+		296FB28021A7052000CB4770 /* build-srt-iOS.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-srt-iOS.sh"; path = "Vendor/SRT/build-srt-iOS.sh"; sourceTree = SOURCE_ROOT; };
+		296FB28321A70D8100CB4770 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		296FB28521A70D9600CB4770 /* SRTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTError.swift; sourceTree = "<group>"; };
+		296FB28921A800CF00CB4770 /* SRTConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTConnection.swift; sourceTree = "<group>"; };
+		296FB28E21A80F1700CB4770 /* HaishinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HaishinKit.framework; path = Carthage/Build/Mac/HaishinKit.framework; sourceTree = "<group>"; };
+		296FB28F21A80F1700CB4770 /* Logboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logboard.framework; path = Carthage/Build/Mac/Logboard.framework; sourceTree = "<group>"; };
+		296FB29521A8121E00CB4770 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTIncomingSocket.swift; sourceTree = "<group>"; };
+		296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTOutgoingSocket.swift; sourceTree = "<group>"; };
+		297BA66D21AC8D3700CD14EA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		29B2C56B21B3CA8A00B1609D /* libsrt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsrt.a; path = /usr/local/Cellar/srt/1.3.1/lib/libsrt.a; sourceTree = "<absolute>"; };
+		29D0939821A998AF003E6E1F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +211,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B2C56C21B3CA8A00B1609D /* libsrt.a in Frameworks */,
+				296FB29021A80F1700CB4770 /* HaishinKit.framework in Frameworks */,
+				296FB29121A80F1700CB4770 /* Logboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +221,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29370FDB21B3EDE900451B6F /* libc++.tbd in Frameworks */,
+				296FB22C21A6C12F00CB4770 /* HaishinKit.framework in Frameworks */,
+				296FB22D21A6C12F00CB4770 /* Logboard.framework in Frameworks */,
+				29370FDE21B3EE8500451B6F /* libsrt-iOS.a in Frameworks */,
+				29370FDC21B3EE3F00451B6F /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +233,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D0939621A98B28003E6E1F /* HaishinKit.framework in Frameworks */,
+				296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,14 +244,16 @@
 		2923D26B217339E2000A5E9B = {
 			isa = PBXGroup;
 			children = (
+				296FB29521A8121E00CB4770 /* Gemfile */,
 				296FB1FC21A6A7BD00CB4770 /* Cartfile */,
 				2923D2BA21733B1E000A5E9B /* LICENSE */,
 				2923D2B921733B1E000A5E9B /* README.md */,
 				2923D2BE21733B78000A5E9B /* Examples */,
-				2923D2CC21733C58000A5E9B /* Plarforms */,
+				2923D2CC21733C58000A5E9B /* Platforms */,
 				2923D275217339E2000A5E9B /* Products */,
 				2923D2BD21733B63000A5E9B /* Sources */,
 				2923D2E421734219000A5E9B /* Vendor */,
+				296FB20621A6BD1F00CB4770 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +284,9 @@
 		2923D2BD21733B63000A5E9B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				29D0939721A99896003E6E1F /* Extension */,
+				296FB22621A6BED100CB4770 /* SRT */,
+				297BA66121AC63C700CD14EA /* Util */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -137,24 +303,26 @@
 		2923D2C521733C3D000A5E9B /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				296FB29221A8108E00CB4770 /* Supporting Files */,
 				2923D2C621733C3D000A5E9B /* SRTHaishinKit.h */,
 				2923D2C721733C3D000A5E9B /* Info.plist */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		2923D2CC21733C58000A5E9B /* Plarforms */ = {
+		2923D2CC21733C58000A5E9B /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
 				2923D2DA21734075000A5E9B /* iOS */,
 				2923D2C521733C3D000A5E9B /* macOS */,
 			);
-			path = Plarforms;
+			path = Platforms;
 			sourceTree = "<group>";
 		};
 		2923D2DA21734075000A5E9B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				296FB23221A6C7E500CB4770 /* Supporting Files */,
 				2923D2DB21734075000A5E9B /* SRTHaishinKit.h */,
 				2923D2DC21734075000A5E9B /* Info.plist */,
 			);
@@ -164,6 +332,7 @@
 		2923D2E421734219000A5E9B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				296FB20121A6BBE200CB4770 /* SRT */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -181,6 +350,110 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		296FB20121A6BBE200CB4770 /* SRT */ = {
+			isa = PBXGroup;
+			children = (
+				29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */,
+				296FB28021A7052000CB4770 /* build-srt-iOS.sh */,
+				296FB20921A6BD8600CB4770 /* Includes */,
+			);
+			path = SRT;
+			sourceTree = "<group>";
+		};
+		296FB20621A6BD1F00CB4770 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29370FDD21B3EE8400451B6F /* libsrt-iOS.a */,
+				29370FDA21B3EDE900451B6F /* libc++.tbd */,
+				29370FD821B3EDCA00451B6F /* libcrypto.a */,
+				29B2C56B21B3CA8A00B1609D /* libsrt.a */,
+				296FB22A21A6C12F00CB4770 /* HaishinKit.framework */,
+				296FB22B21A6C12F00CB4770 /* Logboard.framework */,
+				296FB28E21A80F1700CB4770 /* HaishinKit.framework */,
+				296FB28F21A80F1700CB4770 /* Logboard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		296FB20921A6BD8600CB4770 /* Includes */ = {
+			isa = PBXGroup;
+			children = (
+				296FB24A21A7005F00CB4770 /* api.h */,
+				296FB24C21A7005F00CB4770 /* buffer.h */,
+				296FB25221A7006000CB4770 /* cache.h */,
+				296FB24321A7005E00CB4770 /* channel.h */,
+				296FB24F21A7005F00CB4770 /* common.h */,
+				296FB24921A7005E00CB4770 /* core.h */,
+				296FB25021A7005F00CB4770 /* crypto.h */,
+				296FB25521A7006000CB4770 /* epoll.h */,
+				296FB24721A7005E00CB4770 /* handshake.h */,
+				296FB25121A7005F00CB4770 /* list.h */,
+				296FB24221A7005E00CB4770 /* logging.h */,
+				296FB24821A7005E00CB4770 /* md5.h */,
+				296FB24E21A7005F00CB4770 /* netinet_any.h */,
+				296FB25321A7006000CB4770 /* packet.h */,
+				296FB24121A7005D00CB4770 /* queue.h */,
+				296FB24621A7005E00CB4770 /* smoother.h */,
+				296FB24521A7005E00CB4770 /* srt_compat.h */,
+				296FB24B21A7005F00CB4770 /* threadname.h */,
+				296FB24D21A7005F00CB4770 /* udt.h */,
+				296FB24421A7005E00CB4770 /* utilities.h */,
+				296FB25421A7006000CB4770 /* window.h */,
+				296FB20B21A6BD9800CB4770 /* logging_api.h */,
+				296FB20E21A6BD9800CB4770 /* platform_sys.h */,
+				296FB21021A6BD9900CB4770 /* srt.h */,
+				296FB20A21A6BD9800CB4770 /* srt4udt.h */,
+				296FB20F21A6BD9900CB4770 /* version.h */,
+			);
+			path = Includes;
+			sourceTree = "<group>";
+		};
+		296FB22621A6BED100CB4770 /* SRT */ = {
+			isa = PBXGroup;
+			children = (
+				296FB28921A800CF00CB4770 /* SRTConnection.swift */,
+				296FB28521A70D9600CB4770 /* SRTError.swift */,
+				296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */,
+				296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */,
+				296FB22721A6BEE700CB4770 /* SRTSocket.swift */,
+				296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */,
+				296FB23621A6D58900CB4770 /* SRTStream.swift */,
+			);
+			path = SRT;
+			sourceTree = "<group>";
+		};
+		296FB23221A6C7E500CB4770 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				296FB22F21A6C2C700CB4770 /* module.modulemap */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		296FB29221A8108E00CB4770 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				297BA66D21AC8D3700CD14EA /* module.modulemap */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		297BA66121AC63C700CD14EA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				296FB28321A70D8100CB4770 /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		29D0939721A99896003E6E1F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				29D0939821A998AF003E6E1F /* Data+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -188,7 +461,33 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296FB25E21A7006000CB4770 /* core.h in Headers */,
+				296FB26321A7006000CB4770 /* netinet_any.h in Headers */,
+				296FB25821A7006000CB4770 /* channel.h in Headers */,
+				296FB26121A7006000CB4770 /* buffer.h in Headers */,
+				296FB26821A7006000CB4770 /* packet.h in Headers */,
+				296FB21621A6BD9900CB4770 /* version.h in Headers */,
+				296FB26621A7006000CB4770 /* list.h in Headers */,
+				296FB21921A6BE2400CB4770 /* logging_api.h in Headers */,
+				296FB26921A7006000CB4770 /* window.h in Headers */,
+				296FB25A21A7006000CB4770 /* srt_compat.h in Headers */,
+				296FB25F21A7006000CB4770 /* api.h in Headers */,
+				296FB26721A7006000CB4770 /* cache.h in Headers */,
+				296FB25921A7006000CB4770 /* utilities.h in Headers */,
+				296FB26221A7006000CB4770 /* udt.h in Headers */,
 				2923D2C821733C3D000A5E9B /* SRTHaishinKit.h in Headers */,
+				296FB21721A6BD9900CB4770 /* srt.h in Headers */,
+				296FB26021A7006000CB4770 /* threadname.h in Headers */,
+				296FB26521A7006000CB4770 /* crypto.h in Headers */,
+				296FB25621A7006000CB4770 /* queue.h in Headers */,
+				296FB21121A6BD9900CB4770 /* srt4udt.h in Headers */,
+				296FB25B21A7006000CB4770 /* smoother.h in Headers */,
+				296FB25721A7006000CB4770 /* logging.h in Headers */,
+				296FB25D21A7006000CB4770 /* md5.h in Headers */,
+				296FB25C21A7006000CB4770 /* handshake.h in Headers */,
+				296FB26A21A7006000CB4770 /* epoll.h in Headers */,
+				296FB26421A7006000CB4770 /* common.h in Headers */,
+				296FB21521A6BD9900CB4770 /* platform_sys.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +495,33 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296FB26F21A7009400CB4770 /* common.h in Headers */,
+				296FB26D21A7008200CB4770 /* cache.h in Headers */,
+				296FB27121A7009900CB4770 /* crypto.h in Headers */,
+				296FB27C21A700B500CB4770 /* threadname.h in Headers */,
+				296FB27721A700A700CB4770 /* netinet_any.h in Headers */,
+				296FB27221A7009C00CB4770 /* epoll.h in Headers */,
+				296FB26C21A7007F00CB4770 /* buffer.h in Headers */,
+				296FB21B21A6BE2A00CB4770 /* srt.h in Headers */,
+				296FB27A21A700AF00CB4770 /* smoother.h in Headers */,
 				2923D2DD21734075000A5E9B /* SRTHaishinKit.h in Headers */,
+				296FB27F21A700BC00CB4770 /* window.h in Headers */,
+				296FB21821A6BE2300CB4770 /* logging_api.h in Headers */,
+				296FB27421A700A100CB4770 /* list.h in Headers */,
+				296FB27621A700A400CB4770 /* md5.h in Headers */,
+				296FB26B21A7007D00CB4770 /* api.h in Headers */,
+				296FB26E21A7009200CB4770 /* channel.h in Headers */,
+				296FB27321A7009E00CB4770 /* handshake.h in Headers */,
+				296FB27D21A700B700CB4770 /* udt.h in Headers */,
+				296FB27821A700AA00CB4770 /* packet.h in Headers */,
+				296FB27B21A700B200CB4770 /* srt_compat.h in Headers */,
+				296FB21F21A6BE3500CB4770 /* version.h in Headers */,
+				296FB27021A7009600CB4770 /* core.h in Headers */,
+				296FB27E21A700BA00CB4770 /* utilities.h in Headers */,
+				296FB21C21A6BE2D00CB4770 /* srt4udt.h in Headers */,
+				296FB27921A700AD00CB4770 /* queue.h in Headers */,
+				296FB27521A700A200CB4770 /* logging.h in Headers */,
+				296FB21A21A6BE2700CB4770 /* platform_sys.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +588,13 @@
 				2923D2F2217342A2000A5E9B /* Sources */,
 				2923D2F3217342A2000A5E9B /* Frameworks */,
 				2923D2F4217342A2000A5E9B /* Resources */,
+				296FB29821A8251E00CB4770 /* ShellScript */,
+				296FB29D21A8262800CB4770 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				296FB29C21A8262800CB4770 /* PBXTargetDependency */,
 			);
 			name = "Example iOS";
 			productName = "Exsample iOS";
@@ -280,7 +608,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					2923D29A21733A73000A5E9B = {
@@ -288,9 +616,11 @@
 					};
 					2923D2C321733C3D000A5E9B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 					2923D2D821734075000A5E9B = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 					2923D2F5217342A2000A5E9B = {
 						CreatedOnToolsVersion = 10.0;
@@ -323,9 +653,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2923D2BB21733B1F000A5E9B /* README.md in Resources */,
 				2923D2A221733A74000A5E9B /* Assets.xcassets in Resources */,
-				2923D2BC21733B1F000A5E9B /* LICENSE in Resources */,
 				2923D2A521733A74000A5E9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +684,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		296FB29821A8251E00CB4770 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Logboard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HaishinKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2923D29721733A73000A5E9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -370,6 +720,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296FB23D21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */,
+				296FB28421A70D8100CB4770 /* Constants.swift in Sources */,
+				296FB28A21A800CF00CB4770 /* SRTConnection.swift in Sources */,
+				296FB2A221A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */,
+				296FB28621A70D9600CB4770 /* SRTError.swift in Sources */,
+				296FB23721A6D58900CB4770 /* SRTStream.swift in Sources */,
+				29D0939921A998AF003E6E1F /* Data+Extension.swift in Sources */,
+				296FB29F21A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */,
+				296FB22821A6BEE700CB4770 /* SRTSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +736,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296FB2A021A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */,
+				296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */,
+				296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */,
+				296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */,
+				296FB2A321A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */,
+				296FB28821A70E1500CB4770 /* Constants.swift in Sources */,
+				29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */,
+				296FB28721A70D9600CB4770 /* SRTError.swift in Sources */,
+				296FB22921A6BEE700CB4770 /* SRTSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +758,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		296FB29C21A8262800CB4770 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2923D2D821734075000A5E9B /* SRTHaishinKit iOS */;
+			targetProxy = 296FB29B21A8262800CB4770 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2923D2A321733A74000A5E9B /* Main.storyboard */ = {
@@ -543,13 +919,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.srt.SRTHaishinKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -565,13 +941,13 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.srt.SRTHaishinKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -582,7 +958,9 @@
 		2923D2CA21733C3D000A5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -591,19 +969,31 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Plarforms/macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Platforms/macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/SRT",
+					/usr/local/Cellar/srt/1.3.1/lib,
+					/usr/local/Cellar/openssl/1.0.2p/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Platforms/macOS/Supporting Files\"";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -613,7 +1003,9 @@
 		2923D2CB21733C3D000A5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -622,19 +1014,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Plarforms/macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Platforms/macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/SRT",
+					/usr/local/Cellar/srt/1.3.1/lib,
+					/usr/local/Cellar/openssl/1.0.2p/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Platforms/macOS/Supporting Files\"";
 				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -644,6 +1047,8 @@
 		2923D2DF21734075000A5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -652,16 +1057,28 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Plarforms/iOS/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Platforms/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/SRT",
+					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Platforms/iOS/Supporting Files\"";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -672,6 +1089,8 @@
 		2923D2E021734075000A5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -680,16 +1099,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Plarforms/iOS/Info.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Platforms/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/SRT",
+					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Platforms/iOS/Supporting Files\"";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -700,10 +1130,16 @@
 		2923D306217342A4000A5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -718,10 +1154,16 @@
 		2923D307217342A4000A5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
