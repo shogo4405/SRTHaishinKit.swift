@@ -69,12 +69,20 @@ open class SRTStream: NetStream {
     }
 
     override open func attachCamera(_ camera: AVCaptureDevice?, onError: ((NSError) -> Void)? = nil) {
-        tsWriter.expectedMedias.insert(.video)
+        if camera == nil {
+            tsWriter.expectedMedias.remove(.video)
+        } else {
+            tsWriter.expectedMedias.insert(.video)
+        }
         super.attachCamera(camera, onError: onError)
     }
 
     override open func attachAudio(_ audio: AVCaptureDevice?, automaticallyConfiguresApplicationAudioSession: Bool = true, onError: ((NSError) -> Void)? = nil) {
-        tsWriter.expectedMedias.insert(.audio)
+        if audio == nil {
+            tsWriter.expectedMedias.remove(.audio)
+        } else {
+            tsWriter.expectedMedias.insert(.audio)
+        }
         super.attachAudio(audio, automaticallyConfiguresApplicationAudioSession: automaticallyConfiguresApplicationAudioSession, onError: onError)
     }
 
