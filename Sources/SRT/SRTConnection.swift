@@ -30,11 +30,11 @@ open class SRTConnection: NSObject {
 
         outgoingSocket = SRTOutgoingSocket()
         outgoingSocket?.delegate = self
-        try? outgoingSocket?.connect(addr, options: options)
+        ((try? outgoingSocket?.connect(addr, options: options)) as ()??)
 
         incomingSocket = SRTIncomingSocket()
         incomingSocket?.delegate = self
-        try? incomingSocket?.connect(addr, options: options)
+        ((try? incomingSocket?.connect(addr, options: options)) as ()??)
     }
 
     public func close() {
