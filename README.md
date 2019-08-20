@@ -90,15 +90,18 @@ ffplay -analyzeduration 100 -i 'srt://${YOUR_IP_ADDRESS}?mode=listener'
 ```
 
 ### :memo: How can I run example project?
-SRTHaishinKit needs other dependicies. Please build.
+SRTHaishinKit needs other dependencies. Please build.
 
 #### iOS
+
 ```sh
 carthage update --platform iOS
-cd /Vendor/SRT/
-./build-openssl-iOS.sh
-./build-srt-iOS.sh
 ```
+~~cd /Vendor/SRT/
+./build-openssl-iOS.sh
+./build-srt-iOS.sh~~
+
+
 
 #### macOS
 ```sh
@@ -111,10 +114,10 @@ brew install srt
 Yes. Consulting fee is [$50](https://www.paypal.me/shogo4405/50USD)/1 incident. I don't recommend. 
 Please consider to use Issues.
 
-## Dependicies
+## Dependencies
 1. https://github.com/Haivision/srt
 1. https://github.com/shogo4405/HaishinKit.swift
 1. https://github.com/shogo4405/Logboard
 
-## Refernces
+## References
 * https://www.haivision.com/products/srt-secure-reliable-transport/

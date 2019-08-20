@@ -7,7 +7,7 @@ else
 fi
 
 export IPHONEOS_DEPLOYMENT_TARGET=8.0
-SDKVERSION=12.1
+SDKVERSION=$(xcrun --sdk iphoneos --show-sdk-version)
 
 srt() {
   IOS_OPENSSL=$(pwd)/OpenSSL-for-iPhone/bin/$1${SDKVERSION}-$3.sdk
@@ -15,6 +15,8 @@ srt() {
   mkdir -p ./build/iOS/$3
   pushd ./build/iOS/$3
   ../../../srt/configure --cmake-prefix-path=$IOS_OPENSSL --ios-platform=$2 --ios-arch=$3 --cmake-toolchain-file=scripts/iOS.cmake
+  make
+  install_name_tool -id "@executable_path/Frameworks/libsrt.1.3.3.dylib" libsrt.1.3.3.dylib
   popd
 }
 
