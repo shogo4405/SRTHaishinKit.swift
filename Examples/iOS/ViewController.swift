@@ -17,13 +17,13 @@ final class ViewController: UIViewController {
         connection = .init()
         srtStream = SRTStream(connection)
         srtStream.captureSettings = [
-            "sessionPreset": AVCaptureSession.Preset.hd1280x720.rawValue,
-            "continuousAutofocus": true,
-            "continuousExposure": true
+            .sessionPreset: AVCaptureSession.Preset.hd1280x720,
+            .continuousAutofocus: true,
+            .continuousExposure: true
         ]
         srtStream.videoSettings = [
-            "width": 720,
-            "height": 1280
+            .width: 720,
+            .height: 1280
         ]
         connection?.attachStream(srtStream)
         connection?.connect(URL(string: "srt://192.168.11.15:3000"))

@@ -16,7 +16,7 @@ class SRTSocket {
             options[.tsbdmode] = true
         }
     }
-    private(set) var isRunning: Bool = false
+    private(set) var isRunning: Atomic<Bool> = .init(false)
 
     private let lockQueue: DispatchQueue = DispatchQueue(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock")
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
@@ -88,15 +88,15 @@ extension SRTSocket: Running {
     // MARK: Running
     func startRunning() {
         lockQueue.async {
-            self.isRunning = true
+            self.isRunning.mutate{ $0 = true }
             repeat {
                 self.status = srt_getsockstate(self.socket)
                 usleep(3 * 10000)
-            } while self.isRunning
+            } while self.isRunning.value
         }
     }
 
     func stopRunning() {
-        isRunning = false
+        isRunning.mutate { $0 = false }
     }
 }
