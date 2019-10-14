@@ -373,105 +373,119 @@
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": null,
-      "symbol": "SRTStream",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "SRTStream",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 5,
+      "line": 6,
       "symbol": "SRTStream.ReadyState",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 6,
+      "line": 7,
       "symbol": "SRTStream.ReadyState.initialized",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 7,
+      "line": 8,
       "symbol": "SRTStream.ReadyState.open",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 8,
+      "line": 9,
       "symbol": "SRTStream.ReadyState.play",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 9,
+      "line": 10,
       "symbol": "SRTStream.ReadyState.playing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "SRTStream.ReadyState.publish",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 11,
+      "line": 12,
       "symbol": "SRTStream.ReadyState.publishing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "SRTStream.ReadyState.closed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 26,
+      "line": 27,
       "symbol": "SRTStream.readyState",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 50,
+      "line": 51,
       "symbol": "SRTStream.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 70,
-      "symbol": "SRTStream.publish(_:)",
+      "line": 71,
+      "symbol": "SRTStream.attachCamera(_:onError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "line": 80,
+      "symbol": "SRTStream.attachAudio(_:automaticallyConfiguresApplicationAudioSession:onError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 89,
+      "symbol": "SRTStream.publish(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "line": 108,
       "symbol": "SRTStream.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 102,
+      "line": 119,
+      "symbol": "SRTStream",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "line": 121,
       "symbol": "SRTStream.didOutput(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

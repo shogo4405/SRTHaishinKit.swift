@@ -450,28 +450,28 @@
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 51,
+      "line": 50,
       "symbol": "SRTStream.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 71,
+      "line": 70,
       "symbol": "SRTStream.publish(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 90,
+      "line": 89,
       "symbol": "SRTStream.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 103,
+      "line": 102,
       "symbol": "SRTStream.didOutput(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
