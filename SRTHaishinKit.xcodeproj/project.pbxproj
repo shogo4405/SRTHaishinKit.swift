@@ -568,7 +568,7 @@
 			buildConfigurationList = 2923D2DE21734075000A5E9B /* Build configuration list for PBXNativeTarget "SRTHaishinKit iOS" */;
 			buildPhases = (
 				2923D2D421734075000A5E9B /* Headers */,
-				4B3363C5230B31ED00A67762 /* Build openssl And SRT */,
+				4B3363C5230B31ED00A67762 /* Build OpenSSL and SRT */,
 				2923D2D521734075000A5E9B /* Sources */,
 				2923D2D621734075000A5E9B /* Frameworks */,
 				2923D2D721734075000A5E9B /* Resources */,
@@ -706,7 +706,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
 		};
-		4B3363C5230B31ED00A67762 /* Build openssl And SRT */ = {
+		4B3363C5230B31ED00A67762 /* Build OpenSSL and SRT */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -715,7 +715,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Build openssl And SRT";
+			name = "Build OpenSSL and SRT";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1155,7 +1155,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8E3XAWXZU9;
+				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1179,7 +1179,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8E3XAWXZU9;
+				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

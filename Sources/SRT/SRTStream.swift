@@ -51,7 +51,7 @@ open class SRTStream: NetStream {
     public init(_ connection: SRTConnection) {
         super.init()
         self.connection = connection
-        let keyValueObservation = connection.observe(\.connected, options: [.new, .old]) { [weak self] _, change in
+        let keyValueObservation = connection.observe(\.connected, options: [.new, .old]) { [weak self] _, _ in
             guard let self = self else { return }
             if connection.connected {
                 self.action?()

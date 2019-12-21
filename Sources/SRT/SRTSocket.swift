@@ -88,7 +88,7 @@ extension SRTSocket: Running {
     // MARK: Running
     func startRunning() {
         lockQueue.async {
-            self.isRunning.mutate{ $0 = true }
+            self.isRunning.mutate { $0 = true }
             repeat {
                 self.status = srt_getsockstate(self.socket)
                 usleep(3 * 10000)

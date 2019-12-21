@@ -68,3 +68,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 Vendor/SRT/OpenSSL-for-iPhone/
 Vendor/SRT/srt/
+*.a
