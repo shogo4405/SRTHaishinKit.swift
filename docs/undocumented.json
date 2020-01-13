@@ -1,495 +1,495 @@
 {
   "warnings": [
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
       "line": 3,
       "symbol": "SRTConnection",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
       "line": 16,
       "symbol": "SRTConnection.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
       "line": 24,
       "symbol": "SRTConnection.connect(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
       "line": 40,
       "symbol": "SRTConnection.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
       "line": 48,
       "symbol": "SRTConnection.attachStream(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 8,
       "symbol": "SRTSocketOption",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 32,
       "symbol": "SRTSocketOption.mss",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 33,
       "symbol": "SRTSocketOption.sndsyn",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 34,
       "symbol": "SRTSocketOption.rcvsyn",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 35,
       "symbol": "SRTSocketOption.isn",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 36,
       "symbol": "SRTSocketOption.fc",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 37,
       "symbol": "SRTSocketOption.sndbuf",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 38,
       "symbol": "SRTSocketOption.rcvbuf",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 39,
       "symbol": "SRTSocketOption.linger",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 40,
       "symbol": "SRTSocketOption.udpsndbuf",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 41,
       "symbol": "SRTSocketOption.udprcvbuf",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 42,
       "symbol": "SRTSocketOption.rendezvous",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 43,
       "symbol": "SRTSocketOption.sndtimeo",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 44,
       "symbol": "SRTSocketOption.rcvtimeo",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 45,
       "symbol": "SRTSocketOption.reuseaddr",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 46,
       "symbol": "SRTSocketOption.maxbw",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 47,
       "symbol": "SRTSocketOption.state",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 48,
       "symbol": "SRTSocketOption.event",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 49,
       "symbol": "SRTSocketOption.snddata",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 50,
       "symbol": "SRTSocketOption.rcvdata",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 51,
       "symbol": "SRTSocketOption.sender",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 52,
       "symbol": "SRTSocketOption.tsbdmode",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 53,
       "symbol": "SRTSocketOption.latency",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 54,
       "symbol": "SRTSocketOption.tsbpddelay",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 55,
       "symbol": "SRTSocketOption.inputbw",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 56,
       "symbol": "SRTSocketOption.oheadbw",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 57,
       "symbol": "SRTSocketOption.passphrase",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 58,
       "symbol": "SRTSocketOption.pbkeylen",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 59,
       "symbol": "SRTSocketOption.kmstate",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 60,
       "symbol": "SRTSocketOption.ipttl",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 61,
       "symbol": "SRTSocketOption.iptos",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 62,
       "symbol": "SRTSocketOption.tlpktdrop",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 63,
       "symbol": "SRTSocketOption.snddropdelay",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 64,
       "symbol": "SRTSocketOption.nakreport",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 65,
       "symbol": "SRTSocketOption.conntimeo",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 66,
       "symbol": "SRTSocketOption.sndkmstate",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 67,
       "symbol": "SRTSocketOption.lossmaxttl",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 68,
       "symbol": "SRTSocketOption.rcvlatency",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 69,
       "symbol": "SRTSocketOption.peerlatency",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 70,
       "symbol": "SRTSocketOption.minversion",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 71,
       "symbol": "SRTSocketOption.streamid",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 72,
       "symbol": "SRTSocketOption.smoother",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 73,
       "symbol": "SRTSocketOption.messageapi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 74,
       "symbol": "SRTSocketOption.payloadsize",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 75,
       "symbol": "SRTSocketOption.transtype",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 76,
       "symbol": "SRTSocketOption.kmrefreshrate",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 77,
       "symbol": "SRTSocketOption.kmpreannounce",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 79,
       "symbol": "SRTSocketOption.symbol",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 5,
       "symbol": "SRTStream",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 6,
       "symbol": "SRTStream.ReadyState",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 7,
       "symbol": "SRTStream.ReadyState.initialized",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 8,
       "symbol": "SRTStream.ReadyState.open",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 9,
       "symbol": "SRTStream.ReadyState.play",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 10,
       "symbol": "SRTStream.ReadyState.playing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 11,
       "symbol": "SRTStream.ReadyState.publish",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 12,
       "symbol": "SRTStream.ReadyState.publishing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 13,
       "symbol": "SRTStream.ReadyState.closed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 27,
       "symbol": "SRTStream.readyState",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 51,
       "symbol": "SRTStream.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 71,
       "symbol": "SRTStream.attachCamera(_:onError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 80,
       "symbol": "SRTStream.attachAudio(_:automaticallyConfiguresApplicationAudioSession:onError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 89,
       "symbol": "SRTStream.publish(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 108,
       "symbol": "SRTStream.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 119,
       "symbol": "SRTStream",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 121,
       "symbol": "SRTStream.didOutput(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/shogo/Dropbox/xcode/SRTHaishinKit.swift"
+  "source_directory": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift"
 }
