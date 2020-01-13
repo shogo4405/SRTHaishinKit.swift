@@ -4,7 +4,9 @@ if which $(pwd)/srt >/dev/null; then
   echo ""
 else
   git clone "git@github.com:Haivision/srt.git"
-  git checkout -b v1.3.3 refs/tags/1.3.3
+  pushd srt
+  git checkout refs/tags/v1.3.3
+  popd
 fi
 
 export IPHONEOS_DEPLOYMENT_TARGET=8.0
@@ -22,11 +24,12 @@ srt() {
 }
 
 # compile
-srt iPhoneSimulator SIMULATOR i386
+#srt iPhoneSimulator SIMULATOR i386
 srt iPhoneSimulator SIMULATOR64 x86_64
-srt iPhoneOS OS armv7
-srt iPhoneOS OS armv7s
+#srt iPhoneOS OS armv7
+#srt iPhoneOS OS armv7s
 srt iPhoneOS OS arm64
 
 # lipo
-lipo -output libsrt-iOS.a -create ./build/iOS/i386/libsrt.a ./build/iOS/x86_64/libsrt.a ./build/iOS/armv7/libsrt.a ./build/iOS/armv7s/libsrt.a ./build/iOS/arm64/libsrt.a
+lipo -output libsrt-iOS.a -create ./build/iOS/x86_64/libsrt.a ./build/iOS/arm64/libsrt.a
+
