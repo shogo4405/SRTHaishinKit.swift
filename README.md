@@ -93,15 +93,9 @@ ffplay -analyzeduration 100 -i 'srt://${YOUR_IP_ADDRESS}?mode=listener'
 SRTHaishinKit needs other dependencies. Please build.
 
 #### iOS
-
 ```sh
 carthage update --platform iOS
 ```
-~~cd /Vendor/SRT/
-./build-openssl-iOS.sh
-./build-srt-iOS.sh~~
-
-
 
 #### macOS
 ```sh

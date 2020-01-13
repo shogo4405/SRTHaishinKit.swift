@@ -4,6 +4,7 @@ if which $(pwd)/srt >/dev/null; then
   echo ""
 else
   git clone "git@github.com:Haivision/srt.git"
+  git checkout -b v1.3.3 refs/tags/1.3.3
 fi
 
 export IPHONEOS_DEPLOYMENT_TARGET=8.0
