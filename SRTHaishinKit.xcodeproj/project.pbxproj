@@ -1010,6 +1010,7 @@
 					/usr/local/Cellar/openssl/1.0.2p/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SDKROOT = macosx;
@@ -1055,6 +1056,7 @@
 					/usr/local/Cellar/openssl/1.0.2p/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SDKROOT = macosx;
@@ -1096,6 +1098,7 @@
 					"$(PROJECT_DIR)/Vendor/SRT",
 					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
@@ -1138,6 +1141,7 @@
 					"$(PROJECT_DIR)/Vendor/SRT",
 					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
