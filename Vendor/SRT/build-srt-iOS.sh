@@ -5,7 +5,7 @@ if which $(pwd)/srt >/dev/null; then
 else
   git clone "git@github.com:Haivision/srt.git"
   pushd srt
-  git checkout refs/tags/v1.3.3
+  git checkout refs/tags/v1.4.1
   popd
 fi
 
@@ -19,7 +19,7 @@ srt() {
   pushd ./build/iOS/$3
   ../../../srt/configure --cmake-prefix-path=$IOS_OPENSSL --ios-platform=$2 --ios-arch=$3 --cmake-toolchain-file=scripts/iOS.cmake
   make
-  install_name_tool -id "@executable_path/Frameworks/libsrt.1.3.3.dylib" libsrt.1.3.3.dylib
+  install_name_tool -id "@executable_path/Frameworks/libsrt.1.4.1.dylib" libsrt.1.4.1.dylib
   popd
 }
 
