@@ -8,7 +8,6 @@ protocol SRTSocketDelegate: class {
 class SRTSocket {
     static let defaultOptions: [SRTSocketOption: Any] = [:]
 
-    weak var delegate: SRTSocketDelegate?
     var timeout: Int = 0
     var options: [SRTSocketOption: Any] = [:] {
         didSet {
@@ -16,6 +15,7 @@ class SRTSocket {
             options[.tsbdmode] = true
         }
     }
+    weak var delegate: SRTSocketDelegate?
     private(set) var isRunning: Atomic<Bool> = .init(false)
 
     private let lockQueue: DispatchQueue = DispatchQueue(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock")
@@ -50,14 +50,18 @@ class SRTSocket {
     }
 
     func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
-        guard socket == SRT_INVALID_SOCK else { return }
+        guard socket == SRT_INVALID_SOCK else {
+            return
+        }
         // prepare socket
         socket = srt_socket(AF_INET, SOCK_DGRAM, 0)
         if socket == SRT_ERROR {
             throw SRTError.illegalState(message: "")
         }
         self.options = options
-        guard configure(.pre) else { return }
+        guard configure(.pre) else {
+            return
+        }
         // prepare connect
         var addr_cp = addr
         let stat = withUnsafePointer(to: &addr_cp) { ptr -> Int32 in
@@ -67,7 +71,9 @@ class SRTSocket {
         if stat == SRT_ERROR {
             throw SRTError.illegalState(message: "")
         }
-        guard configure(.post) else { return }
+        guard configure(.post) else {
+            return
+        }
         startRunning()
     }
 
@@ -79,7 +85,9 @@ class SRTSocket {
 
     func configure(_ binding: SRTSocketOption.Binding) -> Bool {
         let failures = SRTSocketOption.configure(socket, binding: binding, options: options)
-        guard failures.isEmpty else { logger.error(failures); return false }
+        guard failures.isEmpty else {
+            logger.error(failures); return false
+        }
         return true
     }
 }

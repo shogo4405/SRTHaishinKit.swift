@@ -67,8 +67,9 @@ open class SRTConnection: NSObject {
 extension SRTConnection: SRTSocketDelegate {
     // MARK: SRTSocketDelegate
     func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS) {
-        if let incomingSocket = incomingSocket, let outgoingSocket = outgoingSocket {
-            connected = incomingSocket.status == SRTS_CONNECTED && outgoingSocket.status == SRTS_CONNECTED
+        guard let incomingSocket = incomingSocket, let outgoingSocket = outgoingSocket else {
+            return
         }
+        connected = incomingSocket.status == SRTS_CONNECTED && outgoingSocket.status == SRTS_CONNECTED
     }
 }
