@@ -1,6 +1,6 @@
 import Foundation
 
-open class SRTConnection: NSObject {
+open class SRTConnection: NSObject {    
     /// SRT Library version
     static public let version: String = SRT_VERSION_STRING
 
@@ -22,7 +22,9 @@ open class SRTConnection: NSObject {
     }
 
     public func connect(_ uri: URL?) {
-        guard let uri = uri, let scheme = uri.scheme, let host = uri.host, let port = uri.port, scheme == "srt" else { return }
+        guard let uri = uri, let scheme = uri.scheme, let host = uri.host, let port = uri.port, scheme == "srt" else {
+            return
+        }
 
         self.uri = uri
         let options = SRTSocketOption.from(uri: uri)
