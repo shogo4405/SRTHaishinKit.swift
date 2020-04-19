@@ -69,7 +69,6 @@ public enum SRTSocketOption: String {
     case peerlatency
     case minversion
     case streamid
-    case smoother
     case messageapi
     case payloadsize
     case transtype
@@ -101,7 +100,6 @@ public enum SRTSocketOption: String {
         case .peerlatency: return SRTO_PEERLATENCY
         case .minversion: return SRTO_MINVERSION
         case .streamid: return SRTO_STREAMID
-        case .smoother: return SRTO_SMOOTHER
         case .messageapi: return SRTO_MESSAGEAPI
         case .payloadsize: return SRTO_PAYLOADSIZE
         case .transtype: return SRTO_TRANSTYPE
@@ -152,7 +150,6 @@ public enum SRTSocketOption: String {
         case .peerlatency: return .pre
         case .minversion: return .pre
         case .streamid: return .pre
-        case .smoother: return .pre
         case .messageapi: return .pre
         case .payloadsize: return .pre
         case .transtype: return .pre
@@ -203,7 +200,6 @@ public enum SRTSocketOption: String {
         case .peerlatency: return .int
         case .minversion: return .int
         case .streamid: return .string
-        case .smoother: return .string
         case .messageapi: return .bool
         case .payloadsize: return .int
         case .transtype: return .enumeration

@@ -1,6 +1,6 @@
 import Foundation
 
-open class SRTConnection: NSObject {    
+open class SRTConnection: NSObject {
     /// SRT Library version
     static public let version: String = SRT_VERSION_STRING
 
