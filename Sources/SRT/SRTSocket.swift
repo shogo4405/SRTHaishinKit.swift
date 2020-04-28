@@ -1,5 +1,6 @@
 import Foundation
 import HaishinKit
+import Logboard
 
 protocol SRTSocketDelegate: class {
     func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS)
@@ -26,22 +27,31 @@ class SRTSocket {
             delegate?.status(self, status: status)
             switch status {
             case SRTS_INIT: // 1
+                logger.trace("SRT Socket Init")
                 break
             case SRTS_OPENED:
+                logger.info("SRT Socket opened")
                 break
             case SRTS_LISTENING:
+                logger.trace("SRT Socket Listening")
                 break
             case SRTS_CONNECTING:
+                logger.trace("SRT Socket Connecting")
                 break
             case SRTS_CONNECTED:
+                logger.info("SRT Socket Connected")
                 break
             case SRTS_BROKEN:
+                logger.warn("SRT Socket Broken")
                 close()
             case SRTS_CLOSING:
+                logger.trace("SRT Socket Closing")
                 break
             case SRTS_CLOSED:
+                logger.info("SRT Socket Closed")
                 stopRunning()
             case SRTS_NONEXIST:
+                logger.warn("SRT Socket Not Exist")
                 break
             default:
                 break
@@ -50,30 +60,45 @@ class SRTSocket {
     }
 
     func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
+       
         guard socket == SRT_INVALID_SOCK else {
             return
         }
+        
         // prepare socket
         socket = srt_socket(AF_INET, SOCK_DGRAM, 0)
         if socket == SRT_ERROR {
-            throw SRTError.illegalState(message: "")
+                let error_message = String(cString:srt_getlasterror_str())
+                
+                logger.error(error_message)
+                throw SRTError.illegalState(message: error_message)
         }
+     
         self.options = options
         guard configure(.pre) else {
             return
         }
+    
         // prepare connect
         var addr_cp = addr
         let stat = withUnsafePointer(to: &addr_cp) { ptr -> Int32 in
             let psa = UnsafeRawPointer(ptr).assumingMemoryBound(to: sockaddr.self)
             return srt_connect(socket, psa, Int32(MemoryLayout.size(ofValue: addr)))
         }
+    
+      
         if stat == SRT_ERROR {
-            throw SRTError.illegalState(message: "")
+           
+            let error_message = String(cString:srt_getlasterror_str())
+            
+            logger.error(error_message)
+            throw SRTError.illegalState(message: error_message)
         }
+
         guard configure(.post) else {
             return
         }
+      
         startRunning()
     }
 
