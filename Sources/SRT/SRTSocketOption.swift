@@ -7,11 +7,20 @@ private let enummapTranstype: [String: Any] = [
 
 public enum SRTSocketOption: String {
     static func from(uri: URL?) -> [SRTSocketOption: Any] {
-        guard let uri = uri, let queryItems = URLComponents(url: uri, resolvingAgainstBaseURL: true)?.queryItems else { return [:] }
+     
+        //resolvingAgainstBaseURL does not work with the streamid standard
+        //guard let uri = uri, let queryItems = URLComponents(url: uri, resolvingAgainstBaseURL: true)?.queryItems else { return [:] }
+        
+        guard let uri = uri else { return [:] }
+        
+        let queryItems = getQueryItems(uri: uri)
+        
         var options: [SRTSocketOption: Any] = [:]
         for item in queryItems {
-            guard let option = SRTSocketOption(rawValue: item.name) else { continue }
+            guard let option = SRTSocketOption(rawValue: item.key) else { continue }
             options[option] = item.value
+            print(item.key)
+            print(item.value)
         }
         return options
     }
@@ -272,5 +281,30 @@ public enum SRTSocketOption: String {
             if !key.apply(socket, value: value) { failures.append(key.rawValue) }
         }
         return failures
+    }
+    
+    static func getQueryItems(uri: URL)->[String:String]{
+        
+        let url = uri.absoluteString
+        
+        if (!url.contains("?")){
+            return [:]
+        }
+        
+        let queryString = url.split(separator: "?")[1]
+        print(queryString)
+        let queries = queryString.split(separator: "&")
+        
+        var paramsReturn:[String:String] = [:]
+        
+        for q in queries {
+            
+            //streamid standard may have more then one equal
+            let query = q.split(separator: "=", maxSplits: 1)
+            paramsReturn[String(query[0])] = String(query[1])
+        }
+        
+        return paramsReturn
+        
     }
 }
