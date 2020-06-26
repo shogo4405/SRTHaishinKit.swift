@@ -14,6 +14,7 @@ final class SRTOutgoingSocket: SRTSocket {
             repeat {
                 if let data = self.pendingData.first {
                     data.withUnsafeBytes { (buffer: UnsafePointer<Int8>) -> Void in
+                        
                         srt_sendmsg2(self.socket, buffer, Int32(data.count), nil)
                     }
                     self.pendingData.remove(at: 0)
@@ -28,6 +29,7 @@ final class SRTOutgoingSocket: SRTSocket {
             return super.configure(binding)
         case .post:
             options[.sndsyn] = true
+            options[.tsbdmode] = true
             if 0 < timeout {
                 options[.sndtimeo] = timeout
             }
