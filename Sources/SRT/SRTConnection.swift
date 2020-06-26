@@ -9,12 +9,14 @@ open class SRTConnection: NSObject {
     /// This instance connect to server(true) or not(false)
     @objc dynamic public private(set) var connected: Bool = false
 
-    var incomingSocket: SRTIncomingSocket?
+  //  var incomingSocket: SRTIncomingSocket?
     var outgoingSocket: SRTOutgoingSocket?
     private var streams: [SRTStream] = []
 
     public override init() {
         super.init()
+        logger.level = .trace
+       
     }
 
     deinit {
@@ -29,14 +31,15 @@ open class SRTConnection: NSObject {
         self.uri = uri
         let options = SRTSocketOption.from(uri: uri)
         let addr = sockaddr_in(host, port: UInt16(port))
-
+        
         outgoingSocket = SRTOutgoingSocket()
         outgoingSocket?.delegate = self
         ((try? outgoingSocket?.connect(addr, options: options)) as ()??)
 
-        incomingSocket = SRTIncomingSocket()
-        incomingSocket?.delegate = self
-        ((try? incomingSocket?.connect(addr, options: options)) as ()??)
+//        incomingSocket = SRTIncomingSocket()
+//        incomingSocket?.delegate = self
+//        ((try? incomingSocket?.connect(addr, options: options)) as ()??)
+    
     }
 
     public func close() {
@@ -44,7 +47,7 @@ open class SRTConnection: NSObject {
             stream.close()
         }
         outgoingSocket?.close()
-        incomingSocket?.close()
+        //incomingSocket?.close()
     }
 
     public func attachStream(_ stream: SRTStream) {
@@ -55,6 +58,7 @@ open class SRTConnection: NSObject {
         var addr: sockaddr_in = .init()
         addr.sin_family = sa_family_t(AF_INET)
         addr.sin_port = CFSwapInt16BigToHost(UInt16(port))
+     
         if inet_pton(AF_INET, host, &addr.sin_addr) == 1 {
             return addr
         }
@@ -69,9 +73,13 @@ open class SRTConnection: NSObject {
 extension SRTConnection: SRTSocketDelegate {
     // MARK: SRTSocketDelegate
     func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS) {
-        guard let incomingSocket = incomingSocket, let outgoingSocket = outgoingSocket else {
-            return
-        }
-        connected = incomingSocket.status == SRTS_CONNECTED && outgoingSocket.status == SRTS_CONNECTED
+       // guard let incomingSocket = incomingSocket, let outgoingSocket = outgoingSocket else {
+       //     return
+        //}
+        guard  let outgoingSocket = outgoingSocket else {
+                   return
+               }
+       // connected = incomingSocket.status == SRTS_CONNECTED && outgoingSocket.status == SRTS_CONNECTED
+        connected = outgoingSocket.status == SRTS_CONNECTED
     }
 }

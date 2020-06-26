@@ -19,8 +19,7 @@ public enum SRTSocketOption: String {
         for item in queryItems {
             guard let option = SRTSocketOption(rawValue: item.key) else { continue }
             options[option] = item.value
-            print(item.key)
-            print(item.value)
+      
         }
         return options
     }
@@ -283,7 +282,7 @@ public enum SRTSocketOption: String {
         return failures
     }
     
-    static func getQueryItems(uri: URL)->[String:String]{
+    static func getQueryItems(uri: URL)->[String:Any]{
         
         let url = uri.absoluteString
         
@@ -295,10 +294,15 @@ public enum SRTSocketOption: String {
         print(queryString)
         let queries = queryString.split(separator: "&")
         
-        var paramsReturn:[String:String] = [:]
+        var paramsReturn:[String:Any] = [:]
+        
+        //defaults
+        
+//        paramsReturn["rcvsyn"] = true
+
         
         for q in queries {
-            
+                
             //streamid standard may have more then one equal
             let query = q.split(separator: "=", maxSplits: 1)
             paramsReturn[String(query[0])] = String(query[1])
