@@ -92,6 +92,11 @@ ffplay -analyzeduration 100 -i 'srt://${YOUR_IP_ADDRESS}?mode=listener'
 ### :memo: How can I run example project?
 SRTHaishinKit needs other dependencies. Please build.
 
+#### Prerequisites
+```sh
+brew install cmake
+```
+
 #### iOS
 ```sh
 carthage update --platform iOS
