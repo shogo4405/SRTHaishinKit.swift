@@ -123,7 +123,7 @@ extension SRTStream: TSWriterDelegate {
   
     final public func didOutput(_ data: Data) {
         guard readyState == .publishing else { return }
-        print(data.count)
+        //print("TS Output: "+data.count)
             connection?.outgoingSocket?.write(data)
         
     }

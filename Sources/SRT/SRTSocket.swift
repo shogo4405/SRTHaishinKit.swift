@@ -2,11 +2,11 @@ import Foundation
 import HaishinKit
 import Logboard
 
-protocol SRTSocketDelegate: class {
+public protocol SRTSocketDelegate: class {
     func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS)
 }
 
-class SRTSocket {
+open class SRTSocket {
     static let defaultOptions: [SRTSocketOption: Any] = [:]
 
     var timeout: Int = 0
@@ -17,7 +17,7 @@ class SRTSocket {
         }
     }
     weak var delegate: SRTSocketDelegate?
-    private(set) var isRunning: Atomic<Bool> = .init(false)
+    private(set) public var isRunning: Atomic<Bool> = .init(false)
 
     private let lockQueue: DispatchQueue = DispatchQueue(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock")
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
@@ -119,7 +119,7 @@ class SRTSocket {
 
 extension SRTSocket: Running {
     // MARK: Running
-    func startRunning() {
+    public func startRunning() {
         lockQueue.async {
             self.isRunning.mutate { $0 = true }
             repeat {
@@ -129,7 +129,7 @@ extension SRTSocket: Running {
         }
     }
 
-    func stopRunning() {
+    public func stopRunning() {
         isRunning.mutate { $0 = false }
     }
 }

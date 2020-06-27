@@ -1,5 +1,7 @@
 import Foundation
 
+
+
 open class SRTConnection: NSObject {
     /// SRT Library version
     static public let version: String = SRT_VERSION_STRING
@@ -72,7 +74,7 @@ open class SRTConnection: NSObject {
 
 extension SRTConnection: SRTSocketDelegate {
     // MARK: SRTSocketDelegate
-    func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS) {
+    public func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS) {
        // guard let incomingSocket = incomingSocket, let outgoingSocket = outgoingSocket else {
        //     return
         //}

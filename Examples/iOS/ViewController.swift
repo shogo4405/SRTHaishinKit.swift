@@ -28,24 +28,18 @@ final class ViewController: UIViewController {
                 .width: 1080,
                 .height: 1920,
                 .bitrate: 2 * 1000000, // video output bitrate
-                .profileLevel: kVTProfileLevel_HEVC_Main_AutoLevel
+                .profileLevel: kVTProfileLevel_H264_High_AutoLevel
             ]
-        } else {
-            // Fallback on earlier versions
         }
        
         
-         srtStream.publish("hoge")
-        connection!.attachStream(srtStream)
+   
         
        //connection!.connect(URL(string: "srt://134.209.120.63:10080?streamid=#!::h=live/livestream,m=publish"))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.connection!.connect(URL(string: "srt://192.168.0.250:8080?streamid=uplive.sls.com/live/test"))
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-            self.srtStream.videoSettings[.bitrate] = 1 * 1000000 // video output bitrate
-        }
+   
+    
+         //   self.srtStream.videoSettings[.bitrate] = 1 * 1000000 // video output bitrate
+      
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -59,4 +53,28 @@ final class ViewController: UIViewController {
         
         hkView?.attachStream(srtStream)
     }
+    
+    
+    @IBOutlet weak var streamToggle: UIButton!
+    //handle situations
+    @IBAction func streamToggleBTN(_ sender: Any) {
+        streamToggle.setTitle( !connection.connected ? "Stop Broadcast" : "Start Broadcast", for: .normal)
+        
+        if (!connection.connected){
+            
+        srtStream.publish("hoge")
+        connection!.attachStream(srtStream)
+            
+            //update URL to your SRT Server
+         connection!.connect(URL(string: "srt://srt1.development.seasoncast.com:8080?streamid=uplive.sls.com/live/test"))
+            
+        }else{
+            srtStream.close()
+            connection.close()
+        }
+        
+        
+    }
+    
+    
 }
