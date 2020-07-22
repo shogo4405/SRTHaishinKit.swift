@@ -60,37 +60,36 @@ open class SRTSocket {
     }
 
     func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
-       
+
         guard socket == SRT_INVALID_SOCK else {
             return
         }
-        
+
         // prepare socket
         socket = srt_socket(AF_INET, SOCK_DGRAM, 0)
         if socket == SRT_ERROR {
-                let error_message = String(cString:srt_getlasterror_str())
-                
+                let error_message = String(cString: srt_getlasterror_str())
+
                 logger.error(error_message)
                 throw SRTError.illegalState(message: error_message)
         }
-     
+
         self.options = options
         guard configure(.pre) else {
             return
         }
-    
+
         // prepare connect
         var addr_cp = addr
         let stat = withUnsafePointer(to: &addr_cp) { ptr -> Int32 in
             let psa = UnsafeRawPointer(ptr).assumingMemoryBound(to: sockaddr.self)
             return srt_connect(socket, psa, Int32(MemoryLayout.size(ofValue: addr)))
         }
-    
-      
+
         if stat == SRT_ERROR {
-           
-            let error_message = String(cString:srt_getlasterror_str())
-            
+
+            let error_message = String(cString: srt_getlasterror_str())
+
             logger.error(error_message)
             throw SRTError.illegalState(message: error_message)
         }
@@ -98,7 +97,7 @@ open class SRTSocket {
         guard configure(.post) else {
             return
         }
-      
+
         startRunning()
     }
 
