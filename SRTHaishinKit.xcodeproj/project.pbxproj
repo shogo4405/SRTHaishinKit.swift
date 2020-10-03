@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,8 +31,6 @@
 		296FB21C21A6BE2D00CB4770 /* srt4udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20A21A6BD9800CB4770 /* srt4udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		296FB22821A6BEE700CB4770 /* SRTSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB22721A6BEE700CB4770 /* SRTSocket.swift */; };
 		296FB22921A6BEE700CB4770 /* SRTSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB22721A6BEE700CB4770 /* SRTSocket.swift */; };
-		296FB22C21A6C12F00CB4770 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB22A21A6C12F00CB4770 /* HaishinKit.framework */; };
-		296FB22D21A6C12F00CB4770 /* Logboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB22B21A6C12F00CB4770 /* Logboard.framework */; };
 		296FB23721A6D58900CB4770 /* SRTStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23621A6D58900CB4770 /* SRTStream.swift */; };
 		296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23621A6D58900CB4770 /* SRTStream.swift */; };
 		296FB23D21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */; };
@@ -83,8 +81,6 @@
 		296FB28821A70E1500CB4770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28321A70D8100CB4770 /* Constants.swift */; };
 		296FB28A21A800CF00CB4770 /* SRTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28921A800CF00CB4770 /* SRTConnection.swift */; };
 		296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28921A800CF00CB4770 /* SRTConnection.swift */; };
-		296FB29021A80F1700CB4770 /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB28E21A80F1700CB4770 /* HaishinKit.framework */; };
-		296FB29121A80F1700CB4770 /* Logboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB28F21A80F1700CB4770 /* Logboard.framework */; };
 		296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; };
 		296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		296FB29F21A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */; };
@@ -92,7 +88,6 @@
 		296FB2A221A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */; };
 		296FB2A321A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */; };
 		29B2C56C21B3CA8A00B1609D /* libsrt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B2C56B21B3CA8A00B1609D /* libsrt.a */; };
-		29D0939621A98B28003E6E1F /* HaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296FB22A21A6C12F00CB4770 /* HaishinKit.framework */; };
 		29D0939921A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
 		29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
 		BC0951DE23E73951009FAA72 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0951DD23E73950009FAA72 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -109,6 +104,8 @@
 		BC3A695F23E735A80025FC83 /* packetfilter_api.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695423E735A70025FC83 /* packetfilter_api.h */; };
 		BC3A696023E735A80025FC83 /* ccc.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695523E735A70025FC83 /* ccc.h */; };
 		BC3A696123E735A80025FC83 /* ccc.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695523E735A70025FC83 /* ccc.h */; };
+		BCBEB9C4250CEA6700E800FE /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = BCBEB9C3250CEA6700E800FE /* HaishinKit */; };
+		BCBEB9C6250CEAC100E800FE /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = BCBEB9C5250CEAC100E800FE /* HaishinKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,8 +164,6 @@
 		296FB20E21A6BD9800CB4770 /* platform_sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_sys.h; path = Vendor/SRT/Includes/platform_sys.h; sourceTree = SOURCE_ROOT; };
 		296FB21021A6BD9900CB4770 /* srt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srt.h; path = Vendor/SRT/Includes/srt.h; sourceTree = SOURCE_ROOT; };
 		296FB22721A6BEE700CB4770 /* SRTSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocket.swift; sourceTree = "<group>"; };
-		296FB22A21A6C12F00CB4770 /* HaishinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HaishinKit.framework; path = Carthage/Build/iOS/HaishinKit.framework; sourceTree = "<group>"; };
-		296FB22B21A6C12F00CB4770 /* Logboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logboard.framework; path = Carthage/Build/iOS/Logboard.framework; sourceTree = "<group>"; };
 		296FB22F21A6C2C700CB4770 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		296FB23621A6D58900CB4770 /* SRTStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTStream.swift; sourceTree = "<group>"; };
 		296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocketOption.swift; sourceTree = "<group>"; };
@@ -196,8 +191,6 @@
 		296FB28321A70D8100CB4770 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		296FB28521A70D9600CB4770 /* SRTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTError.swift; sourceTree = "<group>"; };
 		296FB28921A800CF00CB4770 /* SRTConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTConnection.swift; sourceTree = "<group>"; };
-		296FB28E21A80F1700CB4770 /* HaishinKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HaishinKit.framework; path = Carthage/Build/Mac/HaishinKit.framework; sourceTree = "<group>"; };
-		296FB28F21A80F1700CB4770 /* Logboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logboard.framework; path = Carthage/Build/Mac/Logboard.framework; sourceTree = "<group>"; };
 		296FB29521A8121E00CB4770 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTIncomingSocket.swift; sourceTree = "<group>"; };
 		296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTOutgoingSocket.swift; sourceTree = "<group>"; };
@@ -212,6 +205,7 @@
 		BC3A695323E735A70025FC83 /* packetfilter_builtin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packetfilter_builtin.h; sourceTree = "<group>"; };
 		BC3A695423E735A70025FC83 /* packetfilter_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packetfilter_api.h; sourceTree = "<group>"; };
 		BC3A695523E735A70025FC83 /* ccc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccc.h; sourceTree = "<group>"; };
+		BCBEB9C1250CEA2100E800FE /* Example iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Example iOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,8 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29B2C56C21B3CA8A00B1609D /* libsrt.a in Frameworks */,
-				296FB29021A80F1700CB4770 /* HaishinKit.framework in Frameworks */,
-				296FB29121A80F1700CB4770 /* Logboard.framework in Frameworks */,
+				BCBEB9C4250CEA6700E800FE /* HaishinKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,9 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				29370FDB21B3EDE900451B6F /* libc++.tbd in Frameworks */,
-				296FB22C21A6C12F00CB4770 /* HaishinKit.framework in Frameworks */,
-				296FB22D21A6C12F00CB4770 /* Logboard.framework in Frameworks */,
 				29370FDE21B3EE8500451B6F /* libsrt-iOS.a in Frameworks */,
+				BCBEB9C6250CEAC100E800FE /* HaishinKit in Frameworks */,
 				29370FDC21B3EE3F00451B6F /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +240,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29D0939621A98B28003E6E1F /* HaishinKit.framework in Frameworks */,
 				296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +250,7 @@
 		2923D26B217339E2000A5E9B = {
 			isa = PBXGroup;
 			children = (
+				BCBEB9C1250CEA2100E800FE /* Example iOS.entitlements */,
 				296FB29521A8121E00CB4770 /* Gemfile */,
 				296FB1FC21A6A7BD00CB4770 /* Cartfile */,
 				2923D2BA21733B1E000A5E9B /* LICENSE */,
@@ -382,10 +374,6 @@
 				29370FDA21B3EDE900451B6F /* libc++.tbd */,
 				29370FD821B3EDCA00451B6F /* libcrypto.a */,
 				29B2C56B21B3CA8A00B1609D /* libsrt.a */,
-				296FB22A21A6C12F00CB4770 /* HaishinKit.framework */,
-				296FB22B21A6C12F00CB4770 /* Logboard.framework */,
-				296FB28E21A80F1700CB4770 /* HaishinKit.framework */,
-				296FB28F21A80F1700CB4770 /* Logboard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -589,6 +577,9 @@
 			dependencies = (
 			);
 			name = "SRTHaishinKit macOS";
+			packageProductDependencies = (
+				BCBEB9C3250CEA6700E800FE /* HaishinKit */,
+			);
 			productName = SRTHaishinKit;
 			productReference = 2923D2C421733C3D000A5E9B /* SRTHaishinKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -608,6 +599,9 @@
 			dependencies = (
 			);
 			name = "SRTHaishinKit iOS";
+			packageProductDependencies = (
+				BCBEB9C5250CEAC100E800FE /* HaishinKit */,
+			);
 			productName = SRTHaishinKit;
 			productReference = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -639,7 +633,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					2923D29A21733A73000A5E9B = {
@@ -668,6 +662,9 @@
 				Base,
 			);
 			mainGroup = 2923D26B217339E2000A5E9B;
+			packageReferences = (
+				BCBEB9C2250CEA6700E800FE /* XCRemoteSwiftPackageReference "HaishinKit" */,
+			);
 			productRefGroup = 2923D275217339E2000A5E9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -871,6 +868,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -896,7 +894,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -932,6 +931,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -951,7 +951,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1010,7 +1011,7 @@
 		2923D2CA21733C3D000A5E9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1056,7 +1057,7 @@
 		2923D2CB21733C3D000A5E9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1117,7 +1118,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Platforms/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1161,7 +1162,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Platforms/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1190,6 +1191,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1204,6 +1206,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.srt.SRTHaishinKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1214,6 +1217,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1228,6 +1232,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.srt.SRTHaishinKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1282,6 +1287,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCBEB9C2250CEA6700E800FE /* XCRemoteSwiftPackageReference "HaishinKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shogo4405/HaishinKit.swift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCBEB9C3250CEA6700E800FE /* HaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCBEB9C2250CEA6700E800FE /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = HaishinKit;
+		};
+		BCBEB9C5250CEAC100E800FE /* HaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCBEB9C2250CEA6700E800FE /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = HaishinKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2923D26C217339E2000A5E9B /* Project object */;
 }
