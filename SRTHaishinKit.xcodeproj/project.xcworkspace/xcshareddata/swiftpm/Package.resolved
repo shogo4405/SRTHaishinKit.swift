@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/shogo4405/HaishinKit.swift",
         "state": {
           "branch": null,
-          "revision": "f62664eb4510f41ec2269530f96264f9bd8bd28c",
-          "version": "1.1.0"
+          "revision": "2aab987bb33bcd515f00bc6c9c3ad387c3fab87d",
+          "version": "1.1.2"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/shogo4405/Logboard.git",
         "state": {
           "branch": null,
-          "revision": "0f156a3aa9782196037881aec2ee796885e3fe29",
-          "version": "2.2.0"
+          "revision": "8cc7656b07e4d327fae42e1320e2e48b8868e3f6",
+          "version": "2.2.2"
         }
       }
     ]
