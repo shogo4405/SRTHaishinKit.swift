@@ -4,6 +4,15 @@
 * Camera and Microphone streaming library via SRT for iOS.
 * Issuesの言語は、英語か、日本語でお願いします！
 
+## Communication
+* If you need help with making LiveStreaming requests using HaishinKit, use a GitHub issue with **Bug report template**
+  - The trace level log is very useful. Please set `Logboard.with(SRTHaishinKitIdentifier).level = .trace`. 
+  - If you don't use an issue template. I will immediately close the your issue without a comment.
+* If you'd like to discuss a feature request, use a GitHub issue with **Feature request template**.
+* If you want to support e-mail based communication without GitHub issue.
+  - Consulting fee is [$50](https://www.paypal.me/shogo4405/50USD)/1 incident. I'm able to response a few days.
+* If you **want to contribute**, submit a pull request!
+
 ## Features
 ### SRT
 - [x] Publish and Recording (H264/AAC)
@@ -40,7 +49,7 @@ BSD-3-Clause
 
 ## Donation
 Paypal
-- https://www.paypal.me/shogo4405
+ - https://www.paypal.me/shogo4405
 
 Bitcoin
 ```txt
@@ -99,19 +108,8 @@ brew install cmake
 
 #### iOS
 ```sh
-carthage update --platform iOS
+carthage update --use-xcframeworks --platform iOS
 ```
-
-#### macOS
-```sh
-carthage update --platform macOS
-brew update
-brew install srt
-```
-
-### :memo: Do you support me via Email?
-Yes. Consulting fee is [$50](https://www.paypal.me/shogo4405/50USD)/1 incident. I don't recommend. 
-Please consider to use Issues.
 
 ## Dependencies
 1. https://github.com/Haivision/srt
