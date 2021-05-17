@@ -14,7 +14,7 @@
 		2923D2C821733C3D000A5E9B /* SRTHaishinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2923D2C621733C3D000A5E9B /* SRTHaishinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2923D2DD21734075000A5E9B /* SRTHaishinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2923D2DB21734075000A5E9B /* SRTHaishinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2923D2F9217342A2000A5E9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923D2F8217342A2000A5E9B /* AppDelegate.swift */; };
-		2923D2FB217342A3000A5E9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923D2FA217342A3000A5E9B /* ViewController.swift */; };
+		2923D2FB217342A3000A5E9B /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2923D2FA217342A3000A5E9B /* LiveViewController.swift */; };
 		2923D2FE217342A3000A5E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FC217342A3000A5E9B /* Main.storyboard */; };
 		2923D300217342A4000A5E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FF217342A4000A5E9B /* Assets.xcassets */; };
 		2923D303217342A4000A5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D301217342A4000A5E9B /* LaunchScreen.storyboard */; };
@@ -103,6 +103,9 @@
 		BC3A695F23E735A80025FC83 /* packetfilter_api.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695423E735A70025FC83 /* packetfilter_api.h */; };
 		BC3A696023E735A80025FC83 /* ccc.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695523E735A70025FC83 /* ccc.h */; };
 		BC3A696123E735A80025FC83 /* ccc.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695523E735A70025FC83 /* ccc.h */; };
+		BCC1A7332652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
+		BCC1A7342652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
+		BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7352652C72600661156 /* PreferenceViewController.swift */; };
 		BCD1DC20260623E200A1C593 /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; };
 		BCD1DC21260623E200A1C593 /* HaishinKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCD1DC22260623E200A1C593 /* Logboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1F260623E200A1C593 /* Logboard.xcframework */; };
@@ -157,7 +160,7 @@
 		2923D2DC21734075000A5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2923D2F6217342A2000A5E9B /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2923D2F8217342A2000A5E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2923D2FA217342A3000A5E9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2923D2FA217342A3000A5E9B /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		2923D2FD217342A3000A5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2923D2FF217342A4000A5E9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2923D302217342A4000A5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 		BC3A695423E735A70025FC83 /* packetfilter_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packetfilter_api.h; sourceTree = "<group>"; };
 		BC3A695523E735A70025FC83 /* ccc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccc.h; sourceTree = "<group>"; };
 		BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SRTHaishinKit.entitlements; sourceTree = "<group>"; };
+		BCC1A7322652C39D00661156 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		BCC1A7352652C72600661156 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HaishinKit.xcframework; path = Carthage/Build/HaishinKit.xcframework; sourceTree = "<group>"; };
 		BCD1DC1F260623E200A1C593 /* Logboard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Logboard.xcframework; path = Carthage/Build/Logboard.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -358,13 +363,15 @@
 		2923D2F7217342A2000A5E9B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */,
 				2923D2F8217342A2000A5E9B /* AppDelegate.swift */,
-				2923D2FA217342A3000A5E9B /* ViewController.swift */,
-				2923D2FC217342A3000A5E9B /* Main.storyboard */,
 				2923D2FF217342A4000A5E9B /* Assets.xcassets */,
-				2923D301217342A4000A5E9B /* LaunchScreen.storyboard */,
 				2923D304217342A4000A5E9B /* Info.plist */,
+				2923D301217342A4000A5E9B /* LaunchScreen.storyboard */,
+				2923D2FA217342A3000A5E9B /* LiveViewController.swift */,
+				2923D2FC217342A3000A5E9B /* Main.storyboard */,
+				BCC1A7322652C39D00661156 /* Preference.swift */,
+				BCC1A7352652C72600661156 /* PreferenceViewController.swift */,
+				BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -750,6 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2923D2A021733A73000A5E9B /* ViewController.swift in Sources */,
+				BCC1A7332652C39D00661156 /* Preference.swift in Sources */,
 				2923D29E21733A73000A5E9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,8 +798,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2923D2FB217342A3000A5E9B /* ViewController.swift in Sources */,
+				2923D2FB217342A3000A5E9B /* LiveViewController.swift in Sources */,
+				BCC1A7342652C39D00661156 /* Preference.swift in Sources */,
 				2923D2F9217342A2000A5E9B /* AppDelegate.swift in Sources */,
+				BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

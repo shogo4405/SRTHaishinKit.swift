@@ -2,7 +2,7 @@ import Foundation
 import HaishinKit
 import Logboard
 
-protocol SRTSocketDelegate: class {
+protocol SRTSocketDelegate: AnyObject {
     func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS)
 }
 
