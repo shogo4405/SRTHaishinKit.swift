@@ -19,7 +19,6 @@
 		2923D300217342A4000A5E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FF217342A4000A5E9B /* Assets.xcassets */; };
 		2923D303217342A4000A5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D301217342A4000A5E9B /* LaunchScreen.storyboard */; };
 		29370FDB21B3EDE900451B6F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29370FDA21B3EDE900451B6F /* libc++.tbd */; };
-		29370FDC21B3EE3F00451B6F /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29370FD821B3EDCA00451B6F /* libcrypto.a */; };
 		29370FDE21B3EE8500451B6F /* libsrt-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29370FDD21B3EE8400451B6F /* libsrt-iOS.a */; };
 		296FB21121A6BD9900CB4770 /* srt4udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20A21A6BD9800CB4770 /* srt4udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		296FB21521A6BD9900CB4770 /* platform_sys.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20E21A6BD9800CB4770 /* platform_sys.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -106,6 +105,7 @@
 		BCC1A7332652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
 		BCC1A7342652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
 		BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7352652C72600661156 /* PreferenceViewController.swift */; };
+		BCC1A73A2656BFAD00661156 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC1A7392656BF9200661156 /* libcrypto.a */; };
 		BCD1DC20260623E200A1C593 /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; };
 		BCD1DC21260623E200A1C593 /* HaishinKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCD1DC22260623E200A1C593 /* Logboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1F260623E200A1C593 /* Logboard.xcframework */; };
@@ -218,6 +218,7 @@
 		BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SRTHaishinKit.entitlements; sourceTree = "<group>"; };
 		BCC1A7322652C39D00661156 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		BCC1A7352652C72600661156 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		BCC1A7392656BF9200661156 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = Vendor/SRT/OpenSSL/iphoneos/lib/libcrypto.a; sourceTree = "<group>"; };
 		BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HaishinKit.xcframework; path = Carthage/Build/HaishinKit.xcframework; sourceTree = "<group>"; };
 		BCD1DC1F260623E200A1C593 /* Logboard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Logboard.xcframework; path = Carthage/Build/Logboard.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,10 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD1DC292606240200A1C593 /* Logboard.xcframework in Frameworks */,
+				BCC1A73A2656BFAD00661156 /* libcrypto.a in Frameworks */,
 				29370FDB21B3EDE900451B6F /* libc++.tbd in Frameworks */,
 				BCD1DC272606240200A1C593 /* HaishinKit.xcframework in Frameworks */,
 				29370FDE21B3EE8500451B6F /* libsrt-iOS.a in Frameworks */,
-				29370FDC21B3EE3F00451B6F /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +390,7 @@
 		296FB20621A6BD1F00CB4770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCC1A7392656BF9200661156 /* libcrypto.a */,
 				BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */,
 				BCD1DC1F260623E200A1C593 /* Logboard.xcframework */,
 				29370FDD21B3EE8400451B6F /* libsrt-iOS.a */,
@@ -1126,6 +1128,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/SRT",
 					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
+					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
 				);
 				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
@@ -1167,6 +1170,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/SRT",
 					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
+					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
 				);
 				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;

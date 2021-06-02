@@ -9,11 +9,11 @@ else
   popd
 fi
 
-export IPHONEOS_DEPLOYMENT_TARGET=8.0
+export IPHONEOS_DEPLOYMENT_TARGET=9.0
 SDKVERSION=$(xcrun --sdk iphoneos --show-sdk-version)
 
 srt() {
-  IOS_OPENSSL=$(pwd)/OpenSSL-for-iPhone/bin/$1${SDKVERSION}-$3.sdk
+  IOS_OPENSSL=$(pwd)/OpenSSL/$1
 
   mkdir -p ./build/iOS/$3
   pushd ./build/iOS/$3
@@ -24,12 +24,12 @@ srt() {
 }
 
 # compile
-#srt iPhoneSimulator SIMULATOR i386
-srt iPhoneSimulator SIMULATOR64 x86_64
-#srt iPhoneOS OS armv7
-#srt iPhoneOS OS armv7s
-srt iPhoneOS OS arm64
+srt iphonesimulator SIMULATOR i386
+srt iphonesimulator SIMULATOR64 x86_64
+srt iphoneos OS armv7
+srt iphoneos OS armv7s
+srt iphoneos OS arm64
 
 # lipo
-lipo -output libsrt-iOS.a -create ./build/iOS/x86_64/libsrt.a ./build/iOS/arm64/libsrt.a
+lipo -output libsrt-iOS.a -create ./build/iOS/x86_64/libsrt.a ./build/iOS/i386/libsrt.a ./build/iOS/arm64/libsrt.a ./build/iOS/armv7/libsrt.a ./build/iOS/armv7s/libsrt.a
 
