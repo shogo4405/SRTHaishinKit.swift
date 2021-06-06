@@ -1127,8 +1127,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/SRT",
-					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
-					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
 				);
 				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
@@ -1138,7 +1136,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e i386 x86_64";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1169,8 +1167,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/SRT",
-					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL-for-iPhone/lib",
-					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
 				);
 				MARKETING_VERSION = 0.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
@@ -1179,7 +1175,7 @@
 				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Platforms/iOS/Supporting Files\"";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e i386 x86_64";
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
