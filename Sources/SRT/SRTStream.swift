@@ -118,7 +118,7 @@ open class SRTStream: NetStream {
 
 extension SRTStream: TSWriterDelegate {
     // MARK: TSWriterDelegate
-    final public func didOutput(_ data: Data) {
+    public func writer(_ writer: TSWriter, didOutput data: Data) {
         guard readyState == .publishing else { return }
         connection?.outgoingSocket?.write(data)
     }
