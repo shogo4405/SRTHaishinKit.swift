@@ -74,7 +74,7 @@ final class LiveViewController: UIViewController {
             publish.setTitle("●", for: [])
         } else {
             UIApplication.shared.isIdleTimerDisabled = true
-            connection.connect(URL(string: Preference.shared.url))
+            ((try? connection.connect(URL(string: Preference.shared.url))) as ()??)
             stream.publish(Preference.shared.streamName)
             publish.setTitle("■", for: [])
         }

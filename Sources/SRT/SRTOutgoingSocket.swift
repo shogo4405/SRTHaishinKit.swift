@@ -22,16 +22,16 @@ final class SRTOutgoingSocket: SRTSocket {
         }
     }
 
-    override func configure(_ binding: SRTSocketOption.Binding) -> Bool {
+    override func configure(_ binding: SRTSocketOption.Binding, _ sock: SRTSOCKET) -> Bool {
         switch binding {
         case .pre:
-            return super.configure(binding)
+            return super.configure(binding, sock)
         case .post:
             options[.sndsyn] = true
             if 0 < timeout {
                 options[.sndtimeo] = timeout
             }
-            return super.configure(binding)
+            return super.configure(binding, sock)
         }
     }
 }

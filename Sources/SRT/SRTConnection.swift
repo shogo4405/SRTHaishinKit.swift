@@ -8,7 +8,13 @@ open class SRTConnection: NSObject {
     public private(set) var uri: URL?
     /// This instance connect to server(true) or not(false)
     @objc dynamic public private(set) var connected: Bool = false
-
+    
+    /// Track if a connection that was working was closed unexpectedly
+    @objc dynamic public private(set) var connectionBroken: Bool = false
+    
+    /// This instance is running a service listening for client to connect
+    @objc dynamic public private(set) var listening: Bool = false
+    
     var incomingSocket: SRTIncomingSocket?
     var outgoingSocket: SRTOutgoingSocket?
     private var streams: [SRTStream] = []
@@ -20,23 +26,63 @@ open class SRTConnection: NSObject {
     deinit {
         streams.removeAll()
     }
-
-    public func connect(_ uri: URL?) {
+    
+    /**
+     Establish a SRT connection to the given host as a caller
+     
+     - parameters:
+        - uri: Encoding of the SRT listener host, port and socket options, must use the srt:// schema
+        - withIncomingSocket: Optional parameter to establish a 2 way connection with the host.
+            The incomming socket shouldn't be needed, however it can be used to detect problems with OBS's reconnection behaviour.
+            Disconnecting and trying to reconnect to OBS immediately doesn't work if you create an incoming socket as well you can detect this failure
+            otherwise things will appear to connect and send data, but you won't see the results in OBS
+     */
+    public func connect(_ uri: URL?, withIncomingSocket: Bool = false) throws {
         guard let uri = uri, let scheme = uri.scheme, let host = uri.host, let port = uri.port, scheme == "srt" else {
-            return
+            throw SRTError.invalidArgument(message: "Invalid Configuration")
         }
-
+        
         self.uri = uri
         let options = SRTSocketOption.from(uri: uri)
         let addr = sockaddr_in(host, port: UInt16(port))
-
+        
+        if(connectionBroken) {
+            connectionBroken = false;
+        }
+        
         outgoingSocket = SRTOutgoingSocket()
         outgoingSocket?.delegate = self
-        ((try? outgoingSocket?.connect(addr, options: options)) as ()??)
-
-        incomingSocket = SRTIncomingSocket()
-        incomingSocket?.delegate = self
-        ((try? incomingSocket?.connect(addr, options: options)) as ()??)
+        try outgoingSocket?.connect(addr, options: options)
+        
+        if(withIncomingSocket)
+        {
+            incomingSocket = SRTIncomingSocket()
+            incomingSocket?.delegate = self
+            try incomingSocket?.connect(addr, options: options)
+        }
+    }
+    
+    /**
+     Establish a SRT connection as the host in listening mode
+     
+     - parameters:
+        - uri: Encoding of the SRT port and socket options, must use the srt:// schema
+     */
+    public func listen(_ uri: URL?) throws {
+        guard let uri = uri, let scheme = uri.scheme, let port = uri.port, scheme == "srt" else { return }
+        let host = "0.0.0.0"
+        
+        self.uri = uri
+        let options = SRTSocketOption.from(uri: uri)
+        let addr = sockaddr_in(host, port: UInt16(port))
+        
+        if(connectionBroken) {
+            connectionBroken = false;
+        }
+        
+        outgoingSocket = SRTOutgoingSocket()
+        outgoingSocket?.delegate = self
+        try outgoingSocket?.listen(addr, options: options)
     }
 
     public func close() {
@@ -45,6 +91,7 @@ open class SRTConnection: NSObject {
         }
         outgoingSocket?.close()
         incomingSocket?.close()
+        incomingSocket = nil
     }
 
     public func attachStream(_ stream: SRTStream) {
@@ -69,9 +116,21 @@ open class SRTConnection: NSObject {
 extension SRTConnection: SRTSocketDelegate {
     // MARK: SRTSocketDelegate
     func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS) {
-        guard let incomingSocket = incomingSocket, let outgoingSocket = outgoingSocket else {
+        guard let outgoingSocket = outgoingSocket else {
             return
         }
-        connected = incomingSocket.status == SRTS_CONNECTED && outgoingSocket.status == SRTS_CONNECTED
+        connected = outgoingSocket.status == SRTS_CONNECTED
+        if(!connectionBroken && outgoingSocket.status == SRTS_BROKEN) {
+            connectionBroken = true;
+        }
+        listening = outgoingSocket.status == SRTS_LISTENING
+        
+        guard let incomingSocket = incomingSocket else {
+            return
+        }
+        connected = connected && incomingSocket.status == SRTS_CONNECTED
+        if(!connectionBroken && incomingSocket.status == SRTS_BROKEN) {
+            connectionBroken = true;
+        }
     }
 }
