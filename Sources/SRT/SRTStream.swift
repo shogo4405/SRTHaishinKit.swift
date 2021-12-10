@@ -67,6 +67,30 @@ open class SRTStream: NetStream {
         connection = nil
         keyValueObservations.removeAll()
     }
+    
+    /**
+     Prepare the stream to process media of the given type
+     
+     - parameters:
+        - type: An AVMediaType you will be sending via an appendSampleBuffer call
+     
+     As with appendSampleBuffer only video and audio types are supported
+     */
+    open func attachRawMedia(_ type: AVMediaType)
+    {
+        tsWriter.expectedMedias.insert(type)
+    }
+    
+    /**
+     Remove a media type that was added via attachRawMedia
+     
+     - parameters:
+        - type: An AVMediaType that was added via an attachRawMedia call
+     */
+    open func detachRawMedia(_ type: AVMediaType)
+    {
+        tsWriter.expectedMedias.remove(type)
+    }
 
     override open func attachCamera(_ camera: AVCaptureDevice?, onError: ((NSError) -> Void)? = nil) {
         if camera == nil {
