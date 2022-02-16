@@ -7,6 +7,8 @@ final class SRTIncomingSocket: SRTSocket {
             return super.configure(binding, sock)
         case .post:
             options[.rcvsyn] = true
+            options[.rcvlatency] = 0
+            options[.peerlatency] = 0
             if 0 < timeout {
                 options[.rcvtimeo] = timeout
             }

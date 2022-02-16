@@ -28,6 +28,7 @@ final class SRTOutgoingSocket: SRTSocket {
             return super.configure(binding, sock)
         case .post:
             options[.sndsyn] = true
+            options[.peerlatency] = 0
             if 0 < timeout {
                 options[.sndtimeo] = timeout
             }
