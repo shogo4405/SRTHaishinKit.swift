@@ -3,7 +3,7 @@
 if which $(pwd)/srt >/dev/null; then
   echo ""
 else
-  git clone "git://github.com/Haivision/srt.git"
+  git clone git@github.com:Haivision/srt.git
   pushd srt
   git checkout refs/tags/v1.4.1
   popd
