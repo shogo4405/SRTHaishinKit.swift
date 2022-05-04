@@ -114,6 +114,8 @@
 		BCD1DC292606240200A1C593 /* Logboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1F260623E200A1C593 /* Logboard.xcframework */; };
 		BCD1DC322606255000A1C593 /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; };
 		BCD1DC342606255000A1C593 /* Logboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1F260623E200A1C593 /* Logboard.xcframework */; };
+		BCE8341B282273D0003E5CCE /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; };
+		BCE8341C282273D5003E5CCE /* Logboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1F260623E200A1C593 /* Logboard.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,7 +167,6 @@
 		2923D2FF217342A4000A5E9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2923D302217342A4000A5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2923D304217342A4000A5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29370FD821B3EDCA00451B6F /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "Vendor/SRT/OpenSSL-for-iPhone/lib/libcrypto.a"; sourceTree = "<group>"; };
 		29370FDA21B3EDE900451B6F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		29370FDD21B3EE8400451B6F /* libsrt-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsrt-iOS.a"; path = "Vendor/SRT/libsrt-iOS.a"; sourceTree = "<group>"; };
 		296FB1FC21A6A7BD00CB4770 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -205,7 +206,6 @@
 		296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTIncomingSocket.swift; sourceTree = "<group>"; };
 		296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTOutgoingSocket.swift; sourceTree = "<group>"; };
 		297BA66D21AC8D3700CD14EA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		29B2C56B21B3CA8A00B1609D /* libsrt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsrt.a; path = /usr/local/Cellar/srt/1.3.1/lib/libsrt.a; sourceTree = "<absolute>"; };
 		29D0939821A998AF003E6E1F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
@@ -228,6 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE8341B282273D0003E5CCE /* HaishinKit.xcframework in Frameworks */,
+				BCE8341C282273D5003E5CCE /* Logboard.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,14 +392,11 @@
 		296FB20621A6BD1F00CB4770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC3296DF2737C33F00DCACD7 /* libcryptex.tbd */,
 				BCC1A7392656BF9200661156 /* libcrypto.a */,
 				BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */,
 				BCD1DC1F260623E200A1C593 /* Logboard.xcframework */,
 				29370FDD21B3EE8400451B6F /* libsrt-iOS.a */,
 				29370FDA21B3EDE900451B6F /* libc++.tbd */,
-				29370FD821B3EDCA00451B6F /* libcrypto.a */,
-				29B2C56B21B3CA8A00B1609D /* libsrt.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1016,6 +1015,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1062,6 +1062,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1107,6 +1108,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1119,7 +1121,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Platforms/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1148,6 +1150,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1160,7 +1163,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Platforms/iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
