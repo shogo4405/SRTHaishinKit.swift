@@ -28,13 +28,17 @@ open class SRTConnection: NSObject {
         self.uri = uri
         let options = SRTSocketOption.from(uri: uri)
         let addr = sockaddr_in(host, port: UInt16(port))
+
+        outgoingSocket = SRTOutgoingSocket()
+        outgoingSocket?.delegate = self
+        ((try? outgoingSocket?.connect(addr, options: options)) as ()??)
     }
 
     public func close() {
         for stream in streams {
             stream.close()
         }
-        incomingSocket?.close()
+        outgoingSocket?.close()
     }
 
     public func attachStream(_ stream: SRTStream) {
