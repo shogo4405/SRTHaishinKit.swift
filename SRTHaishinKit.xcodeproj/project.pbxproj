@@ -90,7 +90,6 @@
 		29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
 		BC0951DE23E73951009FAA72 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0951DD23E73950009FAA72 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BC0951DF23E73951009FAA72 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0951DD23E73950009FAA72 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BC3296E12737C36E00DCACD7 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC1A7392656BF9200661156 /* libcrypto.a */; };
 		BC3A695623E735A80025FC83 /* fec.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695023E735A70025FC83 /* fec.h */; };
 		BC3A695723E735A80025FC83 /* fec.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695023E735A70025FC83 /* fec.h */; };
 		BC3A695823E735A80025FC83 /* congctl.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695123E735A70025FC83 /* congctl.h */; };
@@ -103,6 +102,9 @@
 		BC3A695F23E735A80025FC83 /* packetfilter_api.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695423E735A70025FC83 /* packetfilter_api.h */; };
 		BC3A696023E735A80025FC83 /* ccc.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695523E735A70025FC83 /* ccc.h */; };
 		BC3A696123E735A80025FC83 /* ccc.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3A695523E735A70025FC83 /* ccc.h */; };
+		BC837D4328842A2C00147A7B /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC837D4228842A2C00147A7B /* OpenSSL.xcframework */; };
+		BC837D4428842A7800147A7B /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC837D4228842A2C00147A7B /* OpenSSL.xcframework */; };
+		BC837D4528842A7800147A7B /* OpenSSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC837D4228842A2C00147A7B /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCC1A7332652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
 		BCC1A7342652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
 		BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7352652C72600661156 /* PreferenceViewController.swift */; };
@@ -137,6 +139,7 @@
 			files = (
 				296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */,
 				BCD1DC21260623E200A1C593 /* HaishinKit.xcframework in Embed Frameworks */,
+				BC837D4528842A7800147A7B /* OpenSSL.xcframework in Embed Frameworks */,
 				BCD1DC23260623E200A1C593 /* Logboard.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -215,10 +218,10 @@
 		BC3A695323E735A70025FC83 /* packetfilter_builtin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packetfilter_builtin.h; sourceTree = "<group>"; };
 		BC3A695423E735A70025FC83 /* packetfilter_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = packetfilter_api.h; sourceTree = "<group>"; };
 		BC3A695523E735A70025FC83 /* ccc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccc.h; sourceTree = "<group>"; };
+		BC837D4228842A2C00147A7B /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = "<group>"; };
 		BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SRTHaishinKit.entitlements; sourceTree = "<group>"; };
 		BCC1A7322652C39D00661156 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		BCC1A7352652C72600661156 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
-		BCC1A7392656BF9200661156 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = Vendor/SRT/OpenSSL/iphoneos/lib/libcrypto.a; sourceTree = "<group>"; };
 		BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HaishinKit.xcframework; path = Carthage/Build/HaishinKit.xcframework; sourceTree = "<group>"; };
 		BCD1DC1F260623E200A1C593 /* Logboard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Logboard.xcframework; path = Carthage/Build/Logboard.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,7 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3296E12737C36E00DCACD7 /* libcrypto.a in Frameworks */,
+				BC837D4328842A2C00147A7B /* OpenSSL.xcframework in Frameworks */,
 				BCD1DC292606240200A1C593 /* Logboard.xcframework in Frameworks */,
 				29370FDB21B3EDE900451B6F /* libc++.tbd in Frameworks */,
 				BCD1DC272606240200A1C593 /* HaishinKit.xcframework in Frameworks */,
@@ -260,6 +263,7 @@
 			files = (
 				296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */,
 				BCD1DC20260623E200A1C593 /* HaishinKit.xcframework in Frameworks */,
+				BC837D4428842A7800147A7B /* OpenSSL.xcframework in Frameworks */,
 				BCD1DC22260623E200A1C593 /* Logboard.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +396,7 @@
 		296FB20621A6BD1F00CB4770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCC1A7392656BF9200661156 /* libcrypto.a */,
+				BC837D4228842A2C00147A7B /* OpenSSL.xcframework */,
 				BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */,
 				BCD1DC1F260623E200A1C593 /* Logboard.xcframework */,
 				29370FDD21B3EE8400451B6F /* libsrt-iOS.a */,
@@ -611,7 +615,6 @@
 			buildConfigurationList = 2923D2DE21734075000A5E9B /* Build configuration list for PBXNativeTarget "SRTHaishinKit iOS" */;
 			buildPhases = (
 				2923D2D421734075000A5E9B /* Headers */,
-				4B3363C5230B31ED00A67762 /* Build OpenSSL and SRT */,
 				2923D2D521734075000A5E9B /* Sources */,
 				2923D2D621734075000A5E9B /* Frameworks */,
 				2923D2D721734075000A5E9B /* Resources */,
@@ -731,27 +734,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4B3363C5230B31ED00A67762 /* Build OpenSSL and SRT */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build OpenSSL and SRT";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# build openssl and srt for ios\npushd ${PROJECT_DIR}/Vendor/SRT\nif [ -e libsrt-iOS.a ]\nthen\n    exit 0\nfi\n\n./build-openssl-iOS.sh\n./build-srt-iOS.sh\npopd\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2923D29721733A73000A5E9B /* Sources */ = {

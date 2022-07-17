@@ -3,6 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 Vendor/SRT/OpenSSL
+Vendor/SRT/srt
 
 ## Build generated
 build/
@@ -68,7 +69,4 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
-Vendor/SRT/OpenSSL-for-iPhone/
-Vendor/SRT/srt/
-*.a
 .DS_Store
