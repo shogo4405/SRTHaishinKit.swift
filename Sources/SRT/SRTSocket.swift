@@ -68,10 +68,10 @@ class SRTSocket {
         // prepare socket
         socket = srt_socket(AF_INET, SOCK_DGRAM, 0)
         if socket == SRT_ERROR {
-                let error_message = String(cString: srt_getlasterror_str())
+            let error_message = String(cString: srt_getlasterror_str())
 
-                logger.error(error_message)
-                throw SRTError.illegalState(message: error_message)
+            logger.error(error_message)
+            throw SRTError.illegalState(message: error_message)
         }
 
         self.options = options

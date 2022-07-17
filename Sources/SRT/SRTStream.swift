@@ -70,10 +70,10 @@ open class SRTStream: NetStream {
 
     /**
      Prepare the stream to process media of the given type
-     
+
      - parameters:
-        - type: An AVMediaType you will be sending via an appendSampleBuffer call
-     
+     - type: An AVMediaType you will be sending via an appendSampleBuffer call
+
      As with appendSampleBuffer only video and audio types are supported
      */
     open func attachRawMedia(_ type: AVMediaType) {
@@ -82,9 +82,9 @@ open class SRTStream: NetStream {
 
     /**
      Remove a media type that was added via attachRawMedia
-     
+
      - parameters:
-        - type: An AVMediaType that was added via an attachRawMedia call
+     - type: An AVMediaType that was added via an attachRawMedia call
      */
     open func detachRawMedia(_ type: AVMediaType) {
         tsWriter.expectedMedias.remove(type)
