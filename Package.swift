@@ -5,8 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SRTHaishinKit",
     platforms: [
-        .iOS(.v9),
-        .macOS(.v10_11)
+        .iOS(.v11),
     ],
     products: [
         .library(name: "SRTHaishinKit", targets: ["SRTHaishinKit"])
@@ -15,7 +14,7 @@ let package = Package(
         .package(
             name: "HaishinKit",
             url: "https://github.com/shogo4405/HaishinKit.swift.git",
-            from: "1.2.7"
+            from: "1.3.0"
         )
     ],
     targets: [

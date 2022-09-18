@@ -1,3 +1,3 @@
 import Logboard
 
-let logger = Logboard.with("com.haishinkit.SRTHaishinKit")
+let logger = LBLogger.with("com.haishinkit.SRTHaishinKit")
