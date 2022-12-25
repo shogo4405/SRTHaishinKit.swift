@@ -38,7 +38,7 @@ open class SRTStream: NetStream {
 
             switch readyState {
             case .publish:
-                mixer.startEncoding(delegate: self.tsWriter)
+                mixer.startEncoding(tsWriter)
                 mixer.startRunning()
                 tsWriter.startRunning()
                 readyState = .publishing
@@ -90,7 +90,7 @@ open class SRTStream: NetStream {
         tsWriter.expectedMedias.remove(type)
     }
 
-    override open func attachCamera(_ camera: AVCaptureDevice?, onError: ((NSError) -> Void)? = nil) {
+    override open func attachCamera(_ camera: AVCaptureDevice?, onError: ((Error) -> Void)? = nil) {
         if camera == nil {
             tsWriter.expectedMedias.remove(.video)
         } else {
@@ -99,7 +99,7 @@ open class SRTStream: NetStream {
         super.attachCamera(camera, onError: onError)
     }
 
-    override open func attachAudio(_ audio: AVCaptureDevice?, automaticallyConfiguresApplicationAudioSession: Bool = true, onError: ((NSError) -> Void)? = nil) {
+    override open func attachAudio(_ audio: AVCaptureDevice?, automaticallyConfiguresApplicationAudioSession: Bool = true, onError: ((Error) -> Void)? = nil) {
         if audio == nil {
             tsWriter.expectedMedias.remove(.audio)
         } else {

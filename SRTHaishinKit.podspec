@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
     'OTHER_LDFLAGS' => '-framework libsrt'
   }
 
-  s.dependency 'HaishinKit', '~> 1.3.0'
+  s.dependency 'HaishinKit', '~> 1.4.0'
   s.dependency 'OpenSSL-Universal', '~> 1.1.1700'
 
 end

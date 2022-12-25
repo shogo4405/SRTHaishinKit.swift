@@ -14,7 +14,7 @@ let package = Package(
         .package(
             name: "HaishinKit",
             url: "https://github.com/shogo4405/HaishinKit.swift.git",
-            from: "1.3.0"
+            from: "1.4.0"
         )
     ],
     targets: [
