@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ReadyState Enumeration Reference</title>
+    <title>Level Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,11 +13,11 @@
     <script src="../../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/ReadyState" class="dashAnchor"></a>
-    <a title="ReadyState Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/Level" class="dashAnchor"></a>
+    <a title="Level Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html">SRTHaishinKit 0.0.3 Docs</a> (20% documented)</p>
+        <p><a href="../../index.html">SRTHaishinKit 0.0.4 Docs</a> (32% documented)</p>
         <div class="header-right">
           <form role="search" action="../../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">SRTHaishinKit Reference</a>
         <img id="carat" src="../../img/carat.png" alt=""/>
-        ReadyState Enumeration Reference
+        Level Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -42,10 +42,13 @@
                 <a href="../../Classes/SRTConnection.html">SRTConnection</a>
               </li>
               <li class="nav-group-task">
-                <a href="../../Classes/SRTStream.html">SRTStream</a>
+                <a href="../../Classes/SRTLogger.html">SRTLogger</a>
               </li>
               <li class="nav-group-task">
-                <a href="../../Classes/SRTStream/ReadyState.html">– ReadyState</a>
+                <a href="../../Classes/SRTLogger/Level.html">– Level</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/SRTStream.html">SRTStream</a>
               </li>
             </ul>
           </li>
@@ -62,11 +65,11 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ReadyState</h1>
+            <h1>Level</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ReadyState</span> <span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Level</span></code></pre>
 
                 </div>
               </div>
@@ -79,9 +82,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO11initializedyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/initialized" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO11initializedyA2EmF">initialized</a>
+                    <a name="/s:13SRTHaishinKit9SRTLoggerC5LevelO5debugyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/debug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit9SRTLoggerC5LevelO5debugyA2EmF">debug</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -89,14 +92,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Highly detailed and very frequent messages.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">initialized</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">debug</span></code></pre>
 
                         </div>
                       </div>
@@ -106,9 +109,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO4openyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/open" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO4openyA2EmF">open</a>
+                    <a name="/s:13SRTHaishinKit9SRTLoggerC5LevelO6noticeyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/notice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit9SRTLoggerC5LevelO6noticeyA2EmF">notice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -116,14 +119,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Occasionally displayed information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kd">open</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notice</span></code></pre>
 
                         </div>
                       </div>
@@ -133,9 +136,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO4playyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/play" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO4playyA2EmF">play</a>
+                    <a name="/s:13SRTHaishinKit9SRTLoggerC5LevelO7warningyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/warning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit9SRTLoggerC5LevelO7warningyA2EmF">warning</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -143,14 +146,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Unusual behavior.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">play</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">warning</span></code></pre>
 
                         </div>
                       </div>
@@ -160,9 +163,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO7playingyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/playing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO7playingyA2EmF">playing</a>
+                    <a name="/s:13SRTHaishinKit9SRTLoggerC5LevelO5erroryA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit9SRTLoggerC5LevelO5erroryA2EmF">error</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -170,14 +173,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Abnormal behavior</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">playing</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">error</span></code></pre>
 
                         </div>
                       </div>
@@ -187,9 +190,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO7publishyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/publish" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO7publishyA2EmF">publish</a>
+                    <a name="/s:13SRTHaishinKit9SRTLoggerC5LevelO4crityA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/crit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit9SRTLoggerC5LevelO4crityA2EmF">crit</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -197,68 +200,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Error that makes the current socket unusabl</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">publish</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO10publishingyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/publishing" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO10publishingyA2EmF">publishing</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">publishing</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO6closedyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/closed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO6closedyA2EmF">closed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">closed</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">crit</span></code></pre>
 
                         </div>
                       </div>
@@ -270,7 +219,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/shogo4405/SRTHaishinKit.swift" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2023-02-05)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/shogo4405/SRTHaishinKit.swift" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2023-02-06)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

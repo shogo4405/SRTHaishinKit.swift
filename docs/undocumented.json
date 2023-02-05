@@ -1,6 +1,20 @@
 {
   "warnings": [
     {
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTLogger.swift",
+      "line": 5,
+      "symbol": "SRTLogger.Level",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTLogger.swift",
+      "line": 33,
+      "symbol": "SRTLogger.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 8,
       "symbol": "SRTSocketOption",
@@ -324,28 +338,7 @@
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 111,
-      "symbol": "SRTStream.play(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 130,
-      "symbol": "SRTStream.publish(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 149,
-      "symbol": "SRTStream.close()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 161,
+      "line": 145,
       "symbol": "SRTStream.writer(_:didOutput:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

@@ -109,7 +109,6 @@
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTLogger.swift; sourceTree = "<group>"; };
-		BC46F9E9288870DA00BB7C96 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BC512F74288534E50081CCC2 /* libsrt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libsrt.xcframework; path = Vendor/SRT/libsrt.xcframework; sourceTree = "<group>"; };
 		BC512F792885364F0081CCC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		BC837D47288445A900147A7B /* SRTHaishinKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRTHaishinKit.podspec; sourceTree = "<group>"; };
@@ -154,7 +153,6 @@
 				2923D2BA21733B1E000A5E9B /* LICENSE */,
 				2923D2B921733B1E000A5E9B /* README.md */,
 				BC837D47288445A900147A7B /* SRTHaishinKit.podspec */,
-				BC46F9E9288870DA00BB7C96 /* Package.swift */,
 				2923D2BE21733B78000A5E9B /* Examples */,
 				296FB20621A6BD1F00CB4770 /* Frameworks */,
 				2923D2CC21733C58000A5E9B /* Platforms */,

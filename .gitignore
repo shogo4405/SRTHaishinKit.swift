@@ -71,3 +71,6 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 .DS_Store
+docs/undocumented.json
+docs/docsets/SRTHaishinKit.docset/Contents/Resources/Documents/undocumented.json
+docs/docsets/SRTHaishinKit.tgz
