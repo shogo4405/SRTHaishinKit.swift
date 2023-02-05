@@ -25,10 +25,9 @@
 		296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28921A800CF00CB4770 /* SRTConnection.swift */; };
 		296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; };
 		296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		296FB2A021A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */; };
-		296FB2A321A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */; };
 		29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
 		BC0951DF23E73951009FAA72 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0951DD23E73950009FAA72 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		BC0BF4FA298F9BA000D72CB4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0BF4F9298F9B4F00D72CB4 /* libcrypto.a */; };
 		BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC512F77288536270081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC512F78288536270081CCC2 /* libsrt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -109,12 +108,12 @@
 		296FB28521A70D9600CB4770 /* SRTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTError.swift; sourceTree = "<group>"; };
 		296FB28921A800CF00CB4770 /* SRTConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTConnection.swift; sourceTree = "<group>"; };
 		296FB29521A8121E00CB4770 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTIncomingSocket.swift; sourceTree = "<group>"; };
-		296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTOutgoingSocket.swift; sourceTree = "<group>"; };
 		297BA66D21AC8D3700CD14EA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		29D0939821A998AF003E6E1F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		BC0BF4F8298F9B4F00D72CB4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = Vendor/SRT/OpenSSL/iphoneos/lib/libssl.a; sourceTree = "<group>"; };
+		BC0BF4F9298F9B4F00D72CB4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = Vendor/SRT/OpenSSL/iphoneos/lib/libcrypto.a; sourceTree = "<group>"; };
 		BC46F9E9288870DA00BB7C96 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BC512F74288534E50081CCC2 /* libsrt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libsrt.xcframework; path = Vendor/SRT/libsrt.xcframework; sourceTree = "<group>"; };
 		BC512F792885364F0081CCC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
@@ -134,6 +133,7 @@
 			files = (
 				BC837D4328842A2C00147A7B /* OpenSSL.xcframework in Frameworks */,
 				BC512F7A2885365B0081CCC2 /* libc++.tbd in Frameworks */,
+				BC0BF4FA298F9BA000D72CB4 /* libcrypto.a in Frameworks */,
 				BCD1DC292606240200A1C593 /* Logboard.xcframework in Frameworks */,
 				BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */,
 				BCD1DC272606240200A1C593 /* HaishinKit.xcframework in Frameworks */,
@@ -280,6 +280,8 @@
 		296FB20621A6BD1F00CB4770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC0BF4F9298F9B4F00D72CB4 /* libcrypto.a */,
+				BC0BF4F8298F9B4F00D72CB4 /* libssl.a */,
 				BC512F792885364F0081CCC2 /* libc++.tbd */,
 				BC512F74288534E50081CCC2 /* libsrt.xcframework */,
 				BC837D4228842A2C00147A7B /* OpenSSL.xcframework */,
@@ -306,8 +308,6 @@
 			children = (
 				296FB28921A800CF00CB4770 /* SRTConnection.swift */,
 				296FB28521A70D9600CB4770 /* SRTError.swift */,
-				296FB29E21A85A7000CB4770 /* SRTIncomingSocket.swift */,
-				296FB2A121A85A8400CB4770 /* SRTOutgoingSocket.swift */,
 				296FB22721A6BEE700CB4770 /* SRTSocket.swift */,
 				296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */,
 				296FB23621A6D58900CB4770 /* SRTStream.swift */,
@@ -470,11 +470,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				296FB2A021A85A7000CB4770 /* SRTIncomingSocket.swift in Sources */,
 				296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */,
 				296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */,
 				296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */,
-				296FB2A321A85A8400CB4770 /* SRTOutgoingSocket.swift in Sources */,
 				296FB28821A70E1500CB4770 /* Constants.swift in Sources */,
 				29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */,
 				296FB28721A70D9600CB4770 /* SRTError.swift in Sources */,
@@ -674,7 +672,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
+				);
 				MARKETING_VERSION = 0.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
@@ -713,7 +714,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
+				);
 				MARKETING_VERSION = 0.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;

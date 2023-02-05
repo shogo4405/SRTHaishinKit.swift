@@ -1,41 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
-      "line": 3,
-      "symbol": "SRTConnection",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
-      "line": 15,
-      "symbol": "SRTConnection.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
-      "line": 23,
-      "symbol": "SRTConnection.connect(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
-      "line": 37,
-      "symbol": "SRTConnection.close()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTConnection.swift",
-      "line": 44,
-      "symbol": "SRTConnection.attachStream(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTSocketOption.swift",
       "line": 8,
       "symbol": "SRTSocketOption",
@@ -359,105 +324,91 @@
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 5,
-      "symbol": "SRTStream",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 6,
+      "line": 7,
       "symbol": "SRTStream.ReadyState",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 7,
+      "line": 8,
       "symbol": "SRTStream.ReadyState.initialized",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 8,
+      "line": 9,
       "symbol": "SRTStream.ReadyState.open",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 9,
+      "line": 10,
       "symbol": "SRTStream.ReadyState.play",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 10,
+      "line": 11,
       "symbol": "SRTStream.ReadyState.playing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 11,
+      "line": 12,
       "symbol": "SRTStream.ReadyState.publish",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "SRTStream.ReadyState.publishing",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "SRTStream.ReadyState.closed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "SRTStream.readyState",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 51,
-      "symbol": "SRTStream.init(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 111,
-      "symbol": "SRTStream.publish(_:)",
+      "symbol": "SRTStream.play(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
       "line": 130,
+      "symbol": "SRTStream.publish(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
+      "line": 149,
       "symbol": "SRTStream.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 141,
-      "symbol": "SRTStream",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/shogo.endo/Documents/GitHub/SRTHaishinKit.swift/Sources/SRT/SRTStream.swift",
-      "line": 143,
+      "line": 161,
       "symbol": "SRTStream.writer(_:didOutput:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

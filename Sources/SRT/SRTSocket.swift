@@ -3,11 +3,13 @@ import HaishinKit
 import Logboard
 
 protocol SRTSocketDelegate: AnyObject {
-    func status(_ socket: SRTSocket, status: SRT_SOCKSTATUS)
+    func socket(_ socket: SRTSocket, status: SRT_SOCKSTATUS)
+    func socket(_ socket: SRTSocket, incomingDataAvailabled data: Data, bytes: Int32)
 }
 
-class SRTSocket {
+final class SRTSocket {
     static let defaultOptions: [SRTSocketOption: Any] = [:]
+    static let payloadSize: Int = 1316
 
     var timeout: Int = 0
     var options: [SRTSocketOption: Any] = [:] {
@@ -18,13 +20,12 @@ class SRTSocket {
     }
     weak var delegate: SRTSocketDelegate?
     private(set) var isRunning: Atomic<Bool> = .init(false)
-
     private let lockQueue: DispatchQueue = DispatchQueue(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock")
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
     private(set) var status: SRT_SOCKSTATUS = SRTS_INIT {
         didSet {
             guard status != oldValue else { return }
-            delegate?.status(self, status: status)
+            delegate?.socket(self, status: status)
             switch status {
             case SRTS_INIT: // 1
                 logger.trace("SRT Socket Init")
@@ -58,47 +59,66 @@ class SRTSocket {
             }
         }
     }
+    private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.srt.SRTSocket.outgoingQueue", qos: .userInitiated)
+    private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.srt.SRTSOcket.incomingQueue", qos: .userInitiated)
 
     func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
-
         guard socket == SRT_INVALID_SOCK else {
             return
         }
-
         // prepare socket
         socket = srt_socket(AF_INET, SOCK_DGRAM, 0)
         if socket == SRT_ERROR {
             let error_message = String(cString: srt_getlasterror_str())
-
             logger.error(error_message)
             throw SRTError.illegalState(message: error_message)
         }
-
         self.options = options
         guard configure(.pre) else {
             return
         }
-
         // prepare connect
         var addr_cp = addr
         let stat = withUnsafePointer(to: &addr_cp) { ptr -> Int32 in
             let psa = UnsafeRawPointer(ptr).assumingMemoryBound(to: sockaddr.self)
             return srt_connect(socket, psa, Int32(MemoryLayout.size(ofValue: addr)))
         }
-
         if stat == SRT_ERROR {
-
             let error_message = String(cString: srt_getlasterror_str())
-
             logger.error(error_message)
             throw SRTError.illegalState(message: error_message)
         }
-
         guard configure(.post) else {
             return
         }
-
         startRunning()
+    }
+
+    private var windowSizeC: Int32 = 1024 * 4
+    private var outgoingBuffer: [Data] = .init()
+    private lazy var incomingBuffer: Data = .init(capacity: Int(windowSizeC))
+
+    func doOutput(data: Data) {
+        outgoingQueue.async {
+            self.outgoingBuffer.append(contentsOf: data.chunk(SRTSocket.payloadSize))
+            repeat {
+                guard var data = self.outgoingBuffer.first else {
+                    return
+                }
+                _ = self.sendmsg2(&data)
+            } while !self.outgoingBuffer.isEmpty
+        }
+    }
+
+    func doInput() {
+        incomingQueue.async {
+            repeat {
+                let result = self.recvmsg()
+                if 0 < result {
+                    self.delegate?.socket(self, incomingDataAvailabled: self.incomingBuffer, bytes: result)
+                }
+            } while self.isRunning.value
+        }
     }
 
     func close() {
@@ -113,6 +133,26 @@ class SRTSocket {
             logger.error(failures); return false
         }
         return true
+    }
+
+    @inline(__always)
+    private func sendmsg2(_ data: inout Data) -> Int32 {
+        return data.withUnsafeBytes { pointer in
+            guard let buffer = pointer.baseAddress?.assumingMemoryBound(to: CChar.self) else {
+                return SRT_ERROR
+            }
+            return srt_sendmsg2(socket, buffer, Int32(data.count), nil)
+        }
+    }
+
+    @inline(__always)
+    private func recvmsg() -> Int32 {
+        return incomingBuffer.withUnsafeMutableBytes { pointer in
+            guard let buffer = pointer.baseAddress?.assumingMemoryBound(to: CChar.self) else {
+                return SRT_ERROR
+            }
+            return srt_recvmsg(socket, buffer, windowSizeC)
+        }
     }
 }
 

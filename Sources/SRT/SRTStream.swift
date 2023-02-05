@@ -2,8 +2,9 @@ import HaishinKit
 import Foundation
 import AVFoundation
 
-open class SRTStream: NetStream {
-    public enum ReadyState: UInt8 {
+/// An object that provides the interface to control a one-way channel over a SRTConnection.
+public class SRTStream: NetStream {
+    private enum ReadyState: UInt8 {
         case initialized = 0
         case open        = 1
         case play        = 2
@@ -13,10 +14,10 @@ open class SRTStream: NetStream {
         case closed      = 6
     }
 
-    private var connection: SRTConnection?
     private var name: String?
     private var action: (() -> Void)?
     private var keyValueObservations: [NSKeyValueObservation] = []
+    private weak var connection: SRTConnection?
 
     private lazy var tsWriter: TSWriter = {
         var tsWriter = TSWriter()
@@ -24,10 +25,9 @@ open class SRTStream: NetStream {
         return tsWriter
     }()
 
-    public private(set) var readyState: ReadyState = .initialized {
+    private var readyState: ReadyState = .initialized {
         didSet {
             guard oldValue != readyState else { return }
-
             switch oldValue {
             case .publishing:
                 tsWriter.stopRunning()
@@ -35,7 +35,6 @@ open class SRTStream: NetStream {
             default:
                 break
             }
-
             switch readyState {
             case .publish:
                 mixer.startEncoding(tsWriter)
@@ -48,6 +47,7 @@ open class SRTStream: NetStream {
         }
     }
 
+    /// Creates a new SRTStream object.
     public init(_ connection: SRTConnection) {
         super.init()
         self.connection = connection
@@ -76,7 +76,7 @@ open class SRTStream: NetStream {
 
      As with appendSampleBuffer only video and audio types are supported
      */
-    open func attachRawMedia(_ type: AVMediaType) {
+    public func attachRawMedia(_ type: AVMediaType) {
         tsWriter.expectedMedias.insert(type)
     }
 
@@ -86,11 +86,11 @@ open class SRTStream: NetStream {
      - parameters:
      - type: An AVMediaType that was added via an attachRawMedia call
      */
-    open func detachRawMedia(_ type: AVMediaType) {
+    public func detachRawMedia(_ type: AVMediaType) {
         tsWriter.expectedMedias.remove(type)
     }
 
-    override open func attachCamera(_ camera: AVCaptureDevice?, onError: ((Error) -> Void)? = nil) {
+    override public func attachCamera(_ camera: AVCaptureDevice?, onError: ((Error) -> Void)? = nil) {
         if camera == nil {
             tsWriter.expectedMedias.remove(.video)
         } else {
@@ -99,7 +99,7 @@ open class SRTStream: NetStream {
         super.attachCamera(camera, onError: onError)
     }
 
-    override open func attachAudio(_ audio: AVCaptureDevice?, automaticallyConfiguresApplicationAudioSession: Bool = true, onError: ((Error) -> Void)? = nil) {
+    override public func attachAudio(_ audio: AVCaptureDevice?, automaticallyConfiguresApplicationAudioSession: Bool = true, onError: ((Error) -> Void)? = nil) {
         if audio == nil {
             tsWriter.expectedMedias.remove(.audio)
         } else {
@@ -108,9 +108,9 @@ open class SRTStream: NetStream {
         super.attachAudio(audio, automaticallyConfiguresApplicationAudioSession: automaticallyConfiguresApplicationAudioSession, onError: onError)
     }
 
-    open func publish(_ name: String?) {
+    public func publish(_ name: String? = "") {
         lockQueue.async {
-            guard name != nil else {
+            guard let name else {
                 switch self.readyState {
                 case .publish, .publishing:
                     self.readyState = .open
@@ -127,12 +127,11 @@ open class SRTStream: NetStream {
         }
     }
 
-    open func close() {
-        if readyState == .closed || readyState == .initialized {
-            return
-        }
-        publish(nil)
+    public func close() {
         lockQueue.async {
+            if self.readyState == .closed || self.readyState == .initialized {
+                return
+            }
             self.readyState = .closed
         }
     }
@@ -141,7 +140,9 @@ open class SRTStream: NetStream {
 extension SRTStream: TSWriterDelegate {
     // MARK: TSWriterDelegate
     public func writer(_ writer: TSWriter, didOutput data: Data) {
-        guard readyState == .publishing else { return }
-        connection?.outgoingSocket?.write(data)
+        guard readyState == .publishing else {
+            return
+        }
+        connection?.socket?.doOutput(data: data)
     }
 }

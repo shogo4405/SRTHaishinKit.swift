@@ -17,7 +17,7 @@
     <a title="SRTStream Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">SRTHaishinKit 0.0.3 Docs</a> (9% documented)</p>
+        <p><a href="../index.html">SRTHaishinKit 0.0.3 Docs</a> (23% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -44,9 +44,6 @@
               <li class="nav-group-task">
                 <a href="../Classes/SRTStream.html">SRTStream</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/SRTStream/ReadyState.html">– ReadyState</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -66,72 +63,17 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">SRTStream</span> <span class="p">:</span> <span class="kt">NetStream</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SRTStream</span> <span class="p">:</span> <span class="kt">NetStream</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SRTStream</span><span class="p">:</span> <span class="kt">TSWriterDelegate</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>An object that provides the interface to control a one-way channel over a SRTConnection.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10ReadyStateO"></a>
-                    <a name="//apple_ref/swift/Enum/ReadyState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10ReadyStateO">ReadyState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="../Classes/SRTStream/ReadyState.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ReadyState</span> <span class="p">:</span> <span class="kt">UInt8</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC10readyStateAC05ReadyE0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/readyState" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC10readyStateAC05ReadyE0Ovp">readyState</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">readyState</span><span class="p">:</span> <span class="kt"><a href="../Classes/SRTStream/ReadyState.html">ReadyState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -145,7 +87,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new SRTStream object.</p>
 
                       </div>
                       <div class="declaration">
@@ -185,7 +127,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">attachRawMedia</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AVMediaType</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">attachRawMedia</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AVMediaType</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -216,7 +158,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">detachRawMedia</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AVMediaType</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">detachRawMedia</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AVMediaType</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -242,7 +184,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">open</span> <span class="kd">func</span> <span class="nf">attachCamera</span><span class="p">(</span><span class="n">_</span> <span class="nv">camera</span><span class="p">:</span> <span class="kt">AVCaptureDevice</span><span class="p">?,</span> <span class="nv">onError</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">attachCamera</span><span class="p">(</span><span class="n">_</span> <span class="nv">camera</span><span class="p">:</span> <span class="kt">AVCaptureDevice</span><span class="p">?,</span> <span class="nv">onError</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -268,7 +210,34 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">open</span> <span class="kd">func</span> <span class="nf">attachAudio</span><span class="p">(</span><span class="n">_</span> <span class="nv">audio</span><span class="p">:</span> <span class="kt">AVCaptureDevice</span><span class="p">?,</span> <span class="nv">automaticallyConfiguresApplicationAudioSession</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">onError</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">attachAudio</span><span class="p">(</span><span class="n">_</span> <span class="nv">audio</span><span class="p">:</span> <span class="kt">AVCaptureDevice</span><span class="p">?,</span> <span class="nv">automaticallyConfiguresApplicationAudioSession</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">onError</span><span class="p">:</span> <span class="p">((</span><span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SRTHaishinKit9SRTStreamC4playyySSSgF"></a>
+                    <a name="//apple_ref/swift/Method/play(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC4playyySSSgF">play(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -295,7 +264,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">publish</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">publish</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -322,7 +291,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">close</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -374,7 +343,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/shogo4405/SRTHaishinKit.swift" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2023-01-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/shogo4405/SRTHaishinKit.swift" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2023-02-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

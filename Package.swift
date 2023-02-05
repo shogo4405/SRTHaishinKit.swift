@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SRTHaishinKit",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v11)
     ],
     products: [
         .library(name: "SRTHaishinKit", targets: ["SRTHaishinKit"])

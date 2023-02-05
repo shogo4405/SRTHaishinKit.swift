@@ -24,19 +24,13 @@ final class LiveViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         connection = .init()
         stream = SRTStream(connection)
-        stream.captureSettings = [
-            .sessionPreset: AVCaptureSession.Preset.hd1280x720,
-            .continuousAutofocus: true,
-            .continuousExposure: true
-        ]
+        stream.sessionPreset = .hd1920x1080
         stream.videoSettings = [
             .width: 720,
             .height: 1280
         ]
-        connection.attachStream(stream)
         lfView.attachStream(stream)
     }
 
@@ -45,7 +39,7 @@ final class LiveViewController: UIViewController {
         stream.attachAudio(AVCaptureDevice.default(for: .audio)) { _ in
             // logger.warn(error.description)
         }
-        stream.attachCamera(DeviceUtil.device(withPosition: currentPosition)) { _ in
+        stream.attachCamera(AVCaptureDevice.default(for: .video)) { _ in
             // logger.warn(error.description)
         }
     }
