@@ -32,7 +32,7 @@ Not available.
 
 ### Carthage
 ```swift
-github "shogo4405/SRTHaishinKit.swift" "main"
+github "shogo4405/SRTHaishinKit.swift" "0.0.4"
 ``` 
 
 ## ☕ Cocoa Keys
