@@ -161,15 +161,15 @@ public enum SRTSocketOption: String {
         case .rendezvous: return .pre
         case .sndtimeo: return .post
         case .rcvtimeo: return .post
-        case .reuseaddr: return .post // WIP
-        case .state: return .post // WIP
-        case .event: return .post // WIP
-        case .snddata: return .post // WIP
-        case .rcvdata: return .post // WIP
-        case .sender: return .post // WIP
-        case .kmstate: return .post // WIP
-        case .snddropdelay: return .post // WIP
-        case .sndkmstate: return .post // WIP
+        case .reuseaddr: return .post
+        case .state: return .post
+        case .event: return .post
+        case .snddata: return .post
+        case .rcvdata: return .post
+        case .sender: return .post
+        case .kmstate: return .post
+        case .snddropdelay: return .post
+        case .sndkmstate: return .post
         }
     }
 
@@ -250,7 +250,10 @@ public enum SRTSocketOption: String {
             }
             return .init(Data(bytes: &v, count: MemoryLayout.size(ofValue: v)))
         case .int64:
-            guard var v = value as? Int64 else { return nil }
+            guard var v = value as? Int64 else {
+                return nil
+                
+            }
             return .init(Data(bytes: &v, count: MemoryLayout.size(ofValue: v)))
         case .bool:
             var v: Int32 = 0
@@ -259,7 +262,19 @@ public enum SRTSocketOption: String {
             }
             return .init(Data(bytes: &v, count: MemoryLayout.size(ofValue: v)))
         case .enumeration:
-            return nil
+            switch self {
+            case .transtype:
+                guard let key = value as? String else {
+                    return nil
+                }
+                guard var v = valmap?[key] as? SRT_TRANSTYPE else {
+                    return nil
+                }
+                print(Data(bytes: &v, count: MemoryLayout.size(ofValue: value)))
+                return .init(Data(bytes: &v, count: MemoryLayout.size(ofValue: value)))
+            default:
+                return nil
+            }
         }
     }
 

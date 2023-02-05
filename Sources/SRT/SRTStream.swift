@@ -51,6 +51,7 @@ public class SRTStream: NetStream {
     public init(_ connection: SRTConnection) {
         super.init()
         self.connection = connection
+        self.connection?.streams.append(self)
         let keyValueObservation = connection.observe(\.connected, options: [.new, .old]) { [weak self] _, _ in
             guard let self = self else { return }
             if connection.connected {
@@ -108,6 +109,7 @@ public class SRTStream: NetStream {
         super.attachAudio(audio, automaticallyConfiguresApplicationAudioSession: automaticallyConfiguresApplicationAudioSession, onError: onError)
     }
 
+    /// Sends streaming audio, vidoe and data message from client.
     public func publish(_ name: String? = "") {
         lockQueue.async {
             guard let name else {
@@ -127,6 +129,7 @@ public class SRTStream: NetStream {
         }
     }
 
+    /// Stops playing or publishing and makes available other uses.
     public func close() {
         lockQueue.async {
             if self.readyState == .closed || self.readyState == .initialized {

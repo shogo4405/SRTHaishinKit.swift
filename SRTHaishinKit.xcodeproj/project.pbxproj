@@ -27,14 +27,11 @@
 		296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
 		BC0951DF23E73951009FAA72 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0951DD23E73950009FAA72 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BC0BF4FA298F9BA000D72CB4 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0BF4F9298F9B4F00D72CB4 /* libcrypto.a */; };
+		BC0BF4FB298FC54500D72CB4 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
+		BC0BF4FC298FC54500D72CB4 /* libsrt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC0BF500298FE09400D72CB4 /* SRTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */; };
 		BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
-		BC512F77288536270081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
-		BC512F78288536270081CCC2 /* libsrt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC512F7A2885365B0081CCC2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F792885364F0081CCC2 /* libc++.tbd */; };
-		BC837D4328842A2C00147A7B /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC837D4228842A2C00147A7B /* OpenSSL.xcframework */; };
-		BC837D4428842A7800147A7B /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC837D4228842A2C00147A7B /* OpenSSL.xcframework */; };
-		BC837D4528842A7800147A7B /* OpenSSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC837D4228842A2C00147A7B /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BCC1A7342652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
 		BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7352652C72600661156 /* PreferenceViewController.swift */; };
 		BCD1DC20260623E200A1C593 /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; };
@@ -63,9 +60,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */,
+				BC0BF4FC298FC54500D72CB4 /* libsrt.xcframework in Embed Frameworks */,
 				BCD1DC21260623E200A1C593 /* HaishinKit.xcframework in Embed Frameworks */,
-				BC512F78288536270081CCC2 /* libsrt.xcframework in Embed Frameworks */,
-				BC837D4528842A7800147A7B /* OpenSSL.xcframework in Embed Frameworks */,
 				BCD1DC23260623E200A1C593 /* Logboard.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -112,12 +108,10 @@
 		29D0939821A998AF003E6E1F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
-		BC0BF4F8298F9B4F00D72CB4 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = Vendor/SRT/OpenSSL/iphoneos/lib/libssl.a; sourceTree = "<group>"; };
-		BC0BF4F9298F9B4F00D72CB4 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = Vendor/SRT/OpenSSL/iphoneos/lib/libcrypto.a; sourceTree = "<group>"; };
+		BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTLogger.swift; sourceTree = "<group>"; };
 		BC46F9E9288870DA00BB7C96 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BC512F74288534E50081CCC2 /* libsrt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libsrt.xcframework; path = Vendor/SRT/libsrt.xcframework; sourceTree = "<group>"; };
 		BC512F792885364F0081CCC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
-		BC837D4228842A2C00147A7B /* OpenSSL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OpenSSL.xcframework; path = Carthage/Build/OpenSSL.xcframework; sourceTree = "<group>"; };
 		BC837D47288445A900147A7B /* SRTHaishinKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRTHaishinKit.podspec; sourceTree = "<group>"; };
 		BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SRTHaishinKit.entitlements; sourceTree = "<group>"; };
 		BCC1A7322652C39D00661156 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
@@ -131,9 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC837D4328842A2C00147A7B /* OpenSSL.xcframework in Frameworks */,
 				BC512F7A2885365B0081CCC2 /* libc++.tbd in Frameworks */,
-				BC0BF4FA298F9BA000D72CB4 /* libcrypto.a in Frameworks */,
 				BCD1DC292606240200A1C593 /* Logboard.xcframework in Frameworks */,
 				BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */,
 				BCD1DC272606240200A1C593 /* HaishinKit.xcframework in Frameworks */,
@@ -145,9 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */,
+				BC0BF4FB298FC54500D72CB4 /* libsrt.xcframework in Frameworks */,
 				BCD1DC20260623E200A1C593 /* HaishinKit.xcframework in Frameworks */,
-				BC512F77288536270081CCC2 /* libsrt.xcframework in Frameworks */,
-				BC837D4428842A7800147A7B /* OpenSSL.xcframework in Frameworks */,
 				BCD1DC22260623E200A1C593 /* Logboard.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +271,8 @@
 		296FB20621A6BD1F00CB4770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC0BF4F9298F9B4F00D72CB4 /* libcrypto.a */,
-				BC0BF4F8298F9B4F00D72CB4 /* libssl.a */,
 				BC512F792885364F0081CCC2 /* libc++.tbd */,
 				BC512F74288534E50081CCC2 /* libsrt.xcframework */,
-				BC837D4228842A2C00147A7B /* OpenSSL.xcframework */,
 				BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */,
 				BCD1DC1F260623E200A1C593 /* Logboard.xcframework */,
 			);
@@ -308,6 +296,7 @@
 			children = (
 				296FB28921A800CF00CB4770 /* SRTConnection.swift */,
 				296FB28521A70D9600CB4770 /* SRTError.swift */,
+				BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */,
 				296FB22721A6BEE700CB4770 /* SRTSocket.swift */,
 				296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */,
 				296FB23621A6D58900CB4770 /* SRTStream.swift */,
@@ -473,6 +462,7 @@
 				296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */,
 				296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */,
 				296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */,
+				BC0BF500298FE09400D72CB4 /* SRTLogger.swift in Sources */,
 				296FB28821A70E1500CB4770 /* Constants.swift in Sources */,
 				29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */,
 				296FB28721A70D9600CB4770 /* SRTError.swift in Sources */,

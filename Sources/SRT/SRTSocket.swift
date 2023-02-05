@@ -20,7 +20,7 @@ final class SRTSocket {
     }
     weak var delegate: SRTSocketDelegate?
     private(set) var isRunning: Atomic<Bool> = .init(false)
-    private let lockQueue: DispatchQueue = DispatchQueue(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock")
+    private let lockQueue: DispatchQueue = .init(label: "ccom.haishinkit.SRTSocket.lock", qos: .userInitiated)
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
     private(set) var status: SRT_SOCKSTATUS = SRTS_INIT {
         didSet {
@@ -29,45 +29,39 @@ final class SRTSocket {
             switch status {
             case SRTS_INIT: // 1
                 logger.trace("SRT Socket Init")
-                break
             case SRTS_OPENED:
                 logger.info("SRT Socket opened")
-                break
             case SRTS_LISTENING:
                 logger.trace("SRT Socket Listening")
-                break
             case SRTS_CONNECTING:
                 logger.trace("SRT Socket Connecting")
-                break
             case SRTS_CONNECTED:
                 logger.info("SRT Socket Connected")
-                break
             case SRTS_BROKEN:
                 logger.warn("SRT Socket Broken")
                 close()
             case SRTS_CLOSING:
                 logger.trace("SRT Socket Closing")
-                break
             case SRTS_CLOSED:
                 logger.info("SRT Socket Closed")
                 stopRunning()
             case SRTS_NONEXIST:
                 logger.warn("SRT Socket Not Exist")
-                break
             default:
                 break
             }
         }
     }
-    private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.srt.SRTSocket.outgoingQueue", qos: .userInitiated)
-    private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.srt.SRTSOcket.incomingQueue", qos: .userInitiated)
+    private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTSocket.outgoing", qos: .userInitiated)
+    private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTSocket.incoming", qos: .userInitiated)
 
     func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
         guard socket == SRT_INVALID_SOCK else {
             return
         }
+        srt_startup()
         // prepare socket
-        socket = srt_socket(AF_INET, SOCK_DGRAM, 0)
+        socket = srt_create_socket()
         if socket == SRT_ERROR {
             let error_message = String(cString: srt_getlasterror_str())
             logger.error(error_message)
@@ -106,6 +100,7 @@ final class SRTSocket {
                     return
                 }
                 _ = self.sendmsg2(&data)
+                self.outgoingBuffer.remove(at: 0)
             } while !self.outgoingBuffer.isEmpty
         }
     }
@@ -122,7 +117,9 @@ final class SRTSocket {
     }
 
     func close() {
-        guard socket != SRT_INVALID_SOCK else { return }
+        guard socket != SRT_INVALID_SOCK else {
+            return
+        }
         srt_close(socket)
         socket = SRT_INVALID_SOCK
     }

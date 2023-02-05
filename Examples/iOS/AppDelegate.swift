@@ -9,7 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Logboard.with(SRTHaishinKit).level = .trace
+        // LBLogger.with(SRTHaishinKit).level = .trace
+        SRTLogger.shared.level = .debug
         let session: AVAudioSession = AVAudioSession.sharedInstance()
         do {
             try session.setPreferredSampleRate(44_100)
