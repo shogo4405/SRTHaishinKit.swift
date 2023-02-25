@@ -1,6 +1,7 @@
 import UIKit
 import Logboard
 import AVFoundation
+import HaishinKit
 import SRTHaishinKit
 
 @UIApplicationMain
@@ -9,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // LBLogger.with(SRTHaishinKit).level = .trace
+        LBLogger.with(HaishinKitIdentifier).level = .trace
         SRTLogger.shared.level = .debug
         let session: AVAudioSession = AVAudioSession.sharedInstance()
         do {

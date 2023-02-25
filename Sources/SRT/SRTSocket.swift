@@ -20,7 +20,7 @@ final class SRTSocket {
     }
     weak var delegate: SRTSocketDelegate?
     private(set) var isRunning: Atomic<Bool> = .init(false)
-    private let lockQueue: DispatchQueue = .init(label: "ccom.haishinkit.SRTSocket.lock", qos: .userInitiated)
+    private let lockQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock", qos: .userInitiated)
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
     private(set) var status: SRT_SOCKSTATUS = SRTS_INIT {
         didSet {
@@ -52,8 +52,8 @@ final class SRTSocket {
             }
         }
     }
-    private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTSocket.outgoing", qos: .userInitiated)
-    private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTSocket.incoming", qos: .userInitiated)
+    private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.outgoing", qos: .userInitiated)
+    private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.incoming", qos: .userInitiated)
 
     func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
         guard socket == SRT_INVALID_SOCK else {
@@ -85,12 +85,15 @@ final class SRTSocket {
         guard configure(.post) else {
             return
         }
+        if incomingBuffer.count < windowSizeC {
+            incomingBuffer = .init(count: Int(windowSizeC))
+        }
         startRunning()
     }
 
     private var windowSizeC: Int32 = 1024 * 4
     private var outgoingBuffer: [Data] = .init()
-    private lazy var incomingBuffer: Data = .init(capacity: Int(windowSizeC))
+    private lazy var incomingBuffer: Data = .init(count: Int(windowSizeC))
 
     func doOutput(data: Data) {
         outgoingQueue.async {
@@ -105,7 +108,7 @@ final class SRTSocket {
         }
     }
 
-    func doInput() {
+    func listen() {
         incomingQueue.async {
             repeat {
                 let result = self.recvmsg()
@@ -166,6 +169,8 @@ extension SRTSocket: Running {
     }
 
     func stopRunning() {
-        isRunning.mutate { $0 = false }
+        lockQueue.async {
+            self.isRunning.mutate { $0 = false }
+        }
     }
 }

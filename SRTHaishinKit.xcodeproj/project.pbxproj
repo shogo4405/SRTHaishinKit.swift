@@ -30,6 +30,7 @@
 		BC0BF4FB298FC54500D72CB4 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC0BF4FC298FC54500D72CB4 /* libsrt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC0BF500298FE09400D72CB4 /* SRTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */; };
+		BC2EE11729B453570045BA98 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EE11529B453530045BA98 /* PlaybackViewController.swift */; };
 		BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC512F7A2885365B0081CCC2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F792885364F0081CCC2 /* libc++.tbd */; };
 		BCC1A7342652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
@@ -70,12 +71,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2923D29D21733A73000A5E9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2923D29F21733A73000A5E9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2923D2A121733A74000A5E9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2923D2A421733A74000A5E9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2923D2A621733A74000A5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2923D2A721733A74000A5E9B /* SRTHaishinKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SRTHaishinKit.entitlements; sourceTree = "<group>"; };
 		2923D2B921733B1E000A5E9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2923D2BA21733B1E000A5E9B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2923D2C621733C3D000A5E9B /* SRTHaishinKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRTHaishinKit.h; sourceTree = "<group>"; };
@@ -109,6 +104,7 @@
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTLogger.swift; sourceTree = "<group>"; };
+		BC2EE11529B453530045BA98 /* PlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 		BC512F74288534E50081CCC2 /* libsrt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libsrt.xcframework; path = Vendor/SRT/libsrt.xcframework; sourceTree = "<group>"; };
 		BC512F792885364F0081CCC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		BC837D47288445A900147A7B /* SRTHaishinKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRTHaishinKit.podspec; sourceTree = "<group>"; };
@@ -171,19 +167,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2923D29C21733A73000A5E9B /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				2923D29D21733A73000A5E9B /* AppDelegate.swift */,
-				2923D29F21733A73000A5E9B /* ViewController.swift */,
-				2923D2A121733A74000A5E9B /* Assets.xcassets */,
-				2923D2A321733A74000A5E9B /* Main.storyboard */,
-				2923D2A621733A74000A5E9B /* Info.plist */,
-				2923D2A721733A74000A5E9B /* SRTHaishinKit.entitlements */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
 		2923D2BD21733B63000A5E9B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				2923D2F7217342A2000A5E9B /* iOS */,
-				2923D29C21733A73000A5E9B /* macOS */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -249,6 +231,7 @@
 				2923D301217342A4000A5E9B /* LaunchScreen.storyboard */,
 				2923D2FA217342A3000A5E9B /* LiveViewController.swift */,
 				2923D2FC217342A3000A5E9B /* Main.storyboard */,
+				BC2EE11529B453530045BA98 /* PlaybackViewController.swift */,
 				BCC1A7322652C39D00661156 /* Preference.swift */,
 				BCC1A7352652C72600661156 /* PreferenceViewController.swift */,
 				BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */,
@@ -473,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2923D2FB217342A3000A5E9B /* LiveViewController.swift in Sources */,
+				BC2EE11729B453570045BA98 /* PlaybackViewController.swift in Sources */,
 				BCC1A7342652C39D00661156 /* Preference.swift in Sources */,
 				2923D2F9217342A2000A5E9B /* AppDelegate.swift in Sources */,
 				BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */,
@@ -490,14 +474,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2923D2A321733A74000A5E9B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2923D2A421733A74000A5E9B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2923D2FC217342A3000A5E9B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

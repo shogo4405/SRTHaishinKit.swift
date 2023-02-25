@@ -231,10 +231,13 @@ public enum SRTSocketOption: String {
         }
     }
 
-    func apply(_ socket: SRTSOCKET, value: Any) -> Bool {
+    func setOption(_ socket: SRTSOCKET, value: Any) -> Bool {
         guard let data = data(value) else { return false }
-        let result = data.withUnsafeBytes { (ptr: UnsafePointer<UInt8>) in
-            return srt_setsockopt(socket, 0, symbol, ptr, Int32(data.count))
+        let result: Int32 = data.withUnsafeBytes { pointer in
+            guard let buffer = pointer.baseAddress else {
+                return -1
+            }
+            return srt_setsockopt(socket, 0, symbol, buffer, Int32(data.count))
         }
         return result != -1
     }
@@ -252,7 +255,7 @@ public enum SRTSocketOption: String {
         case .int64:
             guard var v = value as? Int64 else {
                 return nil
-                
+
             }
             return .init(Data(bytes: &v, count: MemoryLayout.size(ofValue: v)))
         case .bool:
@@ -270,7 +273,6 @@ public enum SRTSocketOption: String {
                 guard var v = valmap?[key] as? SRT_TRANSTYPE else {
                     return nil
                 }
-                print(Data(bytes: &v, count: MemoryLayout.size(ofValue: value)))
                 return .init(Data(bytes: &v, count: MemoryLayout.size(ofValue: value)))
             default:
                 return nil
@@ -281,7 +283,7 @@ public enum SRTSocketOption: String {
     static func configure(_ socket: SRTSOCKET, binding: Binding, options: [SRTSocketOption: Any]) -> [String] {
         var failures: [String] = []
         for (key, value) in options where key.binding == binding {
-            if !key.apply(socket, value: value) { failures.append(key.rawValue) }
+            if !key.setOption(socket, value: value) { failures.append(key.rawValue) }
         }
         return failures
     }

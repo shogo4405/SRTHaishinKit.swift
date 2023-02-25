@@ -18,28 +18,46 @@ public class SRTStream: NetStream {
     private var action: (() -> Void)?
     private var keyValueObservations: [NSKeyValueObservation] = []
     private weak var connection: SRTConnection?
+    private lazy var audioEngine: AVAudioEngine = .init()
 
-    private lazy var tsWriter: TSWriter = {
-        var tsWriter = TSWriter()
-        tsWriter.delegate = self
-        return tsWriter
+    private lazy var writer: TSWriter = {
+        var writer = TSWriter()
+        writer.delegate = self
+        return writer
+    }()
+
+    private lazy var reader: TSReader = {
+        var reader = TSReader()
+        reader.delegate = self
+        return reader
     }()
 
     private var readyState: ReadyState = .initialized {
         didSet {
-            guard oldValue != readyState else { return }
+            guard oldValue != readyState else {
+                return
+            }
+
             switch oldValue {
             case .publishing:
-                tsWriter.stopRunning()
+                writer.stopRunning()
                 mixer.stopEncoding()
+            case .playing:
+                mixer.stopDecoding()
             default:
                 break
             }
+
             switch readyState {
+            case .play:
+                connection?.socket?.listen()
+                mixer.isPaused = false
+                mixer.startDecoding(audioEngine)
+                readyState = .playing
             case .publish:
-                mixer.startEncoding(tsWriter)
+                mixer.startEncoding(writer)
                 mixer.startRunning()
-                tsWriter.startRunning()
+                writer.startRunning()
                 readyState = .publishing
             default:
                 break
@@ -78,7 +96,7 @@ public class SRTStream: NetStream {
      As with appendSampleBuffer only video and audio types are supported
      */
     public func attachRawMedia(_ type: AVMediaType) {
-        tsWriter.expectedMedias.insert(type)
+        writer.expectedMedias.insert(type)
     }
 
     /**
@@ -88,23 +106,23 @@ public class SRTStream: NetStream {
      - type: An AVMediaType that was added via an attachRawMedia call
      */
     public func detachRawMedia(_ type: AVMediaType) {
-        tsWriter.expectedMedias.remove(type)
+        writer.expectedMedias.remove(type)
     }
 
     override public func attachCamera(_ camera: AVCaptureDevice?, onError: ((Error) -> Void)? = nil) {
         if camera == nil {
-            tsWriter.expectedMedias.remove(.video)
+            writer.expectedMedias.remove(.video)
         } else {
-            tsWriter.expectedMedias.insert(.video)
+            writer.expectedMedias.insert(.video)
         }
         super.attachCamera(camera, onError: onError)
     }
 
     override public func attachAudio(_ audio: AVCaptureDevice?, automaticallyConfiguresApplicationAudioSession: Bool = true, onError: ((Error) -> Void)? = nil) {
         if audio == nil {
-            tsWriter.expectedMedias.remove(.audio)
+            writer.expectedMedias.remove(.audio)
         } else {
-            tsWriter.expectedMedias.insert(.audio)
+            writer.expectedMedias.insert(.audio)
         }
         super.attachAudio(audio, automaticallyConfiguresApplicationAudioSession: automaticallyConfiguresApplicationAudioSession, onError: onError)
     }
@@ -129,6 +147,26 @@ public class SRTStream: NetStream {
         }
     }
 
+    /// Playback streaming audio and video message from server.
+    public func play(_ name: String? = "") {
+        lockQueue.async {
+            guard let name else {
+                switch self.readyState {
+                case .play, .playing:
+                    self.readyState = .open
+                default:
+                    break
+                }
+                return
+            }
+            if self.connection?.connected == true {
+                self.readyState = .play
+            } else {
+                self.action = { [weak self] in self?.play(name) }
+            }
+        }
+    }
+
     /// Stops playing or publishing and makes available other uses.
     public func close() {
         lockQueue.async {
@@ -137,6 +175,10 @@ public class SRTStream: NetStream {
             }
             self.readyState = .closed
         }
+    }
+
+    func doInput(_ data: Data) {
+        _ = reader.read(data)
     }
 }
 
@@ -147,5 +189,27 @@ extension SRTStream: TSWriterDelegate {
             return
         }
         connection?.socket?.doOutput(data: data)
+    }
+}
+
+extension SRTStream: TSReaderDelegate {
+    // MARK: TSReaderDelegate
+    public func reader(_ reader: TSReader, id: UInt16, didRead formatDescription: CMFormatDescription) {
+        guard readyState == .playing else {
+            return
+        }
+        switch CMFormatDescriptionGetMediaType(formatDescription) {
+        case kCMMediaType_Video:
+            mixer.hasVideo = true
+        default:
+            break
+        }
+    }
+
+    public func reader(_ reader: TSReader, id: UInt16, didRead sampleBuffer: CMSampleBuffer) {
+        guard readyState == .playing else {
+            return
+        }
+        mixer.appendSampleBuffer(sampleBuffer)
     }
 }

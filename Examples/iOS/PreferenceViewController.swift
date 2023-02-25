@@ -8,7 +8,7 @@ final class PreferenceViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         urlField?.text = Preference.shared.url.description
-        streamNameField?.text = Preference.shared.streamName
+        streamNameField?.text = ""
     }
 
     @IBAction func on(open: UIButton) {
@@ -22,9 +22,6 @@ extension PreferenceViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if urlField == textField {
             Preference.shared.url = textField.text ?? ""
-        }
-        if streamNameField == textField {
-            Preference.shared.streamName = textField.text ?? ""
         }
         textField.resignFirstResponder()
         return true

@@ -37,7 +37,7 @@ public class SRTLogger {
     }
 
     /// Specifies the current logging level.
-    public var level: Level = .notice{
+    public var level: Level = .notice {
         didSet {
             guard level != oldValue else {
                 return

@@ -67,5 +67,6 @@ extension SRTConnection: SRTSocketDelegate {
     }
 
     func socket(_ socket: SRTSocket, incomingDataAvailabled data: Data, bytes: Int32) {
+        streams.first?.doInput(data.subdata(in: 0..<Data.Index(bytes)))
     }
 }

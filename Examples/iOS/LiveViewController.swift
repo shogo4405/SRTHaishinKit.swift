@@ -27,10 +27,7 @@ final class LiveViewController: UIViewController {
         connection = .init()
         stream = SRTStream(connection)
         stream.sessionPreset = .hd1920x1080
-        stream.videoSettings = [
-            .width: 720,
-            .height: 1280
-        ]
+        stream.videoSettings.videoSize = .init(width: 720, height: 1280)
         lfView.attachStream(stream)
     }
 
@@ -44,20 +41,15 @@ final class LiveViewController: UIViewController {
         }
     }
 
-    @IBAction func rotateCamera(_ sender: UIButton) {
-    }
-
-    @IBAction func toggleTorch(_ sender: UIButton) {
-    }
-
     @IBAction func on(slider: UISlider) {
-    }
-
-    @IBAction func on(pause: UIButton) {
-    }
-
-    @IBAction func on(close: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        if slider == audioBitrateSlider {
+            audioBitrateLabel?.text = "audio \(Int(slider.value))/kbps"
+            stream.audioSettings.bitRate = Int(slider.value * 1000)
+        }
+        if slider == videoBitrateSlider {
+            videoBitrateLabel?.text = "video \(Int(slider.value))/kbps"
+            stream.videoSettings.bitRate = UInt32(slider.value * 1000)
+        }
     }
 
     @IBAction func on(publish: UIButton) {
@@ -69,30 +61,9 @@ final class LiveViewController: UIViewController {
         } else {
             UIApplication.shared.isIdleTimerDisabled = true
             connection.connect(URL(string: Preference.shared.url))
-            stream.publish(Preference.shared.streamName)
+            stream.publish("")
             publish.setTitle("■", for: [])
         }
         publish.isSelected.toggle()
-    }
-
-    func tapScreen(_ gesture: UIGestureRecognizer) {
-    }
-
-    @IBAction private func onFPSValueChanged(_ segment: UISegmentedControl) {
-    }
-
-    @IBAction private func onEffectValueChanged(_ segment: UISegmentedControl) {
-    }
-
-    @objc
-    private func on(_ notification: Notification) {
-    }
-
-    @objc
-    private func didEnterBackground(_ notification: Notification) {
-    }
-
-    @objc
-    private func didBecomeActive(_ notification: Notification) {
     }
 }
