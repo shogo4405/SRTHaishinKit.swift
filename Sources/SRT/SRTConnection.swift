@@ -7,7 +7,7 @@ public class SRTConnection: NSObject {
     /// The URI passed to the SRTConnection.connect() method.
     public private(set) var uri: URL?
     /// This instance connect to server(true) or not(false)
-    @objc dynamic public private(set) var connected: Bool = false
+    @objc dynamic public private(set) var connected = false
 
     var socket: SRTSocket? {
         didSet {
@@ -19,10 +19,12 @@ public class SRTConnection: NSObject {
     /// Creates a new SRTConnection.
     public override init() {
         super.init()
+        srt_startup()
     }
 
     deinit {
         streams.removeAll()
+        srt_cleanup()
     }
 
     /// Creates a two-way connection to an application on SRT Server.

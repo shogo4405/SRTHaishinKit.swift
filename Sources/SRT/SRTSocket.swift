@@ -15,7 +15,6 @@ final class SRTSocket {
     var options: [SRTSocketOption: Any] = [:]
     weak var delegate: SRTSocketDelegate?
     private(set) var isRunning: Atomic<Bool> = .init(false)
-    private let lockQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock", qos: .userInitiated)
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
     private(set) var status: SRT_SOCKSTATUS = SRTS_INIT {
         didSet {
@@ -56,10 +55,9 @@ final class SRTSocket {
         guard socket == SRT_INVALID_SOCK else {
             return
         }
-        srt_startup()
         // prepare socket
         socket = srt_create_socket()
-        if socket == SRT_ERROR {
+        if socket == SRT_INVALID_SOCK {
             let error_message = String(cString: srt_getlasterror_str())
             logger.error(error_message)
             throw SRTError.illegalState(message: error_message)
@@ -105,7 +103,7 @@ final class SRTSocket {
         }
     }
 
-    func listen() {
+    func doInput() {
         incomingQueue.async {
             repeat {
                 let result = self.recvmsg()
@@ -156,8 +154,11 @@ final class SRTSocket {
 extension SRTSocket: Running {
     // MARK: Running
     func startRunning() {
-        lockQueue.async {
-            self.isRunning.mutate { $0 = true }
+        guard !isRunning.value else {
+            return
+        }
+        isRunning.mutate { $0 = true }
+        DispatchQueue(label: "com.haishkinkit.SRTHaishinKit.SRTSocket.listen").async {
             repeat {
                 self.status = srt_getsockstate(self.socket)
                 usleep(3 * 10000)
@@ -166,8 +167,9 @@ extension SRTSocket: Running {
     }
 
     func stopRunning() {
-        lockQueue.async {
-            self.isRunning.mutate { $0 = false }
+        guard isRunning.value else {
+            return
         }
+        isRunning.mutate { $0 = false }
     }
 }

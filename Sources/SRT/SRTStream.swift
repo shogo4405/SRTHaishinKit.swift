@@ -50,7 +50,7 @@ public class SRTStream: NetStream {
 
             switch readyState {
             case .play:
-                connection?.socket?.listen()
+                connection?.socket?.doInput()
                 mixer.isPaused = false
                 mixer.startDecoding(audioEngine)
                 readyState = .playing
