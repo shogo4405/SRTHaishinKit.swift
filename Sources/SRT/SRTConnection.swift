@@ -16,6 +16,15 @@ public class SRTConnection: NSObject {
     }
     var streams: [SRTStream] = []
 
+    /// The SRT's performance data.
+    public var performanceData: SRTPerformanceData {
+        guard let socket else {
+            return .zero
+        }
+        _ = socket.bstats()
+        return SRTPerformanceData(mon: socket.perf)
+    }
+
     /// Creates a new SRTConnection.
     public override init() {
         super.init()

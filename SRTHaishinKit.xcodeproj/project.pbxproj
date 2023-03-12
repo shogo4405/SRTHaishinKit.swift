@@ -33,6 +33,7 @@
 		BC2EE11729B453570045BA98 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EE11529B453530045BA98 /* PlaybackViewController.swift */; };
 		BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC512F7A2885365B0081CCC2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F792885364F0081CCC2 /* libc++.tbd */; };
+		BCBF1A0729BE0F98006DDAD7 /* SRTPerformanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBF1A0629BE0F98006DDAD7 /* SRTPerformanceData.swift */; };
 		BCC1A7342652C39D00661156 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7322652C39D00661156 /* Preference.swift */; };
 		BCC1A7362652C72600661156 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC1A7352652C72600661156 /* PreferenceViewController.swift */; };
 		BCD1DC20260623E200A1C593 /* HaishinKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */; };
@@ -109,6 +110,7 @@
 		BC512F792885364F0081CCC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		BC837D47288445A900147A7B /* SRTHaishinKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SRTHaishinKit.podspec; sourceTree = "<group>"; };
 		BCBEB9C1250CEA2100E800FE /* SRTHaishinKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SRTHaishinKit.entitlements; sourceTree = "<group>"; };
+		BCBF1A0629BE0F98006DDAD7 /* SRTPerformanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTPerformanceData.swift; sourceTree = "<group>"; };
 		BCC1A7322652C39D00661156 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		BCC1A7352652C72600661156 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		BCD1DC1E260623E200A1C593 /* HaishinKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HaishinKit.xcframework; path = Carthage/Build/HaishinKit.xcframework; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				296FB28921A800CF00CB4770 /* SRTConnection.swift */,
 				296FB28521A70D9600CB4770 /* SRTError.swift */,
 				BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */,
+				BCBF1A0629BE0F98006DDAD7 /* SRTPerformanceData.swift */,
 				296FB22721A6BEE700CB4770 /* SRTSocket.swift */,
 				296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */,
 				296FB23621A6D58900CB4770 /* SRTStream.swift */,
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */,
+				BCBF1A0729BE0F98006DDAD7 /* SRTPerformanceData.swift in Sources */,
 				296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */,
 				296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */,
 				BC0BF500298FE09400D72CB4 /* SRTLogger.swift in Sources */,

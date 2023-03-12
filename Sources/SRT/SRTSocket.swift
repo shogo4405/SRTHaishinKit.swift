@@ -14,6 +14,7 @@ final class SRTSocket {
     var timeout: Int = 0
     var options: [SRTSocketOption: Any] = [:]
     weak var delegate: SRTSocketDelegate?
+    private(set) var perf: CBytePerfMon = .init()
     private(set) var isRunning: Atomic<Bool> = .init(false)
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
     private(set) var status: SRT_SOCKSTATUS = SRTS_INIT {
@@ -21,7 +22,6 @@ final class SRTSocket {
             guard status != oldValue else {
                 return
             }
-            delegate?.socket(self, status: status)
             switch status {
             case SRTS_INIT: // 1
                 logger.trace("SRT Socket Init")
@@ -46,8 +46,12 @@ final class SRTSocket {
             default:
                 break
             }
+            delegate?.socket(self, status: status)
         }
     }
+    private var windowSizeC: Int32 = 1024 * 4
+    private var outgoingBuffer: [Data] = .init()
+    private lazy var incomingBuffer: Data = .init(count: Int(windowSizeC))
     private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.outgoing", qos: .userInitiated)
     private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.incoming", qos: .userInitiated)
 
@@ -58,13 +62,11 @@ final class SRTSocket {
         // prepare socket
         socket = srt_create_socket()
         if socket == SRT_INVALID_SOCK {
-            let error_message = String(cString: srt_getlasterror_str())
-            logger.error(error_message)
-            throw SRTError.illegalState(message: error_message)
+            throw makeSocketError()
         }
         self.options = options
         guard configure(.pre) else {
-            return
+            throw makeSocketError()
         }
         // prepare connect
         var addr_cp = addr
@@ -73,22 +75,16 @@ final class SRTSocket {
             return srt_connect(socket, psa, Int32(MemoryLayout.size(ofValue: addr)))
         }
         if stat == SRT_ERROR {
-            let error_message = String(cString: srt_getlasterror_str())
-            logger.error(error_message)
-            throw SRTError.illegalState(message: error_message)
+            throw makeSocketError()
         }
         guard configure(.post) else {
-            return
+            throw makeSocketError()
         }
         if incomingBuffer.count < windowSizeC {
             incomingBuffer = .init(count: Int(windowSizeC))
         }
         startRunning()
     }
-
-    private var windowSizeC: Int32 = 1024 * 4
-    private var outgoingBuffer: [Data] = .init()
-    private lazy var incomingBuffer: Data = .init(count: Int(windowSizeC))
 
     func doOutput(data: Data) {
         outgoingQueue.async {
@@ -125,9 +121,23 @@ final class SRTSocket {
     func configure(_ binding: SRTSocketOption.Binding) -> Bool {
         let failures = SRTSocketOption.configure(socket, binding: binding, options: options)
         guard failures.isEmpty else {
-            logger.error(failures); return false
+            logger.error(failures)
+            return false
         }
         return true
+    }
+
+    func bstats() -> Int32 {
+        guard socket != SRT_INVALID_SOCK else {
+            return SRT_ERROR
+        }
+        return srt_bstats(socket, &perf, 1)
+    }
+
+    private func makeSocketError() -> SRTError {
+        let error_message = String(cString: srt_getlasterror_str())
+        logger.error(error_message)
+        return SRTError.illegalState(message: error_message)
     }
 
     @inline(__always)
