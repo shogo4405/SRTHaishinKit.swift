@@ -15,6 +15,7 @@ final class PlaybackViewController: UIViewController {
         super.viewDidLoad()
         connection = .init()
         stream = SRTStream(connection)
+        hkView.attachStream(stream)
     }
 
     @IBAction func on(playback: UIButton) {

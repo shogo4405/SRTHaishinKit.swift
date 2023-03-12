@@ -12,19 +12,16 @@ final class SRTSocket {
     static let payloadSize: Int = 1316
 
     var timeout: Int = 0
-    var options: [SRTSocketOption: Any] = [:] {
-        didSet {
-            options[.rcvsyn] = true
-            options[.tsbdmode] = true
-        }
-    }
+    var options: [SRTSocketOption: Any] = [:]
     weak var delegate: SRTSocketDelegate?
     private(set) var isRunning: Atomic<Bool> = .init(false)
     private let lockQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.lock", qos: .userInitiated)
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
     private(set) var status: SRT_SOCKSTATUS = SRTS_INIT {
         didSet {
-            guard status != oldValue else { return }
+            guard status != oldValue else {
+                return
+            }
             delegate?.socket(self, status: status)
             switch status {
             case SRTS_INIT: // 1
