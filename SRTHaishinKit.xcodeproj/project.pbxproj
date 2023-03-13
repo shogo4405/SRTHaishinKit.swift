@@ -30,6 +30,7 @@
 		BC0BF4FB298FC54500D72CB4 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC0BF4FC298FC54500D72CB4 /* libsrt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC0BF500298FE09400D72CB4 /* SRTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */; };
+		BC1C687129BF4F88005BC228 /* SRTMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1C687029BF4F88005BC228 /* SRTMode.swift */; };
 		BC2EE11729B453570045BA98 /* PlaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2EE11529B453530045BA98 /* PlaybackViewController.swift */; };
 		BC512F76288534EB0081CCC2 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC512F7A2885365B0081CCC2 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F792885364F0081CCC2 /* libc++.tbd */; };
@@ -105,6 +106,7 @@
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTLogger.swift; sourceTree = "<group>"; };
+		BC1C687029BF4F88005BC228 /* SRTMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTMode.swift; sourceTree = "<group>"; };
 		BC2EE11529B453530045BA98 /* PlaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackViewController.swift; sourceTree = "<group>"; };
 		BC512F74288534E50081CCC2 /* libsrt.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libsrt.xcframework; path = Vendor/SRT/libsrt.xcframework; sourceTree = "<group>"; };
 		BC512F792885364F0081CCC2 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
@@ -280,6 +282,7 @@
 				296FB28921A800CF00CB4770 /* SRTConnection.swift */,
 				296FB28521A70D9600CB4770 /* SRTError.swift */,
 				BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */,
+				BC1C687029BF4F88005BC228 /* SRTMode.swift */,
 				BCBF1A0629BE0F98006DDAD7 /* SRTPerformanceData.swift */,
 				296FB22721A6BEE700CB4770 /* SRTSocket.swift */,
 				296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */,
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1C687129BF4F88005BC228 /* SRTMode.swift in Sources */,
 				296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */,
 				BCBF1A0729BE0F98006DDAD7 /* SRTPerformanceData.swift in Sources */,
 				296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */,

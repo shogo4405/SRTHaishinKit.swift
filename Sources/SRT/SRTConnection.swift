@@ -15,6 +15,7 @@ public class SRTConnection: NSObject {
         }
     }
     var streams: [SRTStream] = []
+    var clients: [SRTSocket] = []
 
     /// The SRT's performance data.
     public var performanceData: SRTPerformanceData {
@@ -36,24 +37,28 @@ public class SRTConnection: NSObject {
         srt_cleanup()
     }
 
-    /// Creates a two-way connection to an application on SRT Server.
-    public func connect(_ uri: URL?) {
+    /// Open a two-way connection to an application on SRT Server.
+    public func open(_ uri: URL?, mode: SRTMode = .caller) {
         guard let uri = uri, let scheme = uri.scheme, let host = uri.host, let port = uri.port, scheme == "srt" else {
             return
         }
         self.uri = uri
         let options = SRTSocketOption.from(uri: uri)
-        let addr = sockaddr_in(host, port: UInt16(port))
+        let addr = sockaddr_in(mode.host(host), port: UInt16(port))
         socket = .init()
-        ((try? socket?.connect(addr, options: options)) as ()??)
+        ((try? socket?.open(addr, mode: mode, options: options)) as ()??)
     }
 
     /// Closes the connection from the server.
     public func close() {
+        for client in clients {
+            client.close()
+        }
         for stream in streams {
             stream.close()
         }
         socket?.close()
+        clients.removeAll()
     }
 
     private func sockaddr_in(_ host: String, port: UInt16) -> sockaddr_in {
@@ -79,5 +84,9 @@ extension SRTConnection: SRTSocketDelegate {
 
     func socket(_ socket: SRTSocket, incomingDataAvailabled data: Data, bytes: Int32) {
         streams.first?.doInput(data.subdata(in: 0..<Data.Index(bytes)))
+    }
+
+    func socket(_ socket: SRTSocket, didAcceptSocket client: SRTSocket) {
+        clients.append(client)
     }
 }

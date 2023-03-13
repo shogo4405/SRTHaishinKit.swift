@@ -26,7 +26,7 @@ final class PlaybackViewController: UIViewController {
             playback.setTitle("●", for: [])
         } else {
             UIApplication.shared.isIdleTimerDisabled = true
-            connection.connect(URL(string: Preference.shared.url))
+            connection.open(URL(string: Preference.shared.url))
             stream.play("")
             playback.setTitle("■", for: [])
         }

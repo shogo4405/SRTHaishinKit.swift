@@ -5,6 +5,7 @@ import Logboard
 protocol SRTSocketDelegate: AnyObject {
     func socket(_ socket: SRTSocket, status: SRT_SOCKSTATUS)
     func socket(_ socket: SRTSocket, incomingDataAvailabled data: Data, bytes: Int32)
+    func socket(_ socket: SRTSocket, didAcceptSocket client: SRTSocket)
 }
 
 final class SRTSocket {
@@ -14,6 +15,7 @@ final class SRTSocket {
     var timeout: Int = 0
     var options: [SRTSocketOption: Any] = [:]
     weak var delegate: SRTSocketDelegate?
+    private(set) var mode: SRTMode = .caller
     private(set) var perf: CBytePerfMon = .init()
     private(set) var isRunning: Atomic<Bool> = .init(false)
     private(set) var socket: SRTSOCKET = SRT_INVALID_SOCK
@@ -55,10 +57,25 @@ final class SRTSocket {
     private let outgoingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.outgoing", qos: .userInitiated)
     private let incomingQueue: DispatchQueue = .init(label: "com.haishinkit.SRTHaishinKit.SRTSocket.incoming", qos: .userInitiated)
 
-    func connect(_ addr: sockaddr_in, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
+    init() {
+    }
+
+    init(socket: SRTSOCKET) throws {
+        self.socket = socket
+        guard configure(.post) else {
+            throw makeSocketError()
+        }
+        if incomingBuffer.count < windowSizeC {
+            incomingBuffer = .init(count: Int(windowSizeC))
+        }
+        startRunning()
+    }
+
+    func open(_ addr: sockaddr_in, mode: SRTMode, options: [SRTSocketOption: Any] = SRTSocket.defaultOptions) throws {
         guard socket == SRT_INVALID_SOCK else {
             return
         }
+        self.mode = mode
         // prepare socket
         socket = srt_create_socket()
         if socket == SRT_INVALID_SOCK {
@@ -70,18 +87,28 @@ final class SRTSocket {
         }
         // prepare connect
         var addr_cp = addr
-        let stat = withUnsafePointer(to: &addr_cp) { ptr -> Int32 in
+        var stat = withUnsafePointer(to: &addr_cp) { ptr -> Int32 in
             let psa = UnsafeRawPointer(ptr).assumingMemoryBound(to: sockaddr.self)
-            return srt_connect(socket, psa, Int32(MemoryLayout.size(ofValue: addr)))
+            return mode.open(socket, psa, Int32(MemoryLayout.size(ofValue: addr)))
         }
         if stat == SRT_ERROR {
             throw makeSocketError()
         }
-        guard configure(.post) else {
-            throw makeSocketError()
-        }
-        if incomingBuffer.count < windowSizeC {
-            incomingBuffer = .init(count: Int(windowSizeC))
+        switch mode {
+        case .caller:
+            guard configure(.post) else {
+                throw makeSocketError()
+            }
+            if incomingBuffer.count < windowSizeC {
+                incomingBuffer = .init(count: Int(windowSizeC))
+            }
+        case .listener:
+            // only supporting a single connection
+            stat = srt_listen(socket, 1)
+            if stat == SRT_ERROR {
+                srt_close(socket)
+                throw makeSocketError()
+            }
         }
         startRunning()
     }
@@ -134,6 +161,15 @@ final class SRTSocket {
         return srt_bstats(socket, &perf, 1)
     }
 
+    private func accept() {
+        let socket = srt_accept(socket, nil, nil)
+        do {
+            delegate?.socket(self, didAcceptSocket: try SRTSocket(socket: socket))
+        } catch {
+            logger.error(error)
+        }
+    }
+
     private func makeSocketError() -> SRTError {
         let error_message = String(cString: srt_getlasterror_str())
         logger.error(error_message)
@@ -168,9 +204,15 @@ extension SRTSocket: Running {
             return
         }
         isRunning.mutate { $0 = true }
-        DispatchQueue(label: "com.haishkinkit.SRTHaishinKit.SRTSocket.listen").async {
+        DispatchQueue(label: "com.haishkinkit.SRTHaishinKit.SRTSocket.runloop").async {
             repeat {
                 self.status = srt_getsockstate(self.socket)
+                switch self.mode {
+                case .listener:
+                    self.accept()
+                default:
+                    break
+                }
                 usleep(3 * 10000)
             } while self.isRunning.value
         }
