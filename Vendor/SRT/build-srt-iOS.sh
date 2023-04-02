@@ -19,7 +19,6 @@ srt() {
   pushd ./build/$2/$3
   ../../../srt/configure --cmake-prefix-path=$IOS_OPENSSL --ios-disable-bitcode=1 --ios-platform=$2 --ios-arch=$3 --cmake-toolchain-file=scripts/iOS.cmake --USE_OPENSSL_PC=off
   make
-  install_name_tool -id "@executable_path/Frameworks/libsrt.1.5.1.dylib" libsrt.1.5.1.dylib
   popd
 }
 

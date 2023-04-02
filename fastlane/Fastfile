@@ -2,3 +2,8 @@ desc "[CI] Review PullRequest."
 lane :review do
   spm
 end
+
+lane :document do
+    sh('cd ../ && swift package --allow-writing-to-directory ./docs generate-documentation --target SRTHaishinKit --disable-indexing --hosting-base-path SRTHaishinKit.swift --output-path ./docs')
+end
+
