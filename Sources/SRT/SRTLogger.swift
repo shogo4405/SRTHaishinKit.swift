@@ -1,4 +1,5 @@
 import Foundation
+import libsrt
 
 public enum SRTLogLevel {
     /// Highly detailed and very frequent messages.

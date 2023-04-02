@@ -1,5 +1,0 @@
-module SRTHaishinKit [system] {
-    header "/usr/local/opt/srt/include/srt/srt.h"
-    export *
-}
-

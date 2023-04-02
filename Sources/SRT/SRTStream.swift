@@ -1,6 +1,7 @@
 import HaishinKit
 import Foundation
 import AVFoundation
+import libsrt
 
 /// An object that provides the interface to control a one-way channel over a SRTConnection.
 public class SRTStream: NetStream {

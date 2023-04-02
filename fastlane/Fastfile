@@ -1,0 +1,4 @@
+desc "[CI] Review PullRequest."
+lane :review do
+  spm
+end

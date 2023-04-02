@@ -1,4 +1,5 @@
 import Foundation
+import libsrt
 
 /// The SRTConnection class create a two-way SRT connection.
 public class SRTConnection: NSObject {

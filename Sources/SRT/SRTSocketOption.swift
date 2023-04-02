@@ -1,4 +1,5 @@
 import Foundation
+import libsrt
 
 private let enummapTranstype: [String: Any] = [
     "live": SRTT_LIVE,

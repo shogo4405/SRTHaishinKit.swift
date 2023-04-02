@@ -1,4 +1,5 @@
 import Foundation
+import libsrt
 
 /// The type of SRTHaishinKit supports srt modes.
 public enum SRTMode {

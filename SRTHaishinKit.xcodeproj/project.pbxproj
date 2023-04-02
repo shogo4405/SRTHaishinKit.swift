@@ -13,20 +13,15 @@
 		2923D2FE217342A3000A5E9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FC217342A3000A5E9B /* Main.storyboard */; };
 		2923D300217342A4000A5E9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2923D2FF217342A4000A5E9B /* Assets.xcassets */; };
 		2923D303217342A4000A5E9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2923D301217342A4000A5E9B /* LaunchScreen.storyboard */; };
-		296FB21821A6BE2300CB4770 /* logging_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20B21A6BD9800CB4770 /* logging_api.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		296FB21A21A6BE2700CB4770 /* platform_sys.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB20E21A6BD9800CB4770 /* platform_sys.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		296FB21B21A6BE2A00CB4770 /* srt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB21021A6BD9900CB4770 /* srt.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		296FB22921A6BEE700CB4770 /* SRTSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB22721A6BEE700CB4770 /* SRTSocket.swift */; };
 		296FB23821A6D58900CB4770 /* SRTStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23621A6D58900CB4770 /* SRTStream.swift */; };
 		296FB23E21A6E0D100CB4770 /* SRTSocketOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */; };
-		296FB27D21A700B700CB4770 /* udt.h in Headers */ = {isa = PBXBuildFile; fileRef = 296FB24D21A7005F00CB4770 /* udt.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		296FB28721A70D9600CB4770 /* SRTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28521A70D9600CB4770 /* SRTError.swift */; };
 		296FB28821A70E1500CB4770 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28321A70D8100CB4770 /* Constants.swift */; };
 		296FB28B21A800CF00CB4770 /* SRTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB28921A800CF00CB4770 /* SRTConnection.swift */; };
 		296FB29921A8262800CB4770 /* SRTHaishinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; };
 		296FB29A21A8262800CB4770 /* SRTHaishinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2923D2D921734075000A5E9B /* SRTHaishinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29D0939A21A998AF003E6E1F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0939821A998AF003E6E1F /* Data+Extension.swift */; };
-		BC0951DF23E73951009FAA72 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = BC0951DD23E73950009FAA72 /* version.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BC0BF4FB298FC54500D72CB4 /* libsrt.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; };
 		BC0BF4FC298FC54500D72CB4 /* libsrt.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC512F74288534E50081CCC2 /* libsrt.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC0BF500298FE09400D72CB4 /* SRTLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */; };
@@ -75,8 +70,6 @@
 /* Begin PBXFileReference section */
 		2923D2B921733B1E000A5E9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2923D2BA21733B1E000A5E9B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		2923D2C621733C3D000A5E9B /* SRTHaishinKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRTHaishinKit.h; sourceTree = "<group>"; };
-		2923D2C721733C3D000A5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2923D2D921734075000A5E9B /* SRTHaishinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SRTHaishinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2923D2DB21734075000A5E9B /* SRTHaishinKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRTHaishinKit.h; sourceTree = "<group>"; };
 		2923D2DC21734075000A5E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +85,6 @@
 		296FB20E21A6BD9800CB4770 /* platform_sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = platform_sys.h; path = Vendor/SRT/Includes/platform_sys.h; sourceTree = SOURCE_ROOT; };
 		296FB21021A6BD9900CB4770 /* srt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srt.h; path = Vendor/SRT/Includes/srt.h; sourceTree = SOURCE_ROOT; };
 		296FB22721A6BEE700CB4770 /* SRTSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocket.swift; sourceTree = "<group>"; };
-		296FB22F21A6C2C700CB4770 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		296FB23621A6D58900CB4770 /* SRTStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTStream.swift; sourceTree = "<group>"; };
 		296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocketOption.swift; sourceTree = "<group>"; };
 		296FB24D21A7005F00CB4770 /* udt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udt.h; sourceTree = "<group>"; };
@@ -101,7 +93,6 @@
 		296FB28521A70D9600CB4770 /* SRTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTError.swift; sourceTree = "<group>"; };
 		296FB28921A800CF00CB4770 /* SRTConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTConnection.swift; sourceTree = "<group>"; };
 		296FB29521A8121E00CB4770 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
-		297BA66D21AC8D3700CD14EA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		29D0939821A998AF003E6E1F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
@@ -189,21 +180,10 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
-		2923D2C521733C3D000A5E9B /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				296FB29221A8108E00CB4770 /* Supporting Files */,
-				2923D2C621733C3D000A5E9B /* SRTHaishinKit.h */,
-				2923D2C721733C3D000A5E9B /* Info.plist */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
 		2923D2CC21733C58000A5E9B /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
 				2923D2DA21734075000A5E9B /* iOS */,
-				2923D2C521733C3D000A5E9B /* macOS */,
 			);
 			path = Platforms;
 			sourceTree = "<group>";
@@ -211,7 +191,6 @@
 		2923D2DA21734075000A5E9B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				296FB23221A6C7E500CB4770 /* Supporting Files */,
 				2923D2DB21734075000A5E9B /* SRTHaishinKit.h */,
 				2923D2DC21734075000A5E9B /* Info.plist */,
 			);
@@ -291,22 +270,6 @@
 			path = SRT;
 			sourceTree = "<group>";
 		};
-		296FB23221A6C7E500CB4770 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				296FB22F21A6C2C700CB4770 /* module.modulemap */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		296FB29221A8108E00CB4770 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				297BA66D21AC8D3700CD14EA /* module.modulemap */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		297BA66121AC63C700CD14EA /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,12 +293,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				296FB21B21A6BE2A00CB4770 /* srt.h in Headers */,
 				2923D2DD21734075000A5E9B /* SRTHaishinKit.h in Headers */,
-				296FB21821A6BE2300CB4770 /* logging_api.h in Headers */,
-				296FB27D21A700B700CB4770 /* udt.h in Headers */,
-				BC0951DF23E73951009FAA72 /* version.h in Headers */,
-				296FB21A21A6BE2700CB4770 /* platform_sys.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -610,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
