@@ -1,6 +1,7 @@
 # SRTHaishinKit
 [![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/shogo4405/SRTHaishinKit.swift/master/LICENSE.md)
 * Camera and Microphone streaming library via SRT for iOS.
+* [API Documentation](https://shogo4405.github.io/SRTHaishinKit.swift/)
 * This project status is working in progress.
 
 ## 🎨 Features
@@ -64,8 +65,6 @@ stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
 stream.attachCamera(AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)) { error in
     // print(error)
 }
-stream.publish("hello")
-connection.connect("srt://host:port?option=foo")
 
 let hkView = HKView(frame: view.bounds)
 hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
@@ -73,6 +72,24 @@ hkView.attachStream(rtmpStream)
 
 // add ViewController#view
 view.addSubview(hkView)
+
+connection.connect("srt://host:port?option=foo")
+stream.publish()
+```
+
+```swift
+let connection = SRTConnection()
+let stream = SRTStream(connection: connection)
+
+let hkView = MTHKView(frame: view.bounds)
+hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
+hkView.attachStream(rtmpStream)
+
+// add ViewController#view
+view.addSubview(hkView)
+
+connection.connect("srt://host:port?option=foo")
+stream.play("")
 ```
 
 ## 🐾 Examples
