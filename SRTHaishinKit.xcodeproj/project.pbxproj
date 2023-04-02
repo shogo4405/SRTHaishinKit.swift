@@ -648,7 +648,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
 				);
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
@@ -690,7 +690,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor/SRT/OpenSSL/iphoneos/lib",
 				);
-				MARKETING_VERSION = 0.0.3;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
@@ -714,7 +714,7 @@
 				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -737,7 +737,7 @@
 				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Examples/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

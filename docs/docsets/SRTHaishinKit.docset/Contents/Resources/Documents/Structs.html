@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Structures  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
-    <a title="Classes  Reference"></a>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+    <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">SRTHaishinKit 0.1.0 Docs</a> (72% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="index.html">SRTHaishinKit Reference</a>
         <img id="carat" src="img/carat.png" alt=""/>
-        Classes  Reference
+        Structures  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -79,8 +79,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -89,9 +89,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@SRTHaishinKit@objc(cs)SRTConnection"></a>
-                    <a name="//apple_ref/swift/Class/SRTConnection" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@SRTHaishinKit@objc(cs)SRTConnection">SRTConnection</a>
+                    <a name="/s:13SRTHaishinKit18SRTPerformanceDataV"></a>
+                    <a name="//apple_ref/swift/Struct/SRTPerformanceData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SRTHaishinKit18SRTPerformanceDataV">SRTPerformanceData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -99,73 +99,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The SRTConnection class create a two-way SRT connection.</p>
+                        <p>The SRTPerformanceData represents the SRT&rsquo;s performance statistics. This struct is wrapper for an CBytePerfMon.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <a href="https://github.com/Haivision/srt/blob/master/srtcore/srt.h">https://github.com/Haivision/srt/blob/master/srtcore/srt.h</a>
 
-                        <a href="Classes/SRTConnection.html" class="slightly-smaller">See more</a>
+</div>
+
+                        <a href="Structs/SRTPerformanceData.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SRTConnection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13SRTHaishinKit9SRTLoggerC"></a>
-                    <a name="//apple_ref/swift/Class/SRTLogger" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTLoggerC">SRTLogger</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An object for writing interpolated string messages to srt logging system.</p>
-
-                        <a href="Classes/SRTLogger.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SRTLogger</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:13SRTHaishinKit9SRTStreamC"></a>
-                    <a name="//apple_ref/swift/Class/SRTStream" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13SRTHaishinKit9SRTStreamC">SRTStream</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An object that provides the interface to control a one-way channel over a SRTConnection.</p>
-
-                        <a href="Classes/SRTStream.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SRTStream</span> <span class="p">:</span> <span class="kt">NetStream</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SRTStream</span><span class="p">:</span> <span class="kt">TSWriterDelegate</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SRTStream</span><span class="p">:</span> <span class="kt">TSReaderDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SRTPerformanceData</span></code></pre>
 
                         </div>
                       </div>

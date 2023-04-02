@@ -6,24 +6,17 @@
 ## 🎨 Features
 ### SRT
 - [x] Publish and Recording (H264/AAC)
-- [ ] Playback
+- [x] Playback
 - [ ] mode
   - [x] caller
-  - [ ] listener
+  - [x] listener
   - [ ] rendezvous
 
-### Rendering
-|-|HKView|GLHKView|MTHKView|
-|-|:---:|:---:|:---:|
-|Engine|AVCaptureVideoPreviewLayer|OpenGL ES|Metal|
-|Publish|○|○|◯|
-|VIsualEffect|×|○|◯|
-|Condition|Stable|Stable|Beta|
-
 ## 🌏 Requirements
-|-|iOS|OSX|tvOS|XCode|Swift|CocoaPods|Carthage|
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-|0.0.0+|8.0+|10.11+|-|10.0+|4.2|1.5.0+|0.29.0+|
+|-|iOS|Xcode|Swift|
+|:-:|:-:|:-:|:-:|
+|0.1.0+|11.0+|14.3+|5.8|
+|0.0.0+|8.0+|10.0+|4.2|
 
 ## 🔧 Installation
 Not available.
@@ -32,7 +25,7 @@ Not available.
 
 ### Carthage
 ```swift
-github "shogo4405/SRTHaishinKit.swift" "0.0.4"
+github "shogo4405/SRTHaishinKit.swift" "0.1.0"
 ``` 
 
 ## ☕ Cocoa Keys
@@ -63,15 +56,20 @@ do {
 
 ## SRT Usage
 ```swift
-let srtConnection: SRTConnection = SRTConnection()
-let srtStream: SRTStream = SRTStream(connection: srtConnection)
-srtStream.attachCamera(DeviceUtil.device(withPosition: .back))
-srtStream.attachAudio(AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeAudio))
-srtStream.publish("hello")
-srtConnection.connect("srt://host:port?option=foo")
+let connection = SRTConnection()
+let stream = SRTStream(connection: connection)
+stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
+    // print(error)
+}
+stream.attachCamera(AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)) { error in
+    // print(error)
+}
+stream.publish("hello")
+connection.connect("srt://host:port?option=foo")
 
-var hkView: HKView = HKView(frame: view.bounds)
-hkView.attachStream(srtStream)
+let hkView = HKView(frame: view.bounds)
+hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
+hkView.attachStream(rtmpStream)
 
 // add ViewController#view
 view.addSubview(hkView)

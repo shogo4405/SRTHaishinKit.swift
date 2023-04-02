@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 
   s.name          = "SRTHaishinKit"
-  s.version       = "0.0.4"
+  s.version       = "0.1.0"
   s.summary       = "Camera and Microphone streaming library via SRT for iOS."
-  s.swift_version = "5.7"
+  s.swift_version = "5.8"
 
   s.description  = <<-DESC
   SRTHaishinKit. Camera and Microphone streaming library via SRT for iOS.
@@ -28,6 +28,6 @@ Pod::Spec.new do |s|
     'OTHER_LDFLAGS' => '-framework libsrt'
   }
 
-  s.dependency 'HaishinKit', '~> 1.4.2'
+  s.dependency 'HaishinKit', '~> 1.5.0'
 
 end

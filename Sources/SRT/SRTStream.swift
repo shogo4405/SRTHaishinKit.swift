@@ -52,7 +52,7 @@ public class SRTStream: NetStream {
             case .play:
                 connection?.socket?.doInput()
                 mixer.isPaused = false
-                mixer.startDecoding(audioEngine)
+                mixer.startDecoding()
                 readyState = .playing
             case .publish:
                 mixer.startEncoding(writer)
