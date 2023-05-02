@@ -2,4 +2,3 @@ module libsrt {
     header "srt.h"
     export *
 }
-

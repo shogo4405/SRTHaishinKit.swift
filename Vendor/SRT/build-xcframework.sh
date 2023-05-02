@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if which $(pwd)/OpenSSL >/dev/null; then
+  echo ""
+else
+  git clone git@github.com:krzyzanowskim/OpenSSL.git
+fi
+
 if which $(pwd)/srt >/dev/null; then
   echo ""
 else
@@ -8,9 +14,6 @@ else
   git checkout refs/tags/v1.5.1
   popd
 fi
-
-export IPHONEOS_DEPLOYMENT_TARGET=11.0
-SDKVERSION=$(xcrun --sdk iphoneos --show-sdk-version)
 
 srt() {
   IOS_OPENSSL=$(pwd)/OpenSSL/$1
@@ -22,7 +25,21 @@ srt() {
   popd
 }
 
+srt_macosx() {
+  OPENSSL=$(pwd)/OpenSSL/macosx
+
+  mkdir -p ./build/macosx
+  pushd ./build/macosx
+  ../../srt/configure --cmake-prefix-path=$OPENSSL --cmake-osx-architectures=arm64;x86_64 --USE_OPENSSL_PC=ON --ssl-include-dir=$OPENSSL/include --ssl-libraries=$OPENSSL/lib/libcrypto.a
+  make
+  popd
+}
+
 # compile
+srt_macosx
+
+export IPHONEOS_DEPLOYMENT_TARGET=11.0
+SDKVERSION=$(xcrun --sdk iphoneos --show-sdk-version)
 srt iphonesimulator SIMULATOR64 x86_64
 srt iphonesimulator SIMULATOR64 arm64
 srt iphoneos OS arm64
@@ -42,5 +59,6 @@ rm -rf libsrt.xcframework
 xcodebuild -create-xcframework \
     -library ./build/simulator/libsrt.a -headers Includes \
     -library ./build/device/libsrt.a -headers Includes \
+    -library ./build/macosx/libsrt.a -headers Includes \
     -output libsrt.xcframework
 

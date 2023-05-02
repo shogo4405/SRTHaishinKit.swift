@@ -88,13 +88,11 @@
 		296FB23621A6D58900CB4770 /* SRTStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTStream.swift; sourceTree = "<group>"; };
 		296FB23C21A6E0D100CB4770 /* SRTSocketOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTSocketOption.swift; sourceTree = "<group>"; };
 		296FB24D21A7005F00CB4770 /* udt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udt.h; sourceTree = "<group>"; };
-		296FB28021A7052000CB4770 /* build-srt-iOS.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-srt-iOS.sh"; path = "Vendor/SRT/build-srt-iOS.sh"; sourceTree = SOURCE_ROOT; };
 		296FB28321A70D8100CB4770 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		296FB28521A70D9600CB4770 /* SRTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTError.swift; sourceTree = "<group>"; };
 		296FB28921A800CF00CB4770 /* SRTConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTConnection.swift; sourceTree = "<group>"; };
 		296FB29521A8121E00CB4770 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		29D0939821A998AF003E6E1F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
-		29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-openssl-iOS.sh"; sourceTree = "<group>"; };
 		BC0951DD23E73950009FAA72 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		BC0BF4FF298FE09400D72CB4 /* SRTLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTLogger.swift; sourceTree = "<group>"; };
 		BC1C687029BF4F88005BC228 /* SRTMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTMode.swift; sourceTree = "<group>"; };
@@ -225,8 +223,6 @@
 		296FB20121A6BBE200CB4770 /* SRT */ = {
 			isa = PBXGroup;
 			children = (
-				29D093A321A9EFAD003E6E1F /* build-openssl-iOS.sh */,
-				296FB28021A7052000CB4770 /* build-srt-iOS.sh */,
 				296FB20921A6BD8600CB4770 /* Includes */,
 			);
 			path = SRT;
