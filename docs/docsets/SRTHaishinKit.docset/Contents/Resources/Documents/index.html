@@ -16,7 +16,7 @@
     <a title="SRTHaishinKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SRTHaishinKit 0.1.0 Docs</a> (72% documented)</p>
+        <p><a href="index.html">SRTHaishinKit 0.1.1 Docs</a> (72% documented)</p>
         <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -85,6 +85,7 @@
 
 <ul>
 <li>Camera and Microphone streaming library via SRT for iOS.</li>
+<li><a href="https://shogo4405.github.io/SRTHaishinKit.swift/">API Documentation</a></li>
 <li>This project status is working in progress.</li>
 </ul>
 <h2 id='features' class='heading'>🎨 Features</h2>
@@ -109,25 +110,19 @@
 <th style="text-align: center">iOS</th>
 <th style="text-align: center">Xcode</th>
 <th style="text-align: center">Swift</th>
-<th style="text-align: center">CocoaPods</th>
-<th style="text-align: center">Carthage</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: center">0.1.0+</td>
+<td style="text-align: center">11.0+</td>
 <td style="text-align: center">14.3+</td>
 <td style="text-align: center">5.8</td>
-<td style="text-align: center">1.5.0+</td>
-<td style="text-align: center">0.29.0+</td>
-<td style="text-align: center"></td>
 </tr>
 <tr>
 <td style="text-align: center">0.0.0+</td>
 <td style="text-align: center">8.0+</td>
+<td style="text-align: center">10.0+</td>
 <td style="text-align: center">4.2</td>
-<td style="text-align: center">1.5.0+</td>
-<td style="text-align: center">0.29.0+</td>
-<td style="text-align: center"></td>
 </tr>
 </tbody></table>
 <h2 id='installation' class='heading'>🔧 Installation</h2>
@@ -178,8 +173,6 @@
 <span class="n">stream</span><span class="o">.</span><span class="nf">attachCamera</span><span class="p">(</span><span class="kt">AVCaptureDevice</span><span class="o">.</span><span class="nf">default</span><span class="p">(</span><span class="o">.</span><span class="n">builtInWideAngleCamera</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">video</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="o">.</span><span class="n">back</span><span class="p">))</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
     <span class="c1">// print(error)</span>
 <span class="p">}</span>
-<span class="n">stream</span><span class="o">.</span><span class="nf">publish</span><span class="p">(</span><span class="s">"hello"</span><span class="p">)</span>
-<span class="n">connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="s">"srt://host:port?option=foo"</span><span class="p">)</span>
 
 <span class="k">let</span> <span class="nv">hkView</span> <span class="o">=</span> <span class="kt">HKView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
 <span class="n">hkView</span><span class="o">.</span><span class="n">videoGravity</span> <span class="o">=</span> <span class="kt">AVLayerVideoGravity</span><span class="o">.</span><span class="n">resizeAspectFill</span>
@@ -187,6 +180,22 @@
 
 <span class="c1">// add ViewController#view</span>
 <span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">hkView</span><span class="p">)</span>
+
+<span class="n">connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="s">"srt://host:port?option=foo"</span><span class="p">)</span>
+<span class="n">stream</span><span class="o">.</span><span class="nf">publish</span><span class="p">()</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">connection</span> <span class="o">=</span> <span class="kt">SRTConnection</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">stream</span> <span class="o">=</span> <span class="kt">SRTStream</span><span class="p">(</span><span class="nv">connection</span><span class="p">:</span> <span class="n">connection</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">hkView</span> <span class="o">=</span> <span class="kt">MTHKView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+<span class="n">hkView</span><span class="o">.</span><span class="n">videoGravity</span> <span class="o">=</span> <span class="kt">AVLayerVideoGravity</span><span class="o">.</span><span class="n">resizeAspectFill</span>
+<span class="n">hkView</span><span class="o">.</span><span class="nf">attachStream</span><span class="p">(</span><span class="n">rtmpStream</span><span class="p">)</span>
+
+<span class="c1">// add ViewController#view</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">hkView</span><span class="p">)</span>
+
+<span class="n">connection</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="s">"srt://host:port?option=foo"</span><span class="p">)</span>
+<span class="n">stream</span><span class="o">.</span><span class="nf">play</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
 </code></pre>
 <h2 id='examples' class='heading'>🐾 Examples</h2>
 
@@ -212,7 +221,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/shogo4405/SRTHaishinKit.swift" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2023-04-02)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/shogo4405/SRTHaishinKit.swift" target="_blank" rel="external noopener">shogo4405</a>. All rights reserved. (Last updated: 2023-05-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
