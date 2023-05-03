@@ -16,18 +16,21 @@
 ## 🌏 Requirements
 |-|iOS|Xcode|Swift|
 |:-:|:-:|:-:|:-:|
-|0.1.0+|11.0+|14.3+|5.8|
+|0.1.0+|11.0+|14.0+|5.7|
 |0.0.0+|8.0+|10.0+|4.2|
 
 ## 🔧 Installation
 Not available.
 - CocoaPods
-- Swift Package Manager
 
 ### Carthage
 ```swift
-github "shogo4405/SRTHaishinKit.swift" "0.1.0"
-``` 
+github "shogo4405/SRTHaishinKit.swift" "0.1.1"
+```
+### Swift Package Manager
+```
+https://github.com/shogo4405/HaishinKit.swift
+```
 
 ## ☕ Cocoa Keys
 Please contains Info.plist.
