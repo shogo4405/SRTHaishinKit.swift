@@ -15,7 +15,7 @@ final class SRTSocket {
 
     var timeout: Int = 0
     var options: [SRTSocketOption: Any] = [:]
-    weak var delegate: SRTSocketDelegate?
+    weak var delegate: (any SRTSocketDelegate)?
     private(set) var mode: SRTMode = .caller
     private(set) var perf: CBytePerfMon = .init()
     private(set) var isRunning: Atomic<Bool> = .init(false)
