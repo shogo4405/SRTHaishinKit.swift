@@ -7,7 +7,7 @@
 ## 🎨 Features
 ### SRT
 - [x] Publish and Recording (H264/AAC)
-- [x] Playback
+- [ ] Playback
 - [ ] mode
   - [x] caller
   - [x] listener
