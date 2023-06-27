@@ -599,7 +599,6 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.1;
-				OTHER_SWIFT_FLAGS = "-enable-upcoming-feature ExistentialAny";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
@@ -637,7 +636,6 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.1;
-				OTHER_SWIFT_FLAGS = "-enable-upcoming-feature ExistentialAny";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.SRTHaishinKit;
 				PRODUCT_NAME = SRTHaishinKit;
 				SKIP_INSTALL = YES;
