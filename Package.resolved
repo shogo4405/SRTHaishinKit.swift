@@ -5,8 +5,8 @@
         "package": "HaishinKit",
         "repositoryURL": "https://github.com/shogo4405/HaishinKit.swift.git",
         "state": {
-          "branch": "1.5.0",
-          "revision": "915758d0ec0ef004697f5c8039e9ddd45a3279cf",
+          "branch": "1.5.3",
+          "revision": "6b92987f1ce5e9bd5559788ad35060ff037671f9",
           "version": null
         }
       },
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/apple/swift-docc-plugin",
         "state": {
           "branch": null,
-          "revision": "9b1258905c21fc1b97bf03d1b4ca12c4ec4e5fda",
-          "version": "1.2.0"
+          "revision": "26ac5758409154cc448d7ab82389c520fa8a8247",
+          "version": "1.3.0"
         }
       },
       {

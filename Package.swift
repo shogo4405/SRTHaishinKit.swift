@@ -5,14 +5,13 @@ import PackageDescription
 let package = Package(
     name: "SRTHaishinKit",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v11)
     ],
     products: [
         .library(name: "SRTHaishinKit", targets: ["SRTHaishinKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-        .package(url: "https://github.com/shogo4405/HaishinKit.swift.git", branch: "1.5.0"),
+        .package(url: "https://github.com/shogo4405/HaishinKit.swift.git", branch: "1.5.3")
     ],
     targets: [
         .binaryTarget(
@@ -22,14 +21,13 @@ let package = Package(
         .target(name: "SRTHaishinKit",
                 dependencies: [
                     "libsrt",
-                    .product(name: "HaishinKit", package: "haishinkit.swift"),
+                    .product(name: "HaishinKit", package: "haishinkit.swift")
                 ],
                 path: "Sources",
                 sources: [
                     "Extension",
                     "SRT",
-                    "Util",
-                ]),
+                    "Util"
+                ])
     ]
 )
-

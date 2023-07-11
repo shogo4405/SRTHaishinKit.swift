@@ -7,7 +7,7 @@
 ## 🎨 Features
 ### SRT
 - [x] Publish and Recording (H264/AAC)
-- [ ] Playback
+- [x] Playback(beta)
 - [ ] mode
   - [x] caller
   - [x] listener
@@ -25,7 +25,7 @@ Not available.
 
 ### Carthage
 ```swift
-github "shogo4405/SRTHaishinKit.swift" "0.1.1"
+github "shogo4405/SRTHaishinKit.swift" "0.1.2"
 ```
 ### Swift Package Manager
 ```
