@@ -5,9 +5,9 @@
         "package": "HaishinKit",
         "repositoryURL": "https://github.com/shogo4405/HaishinKit.swift.git",
         "state": {
-          "branch": "1.5.3",
+          "branch": null,
           "revision": "6b92987f1ce5e9bd5559788ad35060ff037671f9",
-          "version": null
+          "version": "1.5.3"
         }
       },
       {
