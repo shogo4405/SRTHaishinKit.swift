@@ -4,7 +4,7 @@
 * [API Documentation](https://shogo4405.github.io/SRTHaishinKit.swift/)
 * This project status is working in progress.
 
-This project has been integrated into [HaishinKit.swift](https://github.com/shogo4405/HaishinKit.swift/)
+This project has been integrated into [HaishinKit.swift](https://github.com/shogo4405/HaishinKit.swift)
 
 ## 🎨 Features
 ### SRT
