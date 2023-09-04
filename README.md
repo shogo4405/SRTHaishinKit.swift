@@ -1,8 +1,10 @@
-# SRTHaishinKit
+# [Archived] SRTHaishinKit
 [![GitHub license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/shogo4405/SRTHaishinKit.swift/master/LICENSE.md)
 * Camera and Microphone streaming library via SRT for iOS.
 * [API Documentation](https://shogo4405.github.io/SRTHaishinKit.swift/)
 * This project status is working in progress.
+
+This project has been integrated into [HaishinKit.swift](https://github.com/shogo4405/HaishinKit.swift/)
 
 ## 🎨 Features
 ### SRT
